@@ -1,7 +1,7 @@
 <?php
-$usuario= 'sa';
-$pass = 'cirec2019..';
-$servidor = 'CIREC_PC85\SQLEXPRESS';
+$usuario = 'sa';
+$pass = 'cirec2020..';
+$servidor = 'DESKTOPCIREC624\COMPAC';
 $basedatos = 'produccion';
 $info = array('Database'=>$basedatos, 'UID'=>$usuario, 'PWD'=>$pass);
 $conn = sqlsrv_connect($servidor, $info);
