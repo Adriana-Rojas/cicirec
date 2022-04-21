@@ -41,7 +41,7 @@ class MainApp extends CI_Controller {
 			    $data['graficas']=true;
 			    
 			    //Obtengo los valores de los tipos de ordenes que se presentar�n
-			    //$tipo1=$this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD","ID_TIPO1","ID_USUARIO", $this->session->userdata('usuario'));
+			    $tipo1=$this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD","ID_TIPO1","ID_USUARIO", $this->session->userdata('usuario'));
 			    $tipo[1]=$tipo1;
 				$data['tipo1']=$this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN","PREFIJO",$tipo1);
 				$tipo2=$this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOUSUARIOESTAD","ID_TIPO2","ID_USUARIO", $this->session->userdata('usuario'));
