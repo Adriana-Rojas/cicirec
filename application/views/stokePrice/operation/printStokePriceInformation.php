@@ -119,14 +119,18 @@ $validador=companyListValidation($this, $empresaId);
 					                    $subtotalDescuento +=$valDescuento*$value->CANTIDAD;
 
 					                    $valorBruto=$valUnitario-$valDescuento;
-					                    //Verifico si tiene IVA
-                   						$iva= defineIvaValue($value->ID_TIPO,$value->CODIGO,$this);
-               							$totalIva= ($valorBruto)*$iva;
-               							$subtotalIva +=$totalIva*$value->CANTIDAD;
-										$totalIvaFinal +=$totalIva;
+					                    
+										//$iva = defineIvaValue($value->ID_TIPO,$value->CODIGO,$this);
+										$iva = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_DETLISTA", "VALOR", "ID", $value->IVA) / 100;
 
+										$valorBruto=($valUnitario-$valDescuento);
+										$totalIva= ($valorBruto)*$iva;
+										$subtotalIva +=$totalIva*$value->CANTIDAD;
+										$totalIvaFinal +=$totalIva;
+										$unitarioTotal=$valorBruto+$totalIva;
 										$valorTotal=($valorBruto+$totalIva)*$value->CANTIDAD;
-                    					$valor = $valor + ($valorTotal);
+
+										$valor = $valor + ($valorTotal);
 								
 								?>
 								<tr>
