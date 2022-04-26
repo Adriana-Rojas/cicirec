@@ -1048,13 +1048,13 @@ if ($listaDetalle!=null){
                                             	<tr>
                                             		<th>Costos materiales</th>
                                             		<th>Costos mano obra</th>
-                                            		<th>Costos adicionales</th>
+                                            		<th>Asociados</th>
                                             		<th>Margen de contribuci&oacute;n</th>
                                             	</tr>
                                             	<tr>
                                             		<td id="materiales">Costos materiales</td>
                                             		<td id="manoobra">Costos mano obra</td>
-                                            		<td id="adicionales">Costos adicionales</td>
+                                            		<td id="adicionales">Asociados</td>
                                             		<td id="margen">Margen</td>
                                             	</tr>
                                             </table>
