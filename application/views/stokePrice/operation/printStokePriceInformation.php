@@ -262,6 +262,8 @@ $validador=companyListValidation($this, $empresaId);
 					<h6><em> <?= $observacion;?></em></h6>
 					<h5><b class="font-bold" style="color: red;">Modelo de Rehabilitaci&oacute;n CIREC de la "A a la Z"    </b> </h5>
 					<h6><em> <?= $incluye;?></em></h6>
+					<h5><b class="font-bold">Concepto costos adicionales</b></h5>
+					<h6><em> <?= $conceptoCosAd;?></em></h6>
 				</div>
 			</div>
 			

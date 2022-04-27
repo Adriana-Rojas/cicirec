@@ -285,6 +285,7 @@ class StokePriceAppStokePrice extends CI_Controller
             $data['vigencia'] = 1;
             $data['incluye'] = 1;
             $data['observacion'] = null;
+			$data['conceptoCosAd'] = null;                    
             $data['tiempo'] = null;
             $data['descuento'] = null;
             $data['id'] = null;
@@ -547,7 +548,7 @@ class StokePriceAppStokePrice extends CI_Controller
                     $data['empresaCoti'] = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB", $empresaCoti);
                     
                     $data['observacion'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "OBSERVACION", $id));
-                 
+			  
                     $pago = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID_PAGO", $id);
                     $data['pago'] = $this->FunctionsGeneral->getFieldFromTable("COT_PAGO", "NOMBRE", $pago);
                     $vigencia = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID_TIEMPO", $id);
@@ -655,8 +656,8 @@ class StokePriceAppStokePrice extends CI_Controller
                     $data['empresaCoti'] = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB", $empresaCoti);
                     
                     $data['observacion'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "OBSERVACION", $id));
-
-
+					
+					
 
 
 
@@ -1101,7 +1102,8 @@ public function defineElementsListOfProducts($id){
                 $data['empresaCoti'] = $this->FunctionsGeneral->getFieldFromTable("COT_TARIFAEMPRESA", "ID_EMPRESA", $empresa);
                 $data['empresaId'] =$empresa;
                 $data['observacion'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "OBSERVACION", $id));
-                $pago = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID_PAGO", $id);
+                $data['conceptoCosAd'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "CONCEPTO_ADICIONAL", "ID", $id);
+				$pago = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID_PAGO", $id);
                 $data['pago'] = $this->FunctionsGeneral->getFieldFromTable("COT_PAGO", "NOMBRE", $pago);
                 $vigencia = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID_TIEMPO", $id);
                 $data['vigencia'] = $this->FunctionsGeneral->getFieldFromTable("COT_TIEMPO", "NOMBRE", $vigencia);
@@ -1441,7 +1443,7 @@ public function defineElementsListOfProducts($id){
             //$municipio = $this->security->xss_clean($this->input->post('ciudad')); 
             $pago = $this->security->xss_clean($this->input->post('pago'));
             $vigencia = $this->security->xss_clean($this->input->post('vigencia'));
-            $observacion = $this->encryption->encrypt($this->security->xss_clean($this->input->post('observacion')));
+            $observacion = $this->encryption->encrypt($this->security->xss_clean($this->input->post('observacion')));       
             $registros = $this->security->xss_clean($this->input->post('registros'));
             $incluye = $this->security->xss_clean($this->input->post('incluye'));
             $descuento = $this->security->xss_clean($this->input->post('descuento'));
@@ -1514,7 +1516,7 @@ public function defineElementsListOfProducts($id){
                 $idCoti = $this->FunctionsGeneral->countMax('COT_CONSECUTIVO', 'ID', 1);
                 
                 $idCotizacion = $this->StokePriceModel->insertStokePriceHead($idSolicitud, $idCoti, $fecha, $idTipo, $empresa, $formula, $observacion, $medico, $especialidad, $pago, $vigencia, $incluye, $descuento, $vendedor, $this->session->userdata('usuario'), $conceptoAdicional, $proceso, $convenio);
-                 
+				
                 //Guardo histórico de bitacora
                 $observacionBitacora="Se crea una nueva cotizaci&oacute;n dentro del sistema de informaci&oacute;n";
                 $this->StokePriceModel->insertStokePriceLog($idCotizacion, $observacionBitacora, $this->session->userdata('usuario'));
