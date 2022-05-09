@@ -39,6 +39,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						</div>
 					</div>
 					<h5 style="color: navy;">TRM de hoy <?= date("Y-m-d") ?> es $ <?=  $valor ?></h5>
+					<h5 style="color: navy;">TRM anterior es $ <?=  $valoranterior ?></h5>
 					
 					<!--  <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>  -->
 

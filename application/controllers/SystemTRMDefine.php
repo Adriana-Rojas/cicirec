@@ -72,7 +72,7 @@ class SystemTRMDefine extends CI_Controller
 			
 			// Cargo los parametros
 			// Cargo la lista de paises
-			//$data['valor'] = $this->FunctionsGeneral->getFieldFromTable("ADM_TRM", "VALOR", 1);
+			$data['valoranterior'] = $this->FunctionsGeneral->getFieldFromTable("ADM_TRM", "VALOR", 1);
 			$data['valor'] = $tms;
 			//$data['valor'] = $this->FunctionsGeneral->getFieldFromTable("ADM_TRM", "VALOR", 1);
 			
@@ -105,7 +105,7 @@ class SystemTRMDefine extends CI_Controller
 			$id = 1;
 			// ----------------------- Par�metros generales -------------------------- //
 			// Actualizo nombre
-			$this->FunctionsGeneral->updateByID("ADM_TRM", "VALOR", $this->security->xss_clean($this->input->post('valor')), $id, $this->session->userdata('usuario'));
+			$this->FunctionsGeneral->updateByID("ADM_TRM", "VALOR", $this->security->xss_clean($this->input->post('valor'),$this->input->post('valoranterior')), $id, $this->session->userdata('usuario'));
 
 			// Pinto mensaje para retornar a la aplicaci�n informando que no hay informaci�n para la consulta realizada
 			$this->session->set_userdata('auxiliar', "parametersOk");
