@@ -1454,15 +1454,16 @@ public function defineElementsListOfProducts($id){
             $margenServicios = $this->security->xss_clean($this->input->post('margenServicios'));
             $costoAdc = $this->security->xss_clean($this->input->post('costoAdc'));
             $formula=intval($costoAdc);
-            $fechaCotizacion = $this->security->xss_clean($this->input->post('fechaCotizacion'));
-            $dateCurrent = date("Y/m/d H:i");
+            //$fechaCotizacion = $this->security->xss_clean($this->input->post('fechaCotizacion'));
+			$fechaCotizacion = cambiaHoraServer ();
+           // $dateCurrent = date("Y/m/d H:i");
             $conceptoAdicional = $this->security->xss_clean($this->input->post('conceptoAdicional'));
             //$valueIvaCotizacion = $this->security->xss_clean($this->input->post('valueIva' . $i));
-            if($fechaCotizacion == $dateCurrent){
+           /* if($fechaCotizacion == $dateCurrent){
                 $fechaCotizacionFormateada = date("Y/m/d H:i", strtotime($fechaCotizacion));
-            } else {
-                $fechaCotizacionFormateada = $dateCurrent;
-            }
+            } else {*/
+               // $fechaCotizacionFormateada = $dateCurrent;
+            //}
 
 
             if($convenio == '') {
@@ -1507,7 +1508,7 @@ public function defineElementsListOfProducts($id){
                 }
                 if ($idSolicitud == null) {
                     // Creo solicitud
-                    $idSolicitud = $this->StokePriceModel->insertRequestInformation($empresa, $proceso, $convenio, null, $this->session->userdata('usuario'), $idUsuario, NULL, NULL, $this->session->userdata('usuario'), $fechaCotizacionFormateada, $municipio, $departamento);
+                    $idSolicitud = $this->StokePriceModel->insertRequestInformation($empresa, $proceso, $convenio, null, $this->session->userdata('usuario'), $idUsuario, NULL, NULL, $this->session->userdata('usuario'), $fechaCotizacion);
                 } else {
                     // Actualizo solicitud
                     $this->FunctionsGeneral->updateByID("COT_SOLICITUD", "ID_USUARIO", $idUsuario, $idSolicitud, $this->session->userdata('usuario'));
@@ -1845,8 +1846,7 @@ public function defineElementsListOfProducts($id){
             $ejecutivo = $this->security->xss_clean($this->input->post('ejecutivo'));
             $adjunto1 = $this->input->post('adjunto1');
             echo $adjunto1;
-            $fechaCotizacion = $this->security->xss_clean($this->input->post('fechaCotizacion'));
-            $fechaCotizacionFormateada = date("Y/m/d H:i", strtotime($fechaCotizacion));
+            $fechaCotizacion = cambiaHoraServer ();
             
             // Valido si los datos del usuario ya se encuentran creados dentro de la gestión de cotizaciones
             $idUsuario = $this->FunctionsGeneral->getFieldFromTableNotIdFields("COT_USUARIO", "ID", "TIPODOC", $tipoDoc, "DOCUMENTO", $documento);
@@ -1945,7 +1945,7 @@ public function defineElementsListOfProducts($id){
                 $ejecutivo = null;
             }
             
-            $id = $this->StokePriceModel->insertRequestInformation($empresa, $proceso, $aliada, $brigada, $ejecutivo, $idUsuario, $adjunto1, $adjunto2, $this->session->userdata('usuario'), $fechaCotizacionFormateada, $ciudad, $departamento);
+            $id = $this->StokePriceModel->insertRequestInformation($empresa, $proceso, $aliada, $brigada, $ejecutivo, $idUsuario, $adjunto1, $adjunto2, $this->session->userdata('usuario'), $fechaCotizacion );
             
             // $id=0;
             $message = 'requestStokeDone';
