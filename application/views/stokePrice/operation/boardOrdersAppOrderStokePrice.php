@@ -147,7 +147,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     </div>
                                                     <?php 
                                                     }else{
-                                                        echo "<small style=\"color: red;\"><i class=\"fa fa-exclamation\" aria-hidden=\"true\"></i> Inactivo - ESALUD</small>";
+                                                        echo "<small style=\"color: red;\"><i class=\"fa fa-exclamation\" aria-hidden=\"true\"></i> Inactivo - SERVINTE</small>";
                                                     }
                                                     ?>
                                                 </td>
@@ -174,12 +174,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     $nombres=$this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "NOMBRES", "ID", $idUsuario));
                                                     $apellidos=$this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "APELLIDOS", "ID", $idUsuario));
                                                     
-                                                    echo $nombres." ".$apellidos;
+                                                   echo $nombres." ".$apellidos;
                                                 }
                                                 
                                                 
                                                  ?></td>
-                                            	 <td><?php
+                                            	 <td>
+
+                                                    <?php
                                             	 
                                             	 if($value->ID_EMPRESA!=''){
                                             	     echo $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB",$value->ID_EMPRESA) ;

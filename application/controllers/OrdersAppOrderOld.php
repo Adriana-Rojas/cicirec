@@ -2299,13 +2299,13 @@ class OrdersAppOrder extends CI_Controller {
 	                    $historia= $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud(
 	                        "T_ADMISIONES", "ID_PCTE_ADM", "ID_AMSION",$historia);
 	                    $paciente= $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud(
-	                        "t_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE",$historia)." ".
+	                        "T_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE",$historia)." ".
 	                        $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud(
-	                            "t_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE",$historia)." ".
+	                            "T_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE",$historia)." ".
 	                            $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud(
-	                                "t_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE",$historia)." ".
+	                                "T_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE",$historia)." ".
 	                                $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud(
-	                                    "t_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE",$historia);
+	                                    "T_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE",$historia);
 	                    
 	                    //Defino comidines y remplazos
 	                    $comodines=array(CTE_JOCKER_ORDER, CTE_JOCKER_STATE,CTE_JOCKER_PATIENT);

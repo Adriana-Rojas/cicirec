@@ -3109,7 +3109,7 @@ class OrdersAppOrder extends CI_Controller
                         // Obbtengo datos del paciente
                         $historia = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ORDENESACTUALES", "HISTORIA", "ID", $idOrden);
                         $historia = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_ADMISIONES", "ID_PCTE_ADM", "ID_AMSION", $historia);
-                        $paciente = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("t_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("t_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("t_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("t_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE", $historia);
+                        $paciente = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE", $historia) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE", $historia);
                         
                         // Defino comidines y remplazos
                         $comodines = array(
