@@ -690,6 +690,7 @@ if(!function_exists('selectPatienInformationFromOrder')) {
         
         //Codigo interno
         $interno=$page->FunctionsGeneral->getFieldFromTableNotId("COT_TARIFAEMPRESA", "ID_EMPRESA", "ID",$idEmpresa);
+		//echo $interno;
 
         //Empresa Nombre
         $empresaNombre=$page->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$interno);
@@ -702,6 +703,7 @@ if(!function_exists('selectPatienInformationFromOrder')) {
 		$return[4]=$municipio;
 		$return[5]=$idMunicipio;
 		$return[6]=$idDepartamento;
+		$return[7]=$interno;
 
         return $return;
 	}

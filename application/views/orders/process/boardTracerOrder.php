@@ -26,7 +26,7 @@ if ($listaLista != null) {
 if ($paciente != null) {
 	foreach ($paciente as $value) {
 		$idResponsable = $value->ID_RESPONSABLE;
-		//echo $idResponsable;
+	//	$idEmpresaadriana = $value->ID_RESPONSABLEADRIANA;
 		$idPaciente = $value->TP_ID_PCTE;
 		$docPaciente = $value->NUM_ID_PCTE;
 		$empresaResponsable = $value->RESPONSABLE;
@@ -51,12 +51,14 @@ if ($datos[2] != '') {
 }
 $direccion = $datos[3];
 $municipio = $datos[4];
+$ideps = $datos[7];
 $correo = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "CORREO", "DOCUMENTO", $value->NUM_ID_PCTE));
 
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_CONTACTOUSUARIO", "ID_CONVENIO", "ID_ENCORDEN", $idEncOrden);
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_ALIADA", "EMPRESA", "ID", $alida);
 $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB", $alida) . " )";
-
+$id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_APB","NOM_APB","'NUEVA EPS S.A.'");
+//echo $direccion;
 
 ?>
 <!-- page css -->
@@ -1638,13 +1640,13 @@ $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFr
 											<tbody>
 												<?php
 											//	$idempresa = $this->StokePriceModel->getPatientInformationEmpresa($responsable);
-												//echo $idempresa[0];
+											//	echo $value->IDEMPRESAADRIANA;
 												if ($listaCotizaciones != null) {
 													$i = 1;
 													//$codigo
 													foreach ($listaCotizaciones as $value) {	
 													
-														if ($value->ID_EMPRESA == '2689') {
+														if ($value->ID_EMPRESA == $ideps) {
 
 															//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
 															if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {

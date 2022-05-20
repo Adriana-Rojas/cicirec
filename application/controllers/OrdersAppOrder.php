@@ -1627,7 +1627,11 @@ class OrdersAppOrder extends CI_Controller
 				
 				//Trae el responsable asociado a la cotizacion
 				$idEmpresa=$this->FunctionsGeneral->getFieldFromTableNotId("VIEW_RELATION_ORDER_STOKEPRICE", "ID_EMPRESA","ID_ORDEN",  $idOrden);
+				//$data['idEmpresaadriana']=$idEmpresa;
+			//	echo $data['idEmpresa'];
                 $data['nombreEmpresaEsalud'] =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$idEmpresa);
+				//echo $data['nombreEmpresaEsalud'];
+				
             
 				
                 // Pinto el despiece asociado a la orden
@@ -1827,6 +1831,8 @@ class OrdersAppOrder extends CI_Controller
                 //Trae el responsable asociado a la cotizacion
                 $idEmpresa=$this->FunctionsGeneral->getFieldFromTableNotId("VIEW_RELATION_ORDER_STOKEPRICE", "ID_EMPRESA","ID_ORDEN",  $idOrden);
                 $data['nombreEmpresaEsalud'] =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$idEmpresa);
+				//$data['idEmpresaadriana']=$idEmpresa;
+				
             
                 
                 // Pinto el despiece asociado a la orden
