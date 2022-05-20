@@ -75,7 +75,7 @@ class EsaludModel extends CI_Model {
     		return $return;
     	}
     }
-    
+
     public function getPatientInformation($search,$option,$adicional=null){
     	/** Obtengo la informaci�n de la historia cl�nica $id*/
     	//con esta l�nea cargamos la base de datos esalud y la asignamos a $esaludDb

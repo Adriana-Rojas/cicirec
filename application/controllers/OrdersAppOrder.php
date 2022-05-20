@@ -1527,7 +1527,7 @@ class OrdersAppOrder extends CI_Controller
                 
                 // Pinto la informacion del paciente
                 $data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
-                // Recibo el idOrden
+			  // Recibo el idOrden
                 $idOrden = $this->encryption->decrypt($idOrden);
                 
                 $idTordPro = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_TORDPRO", "ID", $idOrden);
@@ -1710,7 +1710,7 @@ class OrdersAppOrder extends CI_Controller
             $data['id'] =  $id;
             
             $valorValidacion=$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_ADMISIONES","ID_AMSION","ID_AMSION",$id,"ACTIVO_ADM",0);
-            
+	
             if ($valorValidacion==''){
                 
                 // Pinto las vistas adicionales a travos de la funcion pintaComun del helper hospitium

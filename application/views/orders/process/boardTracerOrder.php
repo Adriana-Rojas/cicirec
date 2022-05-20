@@ -26,6 +26,7 @@ if ($listaLista != null) {
 if ($paciente != null) {
 	foreach ($paciente as $value) {
 		$idResponsable = $value->ID_RESPONSABLE;
+		//echo $idResponsable;
 		$idPaciente = $value->TP_ID_PCTE;
 		$docPaciente = $value->NUM_ID_PCTE;
 		$empresaResponsable = $value->RESPONSABLE;
@@ -41,6 +42,7 @@ if ($paciente != null) {
 //Encabezado de la orden
 $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $idPinta);
 $datos = selectPatienInformationFromOrder($idEncOrden, $this);
+
 $responsable = $datos[0];
 $telefono = $datos[1];
 $telefono2 = $datos[2];
@@ -1059,11 +1061,11 @@ $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFr
 					}
 					?>
 					<?php
-					if ($idResponsable == NEPS) {
+					//if ($idResponsable == NEPS) {
 					?>
 						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cotizacion" role="tab"><span class="hidden-sm-up"><i class="fa fa-usd "></i></span> <span class="hidden-xs-down">Relacionar cotizaci&oacute;n</span></a></li>
 					<?php
-					}
+				//	}
 					?>
 
 
@@ -1603,10 +1605,12 @@ $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFr
 
 
 					<?php
-					if ($idResponsable == NEPS) {
+					//if ($idResponsable == NEPS) {
 						//Defino condici�n 
 						$condicion = " AND TIPODOC='" . $idPaciente . "' and DOCUMENTO='" . $docPaciente . "'";
+						
 						$listaCotizaciones = $this->StokePriceModel->selectListStokePriceFromRequest($condicion, 2);
+
 
 					?>
 						<div class="tab-pane " id="cotizacion" role="tabpanel">
@@ -1633,11 +1637,15 @@ $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFr
 											</thead>
 											<tbody>
 												<?php
+											//	$idempresa = $this->StokePriceModel->getPatientInformationEmpresa($responsable);
+												//echo $idempresa[0];
 												if ($listaCotizaciones != null) {
 													$i = 1;
 													//$codigo
-													foreach ($listaCotizaciones as $value) {
-														if ($value->ID_EMPRESA == $idResponsable) {
+													foreach ($listaCotizaciones as $value) {	
+													
+														if ($value->ID_EMPRESA == '2689') {
+
 															//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
 															if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {
 																//Verifico que la cotizaci�n tenga el seguimiento y este aprobado (autorizado)
@@ -1702,7 +1710,7 @@ $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFr
 
 						</div>
 					<?php
-					}
+					//}
 					?>
 
 

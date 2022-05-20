@@ -143,7 +143,7 @@ class FunctionsGeneral extends CI_Model {
 	    	return $return;
     	}
     }
-    
+
     public function getFieldFromTableNotIdFields($table,$campo,$campoBusqueda,$valor, $campo2= NULL,$valor2= null,$campo3=null,$valor3=null,$campo4=null,$valor4=null,$campo5=null,$valor5=null){
     	/** Selecciono el valor actual para la condici�n que cumplen los diferentes campos*/
     	

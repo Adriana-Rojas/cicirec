@@ -328,11 +328,6 @@ if (isset($_POST['documento'])) {
 						$row10 = sqlsrv_fetch_array($stmt10, SQLSRV_FETCH_ASSOC);
 						$empresaEsalud = utf8_encode($row10['NOM_APB']);
 
-
-
-
-
-
 						$sexto = "SELECT ID_PROCESO, ID_ALIADA FROM COT_SOLICITUD WHERE ID_USUARIO = '$id_usuario'";
 						$stmt9 = sqlsrv_query($conn, $sexto);
 						$row9 = sqlsrv_fetch_array($stmt9, SQLSRV_FETCH_ASSOC);
