@@ -1646,7 +1646,8 @@ $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_
 													//$codigo
 													foreach ($listaCotizaciones as $value) {	
 													
-														if ($value->ID_EMPRESA == $ideps) {
+														//if ($value->ID_EMPRESA == $ideps) {
+														if ($value->ID_EMPRESA == '1632') {
 
 															//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
 															if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {
