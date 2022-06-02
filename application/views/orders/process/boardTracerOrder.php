@@ -58,7 +58,7 @@ $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_CONTACTOUSUARIO", 
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_ALIADA", "EMPRESA", "ID", $alida);
 $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB", $alida) . " )";
 $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_APB","NOM_APB","'NUEVA EPS S.A.'");
-//echo $direccion;
+//echo 'idapb'.$id_apb;
 
 ?>
 <!-- page css -->
@@ -1644,10 +1644,10 @@ $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_
 												if ($listaCotizaciones != null) {
 													$i = 1;
 													//$codigo
-													foreach ($listaCotizaciones as $value) {	
+													foreach ($listaCotizaciones as $value) {
+														//echo 'iips'.$ideps;	
 													
 														//if ($value->ID_EMPRESA == $ideps) {
-														if ($value->ID_EMPRESA == '1632') {
 
 															//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
 															if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {
@@ -1699,7 +1699,7 @@ $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_
 												<?php
 																}
 															}
-														}
+														//}
 														$i++;
 													} //end foreach
 												} //end if

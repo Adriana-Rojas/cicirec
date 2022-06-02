@@ -187,16 +187,22 @@ class SystemPartnerCompany extends CI_Controller
 			// P�gina principal a donde debo retornar
 			$mainPage = "SystemPartnerCompany/board";
 			$empresa = $this->security->xss_clean($this->input->post('empresa'));
-			$municipio = strtoupper($this->security->xss_clean($this->input->post('ciudad')));
+			$municipio = strtoupper($this->security->xss_clean($this->input->post('ciudad')));			
+			$correo = strtoupper($this->security->xss_clean($this->input->post('correo')));
+			$telefono = strtoupper($this->security->xss_clean($this->input->post('telefono')));
 			if ($this->encryption->decrypt($this->security->xss_clean($this->input->post('valida'))) == 'newRegister') {
-				if ($this->FunctionsGeneral->getQuantityFieldFromTable("ADM_ALIADA", "EMPRESA", $empresa, 'ID_MUNICIPIO', $municipio) == 0) {
+				if ($this->FunctionsGeneral->getQuantityFieldFromTable("ADM_ALIADA", "EMPRESA", $empresa, 'ID_MUNICIPIO', $municipio, 'CORREO', $correo, 'TELEFONO', $telefono) == 0) {
 					//Creo el registro
-					$id = $this->FunctionsGeneral->insertTwoParameter(
+					$id = $this->FunctionsGeneral->insertcuatroParameter(
 						"ADM_ALIADA",
 						"EMPRESA",
 						$empresa,
 						"ID_MUNICIPIO",
 						$municipio,
+						"CORREO",
+						$correo,
+						"TELEFONO",
+						$telefono,
 						$this->session->userdata('usuario')
 					);
 

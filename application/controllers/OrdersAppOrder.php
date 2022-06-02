@@ -1627,10 +1627,10 @@ class OrdersAppOrder extends CI_Controller
 				
 				//Trae el responsable asociado a la cotizacion
 				$idEmpresa=$this->FunctionsGeneral->getFieldFromTableNotId("VIEW_RELATION_ORDER_STOKEPRICE", "ID_EMPRESA","ID_ORDEN",  $idOrden);
-				//$data['idEmpresaadriana']=$idEmpresa;
-			//	echo $data['idEmpresa'];
+				$data['idEmpresaadriana']=$idEmpresa;
+				//echo 'idempresa'.$data['idEmpresaadriana'];
                 $data['nombreEmpresaEsalud'] =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$idEmpresa);
-				//echo $data['nombreEmpresaEsalud'];
+			//	echo 'nombreempresa'.$data['nombreEmpresaEsalud'];
 				
             
 				

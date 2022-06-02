@@ -690,7 +690,7 @@ if(!function_exists('selectPatienInformationFromOrder')) {
         
         //Codigo interno
         $interno=$page->FunctionsGeneral->getFieldFromTableNotId("COT_TARIFAEMPRESA", "ID_EMPRESA", "ID",$idEmpresa);
-		//echo $interno;
+	//	echo 'interno'.$interno;
 
         //Empresa Nombre
         $empresaNombre=$page->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","NOM_APB","ID_APB",$interno);
