@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Validación del formulario para la página newCustomer
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Validaciï¿½n del formulario para la pï¿½gina newCustomer
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -29,12 +29,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     rules: {
                     	departamento:{required: true},
                         ciudad:{required: true},
-                        empresa:{required: true}
+                        empresa:{required: true},
+                        correo:{required: true},
+                        telefono:{required: true}
                     },
                     messages: {
                     	departamento:"Seleccione el departamento de residencia comercial de la empresa",
                         ciudad:"Seleccione la ciudad de residencia comercial de la empresa",
-                        empresa:"Seleccione el nombre comercial de la empresa"
+                        empresa:"Seleccione el nombre comercial de la empresa",
+                        correo:"Digite el correo electr<?= LETRA_MIN_O ?>nico de contacto de la empresa",
+                        telefono:"Digite el tel<?= LETRA_MIN_E ?>fono de contacto de la empresa"
                     },
                     highlight: function (e) {
                         $(e).closest('.form-group').removeClass('has-info').addClass('has-danger');
