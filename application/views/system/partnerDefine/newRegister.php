@@ -127,7 +127,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label class="col-md-12" for="telefono">Tel&eacute;fono </label>
 						<div class="col-md-12">
-							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 4565656" />
+							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 3219779402" />
 						</div>
 					</div>
 

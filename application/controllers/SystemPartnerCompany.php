@@ -195,6 +195,7 @@ class SystemPartnerCompany extends CI_Controller
 					//Creo el registro
 					$id = $this->FunctionsGeneral->insertcuatroParameter(
 						"ADM_ALIADA",
+						$this->session->userdata('usuario'),
 						"EMPRESA",
 						$empresa,
 						"ID_MUNICIPIO",
@@ -202,8 +203,7 @@ class SystemPartnerCompany extends CI_Controller
 						"CORREO",
 						$correo,
 						"TELEFONO",
-						$telefono,
-						$this->session->userdata('usuario')
+						$telefono
 					);
 
 					//Pinto mensaje para retornar a la aplicaci�n

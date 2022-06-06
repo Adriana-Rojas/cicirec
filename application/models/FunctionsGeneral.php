@@ -56,22 +56,22 @@ class FunctionsGeneral extends CI_Model {
     	return $consecutivo;
 	}
 
-    public function insertcuatroParameter($table,$field,$value,$field2,$value2, $usuario,$value3,$field3,$value4, $usuario4){
+    public function insertcuatroParameter($table, $usuario,$field,$value,$field2,$value2,$field3,$value3,$field4,$value4){
         /** Se se inserta la informaci�n en la tabla $table para el campo $field con el valor $value*/
     
         //Obtiene el siguiente ID
         $consecutivo =$this->FunctionsGeneral->countMax($table,'ID',1);
         $data = array(
                 'ID' => $consecutivo,
-                $field => $value,
-                $field2 => $value2,
-                'ESTADO' => 'S',
+    			$field => $value,
+    			$field2 => $value2,
+                $field3 => $value3,
+                $field4 => $value4,
+    			'ESTADO' => 'S',
                 'UCREA' => $usuario,
                 'FCREA' => cambiaHoraServer(),
                 'UMOD' => $usuario,
-                'FMOD' => cambiaHoraServer(),
-                $field3 => $value3,
-                $field4 => $value4
+                'FMOD' => cambiaHoraServer()
         );
         //Realizo el insert sobre la base de datos en la tabla $table
         $this->db->insert($table, $data);
