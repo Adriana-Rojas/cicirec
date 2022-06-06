@@ -121,17 +121,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label class="col-md-12" for="correo">Correo electr&oacute;nico </label>
 						<div class="col-md-12">
-							<input class="form-control " type="email" name="correo" id="correo" placeholder="correo@correo.com.co" />
+							<input class="form-control " type="email" name="correo" id="correo" placeholder="correo@correo.com.co" value="<?= $correo;?>"  />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-12" for="telefono">Tel&eacute;fono </label>
 						<div class="col-md-12">
-							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 3219779402" />
+							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 4565656" value="<?= $telefono;?>"   />
 						</div>
 					</div>
-
-
 				</div>
 			</div>
 		</div>

@@ -99,6 +99,8 @@ class SystemPartnerCompany extends CI_Controller
 			//cARGO LISTADO DE EMPRESAS
 			$data['listaEmpresas'] = $this->EsaludModel->getCompaniesInformation();
 			$data['empresa'] = NULL;
+			$data['correo'] = null;
+			$data['telefono'] = null;
 
 			//Cargo vista
 			$this->load->view('system/partnerDefine/newRegister', $data);
@@ -145,6 +147,9 @@ class SystemPartnerCompany extends CI_Controller
 
 				$data['listaCiudad'] = $this->FunctionsAdmin->selectMunicipiosFromDepartamento($this->FunctionsGeneral->getFieldFromTable("ADM_MUNICIPIO", "ID_DEPARTAMENTO", $municipio));
 				$data['ciudad'] = $municipio;
+				$data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "CORREO", $id);
+				$data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "TELEFONO", $id);
+
 				//cARGO LISTADO DE EMPRESAS
 				$data['listaEmpresas'] = $this->EsaludModel->getCompaniesInformation();
 				$data['empresa'] = $this->FunctionsGeneral->getFieldFromTable(
@@ -187,7 +192,7 @@ class SystemPartnerCompany extends CI_Controller
 			// P�gina principal a donde debo retornar
 			$mainPage = "SystemPartnerCompany/board";
 			$empresa = $this->security->xss_clean($this->input->post('empresa'));
-			$municipio = strtoupper($this->security->xss_clean($this->input->post('ciudad')));			
+			$municipio = strtoupper($this->security->xss_clean($this->input->post('ciudad')));
 			$correo = strtoupper($this->security->xss_clean($this->input->post('correo')));
 			$telefono = strtoupper($this->security->xss_clean($this->input->post('telefono')));
 			if ($this->encryption->decrypt($this->security->xss_clean($this->input->post('valida'))) == 'newRegister') {
