@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Página Web.
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Pï¿½gina Web.
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2018 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2018 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -34,6 +34,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <th >Nombre</th>
                                                 <th>Departamento</th>
                                                 <th>Ciudad (municipio)</th>
+                                                <th>Correo </th>
+                                                <th>Tel&eacute;fono</th>
                                                 <th>Estado</th>
                                                 <th>Acci&oacute;n</th>
                                             </tr>
@@ -55,6 +57,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </td>
                                                 <td>
                                                     <?= $value->MUNICIPIO;?>
+                                                </td>
+												<td>
+                                                    <?= $value->CORREO;?>
+                                                </td>
+                                                <td>
+                                                    <?= $value->TELEFONO;?>
                                                 </td>
                                                 <td><span class="<?= validaEstadosGenerales($value->ESTADO,'CLASE')?>">
                                                                     <?= validaEstadosGenerales($value->ESTADO,'NOMBRE') ?>
