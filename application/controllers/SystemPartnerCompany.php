@@ -241,6 +241,20 @@ class SystemPartnerCompany extends CI_Controller
 					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
 					$this->session->userdata('usuario')
 				);
+				$this->FunctionsGeneral->updateByID(
+					"ADM_ALIADA",
+					"CORREO",
+					$correo,
+					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
+					$this->session->userdata('usuario')
+				);
+				$this->FunctionsGeneral->updateByID(
+					"ADM_ALIADA",
+					"TELEFONO",
+					$telefono,
+					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
+					$this->session->userdata('usuario')
+				);
 
 				//Pinto mensaje para retornar a la aplicaci�n
 				$this->session->set_userdata('id', $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))));
