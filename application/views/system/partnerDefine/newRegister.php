@@ -33,6 +33,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		})
 	});
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+
 <!-- ============================================================== -->
 <!-- END PAGE JQUERY ROUTINES -->
 <!-- ============================================================== -->
@@ -52,7 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group ">
 						<label class="col-md-12" for="empresa">Empresa aliada* </label>
 						<div class="col-md-12">
-							<select class="form-control" id="empresa" name="empresa">
+							<select id="empresa" class="selectpicker" data-live-search="true" name="empresa">
 								<option value="">--- Seleccione una opci&oacute;n ---</option>
 								<?php
 								if ($listaEmpresas != null) {
@@ -69,10 +78,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									}
 								} ?>
 							</select>
+							<script>
+								$('select').selectpicker();
+							</script>
 							<div class="form-control-feedback"> </div>
 						</div>
 					</div>
-
 					<div class="form-group ">
 						<label class="col-md-12" for="departamento">Departamento* </label>
 						<div class="col-md-12">
@@ -121,19 +132,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label class="col-md-12" for="correo">Correo electr&oacute;nico </label>
 						<div class="col-md-12">
-							<input class="form-control " type="email" name="correo" id="correo" placeholder="correo@correo.com.co" value="<?= $correo;?>"  />
+							<input class="form-control " type="email" name="correo" id="correo" placeholder="correo@correo.com.co" value="<?= $correo; ?>" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-12" for="telefono">Tel&eacute;fono </label>
 						<div class="col-md-12">
-							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 4565656" value="<?= $telefono;?>"   />
+							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 4565656" value="<?= $telefono; ?>" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 
 	<!-- Bot�n de envio de formulario -->
@@ -152,6 +164,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</div>
 	<!-- FIN Bot�n de envio de formulario -->
+
+
 </form>
 <!-- ============================================================== -->
 <!-- End PAge Content -->
