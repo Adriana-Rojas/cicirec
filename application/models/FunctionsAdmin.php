@@ -4,10 +4,10 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 Juan Carlos Escobar Baquero
- Correo electrónico:         jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:                  Funciones de selección a las tablas de administración, en donde hay interacción con más de una tabla 
+ Correo electrï¿½nico:         jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:                  Funciones de selecciï¿½n a las tablas de administraciï¿½n, en donde hay interacciï¿½n con mï¿½s de una tabla 
  */
 class FunctionsAdmin extends CI_Model
 {
@@ -32,28 +32,28 @@ class FunctionsAdmin extends CI_Model
                 return true;
             } else {
                 
-                // Obtengo id del módulo
+                // Obtengo id del mï¿½dulo
                 $idModulo = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODULO", "ID", "PAGINA", $mainPage);
                 if ($idModulo == '') {
                     // Verifico con final
                     $idModulo = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODULO", "ID", "PAGINA", $mainPage . "/");
                     if ($idModulo == '') {
-                        // Obtengo el id a través de las funciones
+                        // Obtengo el id a travï¿½s de las funciones
                         $idModulo = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODFUNCIONES", "ID_MODULO", "PAGINA", $mainPage);
                         if ($idModulo == '') {
-                            // Obtengo el id a través de las funciones
+                            // Obtengo el id a travï¿½s de las funciones
                             $idModulo = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODFUNCIONES", "ID_MODULO", "PAGINA", $mainPage . "/");
                         }
                     }
                 }
-                // Valido información de acuerdo al rol
+                // Valido informaciï¿½n de acuerdo al rol
                 if ($idModulo != '') {
                     // echo " <center>------------ ---------------- --------------------- ------------------".$idModulo." ------------ ---------------- --------------------- ------------------</center>";
                     // Obtengo id del perfil
                     $idRolPer = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_USUROLPER", "ID_ROLPERFIL", "ID_USUARIO", $this->session->userdata('usuario'));
                     // echo " <center>------------ ---------------- --------------------- ------------------".$this->session->userdata ( 'usuario' )." ------------ ---------------- --------------------- ------------------</center>";
                     // echo " <center>------------ ---------------- --------------------- ------------------".$idRolPer." ------------ ---------------- --------------------- ------------------</center>";
-                    // Verifico la cantidad de la relación entre el módulo y el perfil
+                    // Verifico la cantidad de la relaciï¿½n entre el mï¿½dulo y el perfil
                     $cantidad = $this->FunctionsGeneral->getQuantityFieldFromTable("ADM_MODROLPER", "ID_MODULO", $idModulo, "ID_ROLPERFIL", $idRolPer);
                     if ($cantidad > 0) {
                         // echo " <center>------------ ---------------- --------------------- ------------------".$cantidad." ------------ ---------------- --------------------- ------------------</center>";
@@ -144,7 +144,7 @@ class FunctionsAdmin extends CI_Model
         $return = '';
         $valida = 0;
         foreach ($submenu as $value) {
-            // Menú único
+            // Menï¿½ ï¿½nico
             if ($ruta == $value->PAGINA) {
                 $selected = "selected";
                 $active = "active";
@@ -216,7 +216,7 @@ class FunctionsAdmin extends CI_Model
         $return = '';
         $valida = 0;
         foreach ($submenu as $value) {
-            // Menú único
+            // Menï¿½ ï¿½nico
             if ($ruta == $value->PAGINA) {
                 $selected = "selected";
                 $active = "active";
@@ -279,11 +279,11 @@ class FunctionsAdmin extends CI_Model
          * Rutina para obtener la ruta actual en la cual se encuentra el usuario navegando
          */
         
-        // Creo arreglos para guardar la información
+        // Creo arreglos para guardar la informaciï¿½n
         $data = array();
         $nomModule = array();
         $nomModuleFather = array();
-        // Busco el nombre de la página actual
+        // Busco el nombre de la pï¿½gina actual
         $this->db->from('ADM_MODULO');
         $this->db->where('PAGINA', $route);
         $query = $this->db->get();
@@ -394,17 +394,20 @@ class FunctionsAdmin extends CI_Model
         }
     }
 
-    public function selectMunicipiosFromDepartamento($idDepartamento)
+    public function selectMunicipiosFromDepartamento($idDepartamento) 
     {
         /**
-         * Selecciono los valores actuales de la tabla ADM_MUNICIPIO
+         * Selecciono los valores actuales de la tabla ADM_MUNICIPIO, cuando selecciona departamento
          */
+		echo "<script>console.log('Console: " . $idDepartamento . "' );</script>";
         $this->db->where('ID_DEPARTAMENTO', $idDepartamento);
         $this->db->where('ESTADO', 'S');
         $this->db->order_by('NOMBRE', 'asc');
         $tipoUbicacion = $this->db->get('ADM_MUNICIPIO');
         if ($tipoUbicacion->num_rows() > 0) {
+			//echo "<script>console.log('tipoUbicacion: " . $tipoUbicacion->result() . "' );</script>";
             return $tipoUbicacion->result();
+			
         }
     }
 
@@ -425,7 +428,7 @@ class FunctionsAdmin extends CI_Model
     public function selectEmpresaAliada()
     {
         /**
-         * Seleccciona los diferentes usuarios que están asociados al grupo de la tabla $tabla
+         * Seleccciona los diferentes usuarios que estï¿½n asociados al grupo de la tabla $tabla
          */
         $sql = "select ADM_ALIADA.ID, 
     				  ADM_ALIADA.EMPRESA, 
@@ -449,7 +452,7 @@ class FunctionsAdmin extends CI_Model
     public function selectUsersFromProfile($perfil)
     {
         /**
-         * Seleccciona los diferentes usuarios que están asociados al grupo de la tabla $tabla
+         * Seleccciona los diferentes usuarios que estï¿½n asociados al grupo de la tabla $tabla
          */
         $sql = "
             SELECT
