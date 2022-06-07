@@ -61,7 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group ">
 						<label class="col-md-12" for="empresa">Empresa aliada* </label>
 						<div class="col-md-12">
-							<select id="empresa" class="form-control" data-live-search="true" name="empresa">
+							<select class="form-control" id="empresa" name="empresa" data-live-search="true">
 								<option value="">--- Seleccione una opci&oacute;n ---</option>
 								<?php
 								if ($listaEmpresas != null) {
