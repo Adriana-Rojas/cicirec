@@ -183,7 +183,7 @@ class OrdersConfigurationElements extends CI_Controller
                 // Listado de proveedores
                 $data['listaProveedores'] = $this->FunctionsGeneral->selectValoresListaTabla("ORD_PROVEEDOR", 'DESC');
                 $data['providers'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "ID_PROVEEDOR", $id);
-                ;
+				echo "<script>console.log('Console: " .$data['providers'] . "' );</script>";
                 // Lista de grupos
                 $data['listaGrupo'] = $this->FunctionsGeneral->selectValoresListaTabla("ORD_GRUELEM", 'DESC');
                 $data['grupo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "ID_GRUELEM", $id);

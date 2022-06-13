@@ -279,9 +279,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-12">
                                     	<input type="text" class="form-control" id="codigo" name="codigo" 
                                     	               <?php if ($tipoOrden!=INTERCONSULTAS) {
-                                    	                   ?>data-mask="9999999" <?php }else{?>data-mask="999999"<?php }?> 
+                                    	                   ?>data-mask="9999999" <?php }else{?>data-mask="9999999"<?php }?> 
                                     	               value="<?= $codigo ?>" <?php if ($tipoOrden!=INTERCONSULTAS) {
-                                    	                   ?> placeholder="Ej. 9999999" <?php }else{?> placeholder="Ej. 999999"<?php }?> >
+                                    	                   ?> placeholder="Ej. 9999999" <?php }else{?> placeholder="Ej. 9999999"<?php }?> >
 	                                    
 	                                    <div class="form-control-feedback" > </div>
                                     </div>
