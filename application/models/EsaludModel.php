@@ -54,7 +54,8 @@ class EsaludModel extends CI_Model {
     	if($consulta->num_rows()>0){
     		$resultado = $consulta->row();
     		$return =$resultado->$campo;
-    		return $return;
+           // echo $return;
+    	   return $return;
     	}
     }
     

@@ -1509,10 +1509,12 @@ class OrdersAppOrder extends CI_Controller
             $this->session->set_userdata('id', $id);
             
             $data['id'] =  $id;
+			echo "<script>console.log('Entro if: "  .$id. "' );</script>";
             
             $valorValidacion=$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_ADMISIONES","ID_AMSION","ID_AMSION",$id,"ACTIVO_ADM",0);
             
             if ($valorValidacion==''){
+				echo "<script>console.log('Entro if: "  . "' );</script>";
                 
                 // Pinto las vistas adicionales a travos de la funcion pintaComun del helper hospitium
                 $mainPage = $this->session->userdata('pagina');
@@ -1682,6 +1684,7 @@ class OrdersAppOrder extends CI_Controller
                 // Pinto el final de la pogina (poginas internas)
                 showCommonEnds($this, null, null);
             }else{
+				echo "<script>console.log('Entro else: "  . "' );</script>";
                 $mainPage = "MainApp/board/";
                 // Redirecciono para cambio de clave
                 $redirect = $mainPage;
@@ -1691,6 +1694,7 @@ class OrdersAppOrder extends CI_Controller
             }
             
         } else {
+			echo "<script>console.log('Entro else: "  . "' );</script>";
             // Retorno a la pogina principal
             header("Location: " . base_url());
         }
