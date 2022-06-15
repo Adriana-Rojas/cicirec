@@ -168,14 +168,13 @@ if($clase=='success'){
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-	<!--<section id="wrapper" class="login-register login-sidebar" style="background-image:url(<?= base_url()?>assets/images/background/login-register.png);">
-      -->
-    <section id="wrapper" class="login-register login-sidebar" >
+	<section id="wrapper" class="login-register login-sidebar" style="background-image:url(<?= base_url()?>assets/images/background/imgfondo.JPG);">
+      
         <div class="login-box card">
             <div class="card-body">
                 <form class="form-horizontal " id="loginform" action="<?= base_url()?>Login" method="post" autocomplete="off">
                     <a href="javascript:void(0)" class="text-center db">
-                    <!--	<img src="<?= base_url()?>assets/images/logoCirec.png" alt="Home" />-->
+                    	<img src="<?= base_url()?>assets/images/logo.svg" alt="Home" width="80%"  />
                     	
                     </a>
                     <div class="form-group m-t-40">
