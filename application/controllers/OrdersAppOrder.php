@@ -429,7 +429,7 @@ class OrdersAppOrder extends CI_Controller
 
 
             if ($opcion == null) {
-                // Primera orden
+                // Primera orden // aca es el arbol
                 $data['arbol'] = $this->OrdersModel->selectTreeInformation($route, 0, 'nestable', $this->session->userdata('proceso'));
                 $this->load->view('orders/process/boardCreateOrder', $data);
             } else {

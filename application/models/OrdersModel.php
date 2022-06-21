@@ -1646,12 +1646,13 @@ class OrdersModel extends CI_Model {
 					// Configuraci�n
 					$nestable .= '
 					<li class="dd-item" data-id="TO_' . $a->ID . '">
-			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
+			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: blue;"> ' . $a->NOMBRE . ' </div>
 			            	' . $anidado . '
 		            </li>';
 				} else {
 					// Valido si se tiene la relaci�n creada de PRoceso y Tipo de orden
 					$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields ( "ORD_TORDPRO", "ID", "ID_TIPOORDEN", $a->ID, "ID_PROCESO", $proceso );
+					echo $idTordPro." ";
 					if ($idTordPro != '') {
 					    // Debo validar adicionalmente que exista como m�nimo el estado ordenar
 						$idTordProEst=$this->FunctionsGeneral->getFieldFromTableNotIdFields ( "ORD_TORDPROEST", "ID", "ID_TORDPRO", $idTordPro, "ID_ESTADO", ORDER_STATE );
