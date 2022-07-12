@@ -2011,6 +2011,8 @@ class OrdersAppOrder extends CI_Controller
             // Obtengo ide del valor del Tipo de Orden
             $tipoOrden = $this->encryption->decrypt($this->security->xss_clean($this->input->post('tipoOrden')));
             $observacion=$this->encryption->encrypt($this->security->xss_clean($this->input->post('observacion')));
+			$adjunto1="1";
+			$adjunto2="1";
             // Campos adicionales
             $campo1 = $this->security->xss_clean($this->input->post('campo1'));
             $campo2 = $this->security->xss_clean($this->input->post('campo2'));
@@ -2116,7 +2118,7 @@ class OrdersAppOrder extends CI_Controller
             // Obtengo relacion entre proceso y tipo de orden
             $tordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $tipoOrden, "ID_PROCESO", $this->session->userdata('proceso'));
             // Realizo el insert de la orden
-            $idOrden = $this->OrdersModel->insertOrderBody($encabezado, $tordPro, $this->security->xss_clean($this->input->post('cie10')), $this->security->xss_clean($this->input->post('causa')), $this->encryption->encrypt($this->security->xss_clean($this->input->post('diagnostico'))), $consecutivoOrden, $predecesora, $this->security->xss_clean($this->input->post('codigo')), $this->security->xss_clean($this->input->post('cantidad')), $observacion, $cotizacion, $this->session->userdata('usuario'), $ciudad, $departamento);
+            $idOrden = $this->OrdersModel->insertOrderBody($encabezado, $tordPro, $this->security->xss_clean($this->input->post('cie10')), $this->security->xss_clean($this->input->post('causa')), $this->encryption->encrypt($this->security->xss_clean($this->input->post('diagnostico'))), $consecutivoOrden, $predecesora, $this->security->xss_clean($this->input->post('codigo')), $this->security->xss_clean($this->input->post('cantidad')), $observacion, $cotizacion, $this->session->userdata('usuario'),$adjunto1,$adjunto2);
 
 
             // 3. Corro el consecutivo de la orden

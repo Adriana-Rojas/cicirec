@@ -712,7 +712,7 @@ class OrdersModel extends CI_Model {
 		$this->db->insert ( 'ORD_ENCORDEN', $data );
 		return $consecutivo;
 	}
-	public function insertOrderBody($idEncOrden, $idTordPro, $cie10, $causa, $diagnostico, $cons, $idOrdenAnterior, $actividad, $cantidad, $observacion, $idCotizacion,$usuario) {
+	public function insertOrderBody($idEncOrden, $idTordPro, $cie10, $causa, $diagnostico, $cons, $idOrdenAnterior, $actividad, $cantidad, $observacion, $idCotizacion,$usuario,$adjunto1,$adjunto2) {
 		
 		/**
 		 * Se inserta la informaci�n de la tabla ORD_ORDEN
@@ -737,7 +737,10 @@ class OrdersModel extends CI_Model {
 				'UCREA' => $usuario,
 				'FCREA' => cambiaHoraServer (),
 				'UMOD' => $usuario,
-				'FMOD' => cambiaHoraServer () 
+				'FMOD' => cambiaHoraServer (),
+				'ADJUNTO1' => $adjunto1,
+				'ADJUNTO2' => $adjunto2
+
 		);
 		// Realizo el insert sobre la base de datos en la tabla ORD_ORDEN
 		$this->db->insert ( 'ORD_ORDEN', $data );
