@@ -124,7 +124,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form class=" form-horizontal" role="form" action="<?= base_url()?>OrdersAppOrder/saveRegister" 
 		                id="form_sample_3" 
 		                method="post"       
-		                autocomplete="off">
+		                autocomplete="off"
+						enctype="multipart/form-data">
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-4 col-xlg-3 col-md-5">
@@ -1118,7 +1119,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             
                         </div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">
+											<i class="fa fa-hospital-o   fa-2x"></i> Iinformaci&oacute;n
+											cl&iacute;nica<small> Datos espec&iacute;ficos</small>
+										</h5>
 
+										<div class="form-group ">
+											<label class="col-md-12" for="adjunto1">Orden m&eacute;dica * </label>
+											<div class="col-md-12">
+												<input type="file" class="form-control " id="adjunto1"
+													name="adjunto1" >
+												<div class="form-control-feedback"></div>
+											</div>
+										</div>
+										<div class="form-group " >
+											<label class="col-md-12" for="adjunto2">Resumen de historia
+												cl&iacute;nica </label>
+											<div class="col-md-12">
+												<input type="file" class="form-control " id="adjunto2"
+													name="adjunto2" >
+												<div class="form-control-feedback"></div>
+											</div>
+										</div>
+										
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
                         <div class="row">
 				                	<div class="col-sm-12">
 				                		<?php 
@@ -1134,7 +1167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										}
 				                		?>
 			                                                <i class="fa fa-arrow-left"></i>
-			                                                <span class="hidden-xs"> Retornar</span>
+			                                                <span class="hidden-xs"> Retornarr</span>
 			                                            </a>
 			                            <button type="submit" class="btn btn-info btn-rounded waves-effect waves-light m-r-10 pull-right">Enviar</button>
 				                		<input type="hidden" name="id" id="id" value="<?= $id;?>">
@@ -1188,4 +1221,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	            <!-- End PAge Content -->
 	            <!-- ============================================================== -->
                 
-            
