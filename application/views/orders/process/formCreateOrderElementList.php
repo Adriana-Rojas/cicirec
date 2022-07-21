@@ -1101,30 +1101,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								cl&iacute;nica<small> Datos espec&iacute;ficos</small>
 							</h5>
 							<br>
-					<div class="clearfix" style="text-align:center;">
-						<center>
-							<?php
-							//if ($adjunto1 != '') {
-							?>
-								<a href="<?= base_url() . STOKEPRICE_FOLDER . '9_OM_20220715151642.pdf'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-									<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Resumen de historia cl&iacute;nica</span>
-								</a>
-							<?php
-							//}
-							?>
-							<?php
-							if ($adjunto2 != '') {
-							?>
-								<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-									<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Orden m&eacute;dica</span>
-								</a>
+							<div class="clearfix" style="text-align:center;">
+								<center>
+									<?php
+									//if ($adjunto1 != '') {
+									?>
+									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-14 Formato de toma de medidas Movilidad.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Toma de Medidas Movilidad</span>
+									</a>
+									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10 CONFIGURACIÓN DE PROTESIS MIEMBRO SUPERIOR V1 FORMULARIO.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Prótesis Miembro Superior</span>
+									</a>
+									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9 CONFIGURACIÓN DE PROTESIS MIEMBRO INFERIOR.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Prótesis Miembro Inferior</span>
+									</a>
+									<?php
+									//}
+									?>
+									<?php
+									if ($adjunto2 != '') {
+									?>
+										<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Orden m&eacute;dica</span>
+										</a>
 
-							<?php
-							}
-							?>
-						</center>
-					</div>
-					<br>
+									<?php
+									}
+									?>
+								</center>
+							</div>
+							<br>
 							<div class="form-group ">
 								<label class="col-md-12" for="adjunto1">Orden m&eacute;dica * </label>
 								<div class="col-md-12">
