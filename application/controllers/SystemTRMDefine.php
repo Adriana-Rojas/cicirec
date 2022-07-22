@@ -59,25 +59,23 @@ class SystemTRMDefine extends CI_Controller
 				$response = $response->return;
 				//Se verifica si la respuesta del WebService es correcta
 				if ($response->success) {
-					
-				//	echo "Fechaa:  $date<br/>";					
-					$tms=(int)$response->value;
-				//	echo "Tipo de cambio:  $tms<br/>";
+
+					//	echo "Fechaa:  $date<br/>";					
+					$tms = (int)$response->value;
+					//	echo "Tipo de cambio:  $tms<br/>";
 				} else {
 				}
 			} catch (Exception $e) {
 				header("Location: URL");
 			}
 
-			
+
 			// Cargo los parametros
 			// Cargo la lista de paises
 			$data['valoranterior'] = $this->FunctionsGeneral->getFieldFromTable("ADM_TRM", "VALOR", 1);
 			$data['valor'] = $tms;
 			//$data['valor'] = $this->FunctionsGeneral->getFieldFromTable("ADM_TRM", "VALOR", 1);
-			
-			echo "<script>console.log('Console trm: " . $data['valor'] . "' );</script>";
-
+			//echo "<script>console.log('ConsoleI trm: " . $data['valor'] . "' );</script>";
 			// Pinto plantilla principal
 			$this->load->view('system/trmDefine/board', $data);
 
@@ -100,12 +98,12 @@ class SystemTRMDefine extends CI_Controller
 		 * Guardo la informaci�n de los parametros dentro del sistema
 		 */
 		$mainPage = "SystemTRMDefine/board";
-		echo "<script>console.log('Console guardo : " . "' );</script>";
+		//echo "<script>console.log('ConsoleU guardo : " . "' );</script>";
 		if ($this->FunctionsAdmin->validateSession($mainPage)) {
 			$id = 1;
 			// ----------------------- Par�metros generales -------------------------- //
 			// Actualizo nombre
-			$this->FunctionsGeneral->updateByID("ADM_TRM", "VALOR", $this->security->xss_clean($this->input->post('valor'),$this->input->post('valoranterior')), $id, $this->session->userdata('usuario'));
+			$this->FunctionsGeneral->updateByID("ADM_TRM", "VALOR", $this->security->xss_clean($this->input->post('valor'), $this->input->post('valoranterior')), $id, $this->session->userdata('usuario'));
 
 			// Pinto mensaje para retornar a la aplicaci�n informando que no hay informaci�n para la consulta realizada
 			$this->session->set_userdata('auxiliar', "parametersOk");
@@ -125,7 +123,7 @@ class SystemTRMDefine extends CI_Controller
 		 * Guardo la informaci�n de los parametros dentro del sistema
 		 */
 		$mainPage = "SystemTRMDefine/board";
-		echo "<script>console.log('Console entro a consulta: "  . "' );</script>";
+		//echo "<script>console.log('ConsoleY entro a consulta: "  . "' );</script>";
 		if ($this->FunctionsAdmin->validateSession($mainPage)) {
 			// ----------------------- Par�metros generales -------------------------- //
 			$date = isset($_GET['date']) ? $_GET['date'] : date("2022-05-04");
@@ -145,16 +143,16 @@ class SystemTRMDefine extends CI_Controller
 				$response = $response->return;
 				//Se verifica si la respuesta del WebService es correcta
 				if ($response->success) {
-					
-					echo "Fechaa:  $date<br/>";					
-					$tms=(int)$response->value;
+
+					echo "Fechaa:  $date<br/>";
+					$tms = (int)$response->value;
 					echo "Tipo de cambio:  $tms<br/>";
 				} else {
 				}
 			} catch (Exception $e) {
 			}
 
-			echo "<script>console.log('Console: " .  $tms . "' );</script>";
+			//echo "<script>console.log('ConsoleT: " .  $tms . "' );</script>";
 
 			// Cargo los parametros
 			// Cargo la lista de paises
@@ -167,7 +165,7 @@ class SystemTRMDefine extends CI_Controller
 		} else {
 			// Retorno a la p�gina principal
 			header("Location: " . base_url());
-			echo "<script>console.log('Console eror : " .  $tms . "' );</script>";
+			//echo "<script>console.log('ConsoleR eror : " .  $tms . "' );</script>";
 		}
 	}
 }

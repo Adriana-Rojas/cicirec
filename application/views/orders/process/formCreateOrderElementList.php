@@ -472,7 +472,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							</div>
 						</div>
 						<div class="form-group pais">
-							<label class="col-md-12" for="ciudad">Ciudad (Municipio)* </label>
+							<label class="col-md-12" for="ciudad">Ciudad  (Municipio)* </label>
 							<div class="col-md-12">
 								<select class="form-control" id="ciudad" name="ciudad">
 									<option value="">--- Seleccione una opci&oacute;n ---</option>

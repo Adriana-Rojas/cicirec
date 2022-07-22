@@ -399,13 +399,13 @@ class FunctionsAdmin extends CI_Model
         /**
          * Selecciono los valores actuales de la tabla ADM_MUNICIPIO, cuando selecciona departamento
          */
-		echo "<script>console.log('Console: " . $idDepartamento . "' );</script>";
+		//echo "<script>console.log('ConsoleW: " . $idDepartamento . "' );</script>";
         $this->db->where('ID_DEPARTAMENTO', $idDepartamento);
         $this->db->where('ESTADO', 'S');
         $this->db->order_by('NOMBRE', 'asc');
         $tipoUbicacion = $this->db->get('ADM_MUNICIPIO');
         if ($tipoUbicacion->num_rows() > 0) {
-			//echo "<script>console.log('tipoUbicacion: " . $tipoUbicacion->result() . "' );</script>";
+			//echo "<script>console.log('tipoUbicacion6: " .$tipoUbicacion->result() . "' );</script>";
             return $tipoUbicacion->result();
 			
         }
@@ -477,4 +477,3 @@ class FunctionsAdmin extends CI_Model
         }
     }
 }
-?>

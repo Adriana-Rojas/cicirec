@@ -26,7 +26,7 @@ if ($listaLista != null) {
 if ($paciente != null) {
 	foreach ($paciente as $value) {
 		$idResponsable = $value->ID_RESPONSABLE;
-	//	$idEmpresaadriana = $value->ID_RESPONSABLEADRIANA;
+		//	$idEmpresaadriana = $value->ID_RESPONSABLEADRIANA;
 		$idPaciente = $value->TP_ID_PCTE;
 		$docPaciente = $value->NUM_ID_PCTE;
 		$empresaResponsable = $value->RESPONSABLE;
@@ -52,13 +52,13 @@ if ($datos[2] != '') {
 $direccion = $datos[3];
 $municipio = $datos[4];
 $ideps = $datos[7];
-echo "<script>console.log('Console: " . $value->NUM_ID_PCTE . "' );</script>";
+//echo "<script>console.log('ConsoleQ: " . $value->NUM_ID_PCTE . "' );</script>";
 $correo = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "CORREO", "DOCUMENTO", $value->NUM_ID_PCTE));
 
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_CONTACTOUSUARIO", "ID_CONVENIO", "ID_ENCORDEN", $idEncOrden);
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_ALIADA", "EMPRESA", "ID", $alida);
 $empresaAliadaNombre = " (" . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "NOM_APB", "ID_APB", $alida) . " )";
-$id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_APB","NOM_APB","'NUEVA EPS S.A.'");
+$id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "ID_APB", "NOM_APB", "'NUEVA EPS S.A.'");
 //echo 'idapb'.$id_apb;
 
 ?>
@@ -1066,9 +1066,9 @@ $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_
 					<?php
 					//if ($idResponsable == NEPS) {
 					?>
-						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cotizacion" role="tab"><span class="hidden-sm-up"><i class="fa fa-usd "></i></span> <span class="hidden-xs-down">Relacionar cotizaci&oacute;n</span></a></li>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cotizacion" role="tab"><span class="hidden-sm-up"><i class="fa fa-usd "></i></span> <span class="hidden-xs-down">Relacionar cotizaci&oacute;n</span></a></li>
 					<?php
-				//	}
+					//	}
 					?>
 
 
@@ -1609,110 +1609,110 @@ $id_apb =$this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB","ID_
 
 					<?php
 					//if ($idResponsable == NEPS) {
-						//Defino condici�n 
-						$condicion = " AND TIPODOC='" . $idPaciente . "' and DOCUMENTO='" . $docPaciente . "'";
-						
-						$listaCotizaciones = $this->StokePriceModel->selectListStokePriceFromRequest($condicion, 2);
+					//Defino condici�n 
+					$condicion = " AND TIPODOC='" . $idPaciente . "' and DOCUMENTO='" . $docPaciente . "'";
+
+					$listaCotizaciones = $this->StokePriceModel->selectListStokePriceFromRequest($condicion, 2);
 
 
 					?>
-						<div class="tab-pane " id="cotizacion" role="tabpanel">
-							<div class="p-20">
-								<h3>Relacionar cotizaci&oacute;n.</h3>
-								<p align="justify">
-									Relacionar cotizaci&oacute;n a la orden del paciente. A continuaci&oacute;n, se listar&aacute; las cotizaciones relacionadas al paciente con la empresa <b><?= $empresaResponsable ?></b>, que tengan relaci&oacute;n con el producto, servicio o elemento ordenado y <span style="color: red;"> adicionalmente se encuentren autorizadas (Seguimiento de cotizaciones).</span></p>
-							</div>
+					<div class="tab-pane " id="cotizacion" role="tabpanel">
+						<div class="p-20">
+							<h3>Relacionar cotizaci&oacute;n.</h3>
+							<p align="justify">
+								Relacionar cotizaci&oacute;n a la orden del paciente. A continuaci&oacute;n, se listar&aacute; las cotizaciones relacionadas al paciente con la empresa <b><?= $empresaResponsable ?></b>, que tengan relaci&oacute;n con el producto, servicio o elemento ordenado y <span style="color: red;"> adicionalmente se encuentren autorizadas (Seguimiento de cotizaciones).</span></p>
+						</div>
 
-							<div class="card">
-								<div class="card-body">
-									<div class="table-responsive">
-										<table id="myTable" class="display nowrap table table-hover table-striped table-bordered">
-											<thead>
-												<tr>
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="myTable" class="display nowrap table table-hover table-striped table-bordered">
+										<thead>
+											<tr>
 
-													<th>Cotizaci&oacute;n</th>
-													<th>Fecha</th>
-													<th>Valor</th>
-													<th>Relacionada</th>
+												<th>Cotizaci&oacute;n</th>
+												<th>Fecha</th>
+												<th>Valor</th>
+												<th>Relacionada</th>
 
-													<th>Acci&oacute;n</th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php
+												<th>Acci&oacute;n</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
 											//	$idempresa = $this->StokePriceModel->getPatientInformationEmpresa($responsable);
 											//	echo $value->IDEMPRESAADRIANA;
-												if ($listaCotizaciones != null) {
-													$i = 1;
-													//$codigo
-													foreach ($listaCotizaciones as $value) {
-														//echo 'iips'.$ideps;	
-													
-														//if ($value->ID_EMPRESA == $ideps) {
+											if ($listaCotizaciones != null) {
+												$i = 1;
+												//$codigo
+												foreach ($listaCotizaciones as $value) {
+													//echo 'iips'.$ideps;	
 
-															//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
-															if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {
-																//Verifico que la cotizaci�n tenga el seguimiento y este aprobado (autorizado)
-																if ($value->ID_SEGUIMIENTO == 46) {
-																	//Verifico si la cotizaci�n est� relacionada con la orden
-																	if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_ORDEN", "ID_COTIZACION", $value->ID, "ID", $this->encryption->decrypt($idOrden)) > 0) {
-																		$bandera = ACTIVO_ESTADO;
-																	} else {
-																		$bandera = null;
-																	}
-												?>
-																	<tr>
+													//if ($value->ID_EMPRESA == $ideps) {
 
-																		<td align="right"><?= $value->CONSECUTIVO; ?></td>
-																		<td><?= $value->FECHA ?></td>
-																		<td align="right"><?php
-																							if ($value->TIPODOC != '') {
-																								echo "$ " . numberFormatEvolution($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
-																							} else {
-																								echo "----";
-																							}
-
-
-
-																							?>
-
-																		</td>
-																		<td>
-
-																			<span class="<?= validaEstadosGenerales($bandera, 'CLASE') ?>">
-																				<?= validaEstadosGenerales($bandera, 'NOMBRE') ?>
-																			</span>
-																		</td>
-
-																		<td>
-																			<?php
-																			if ($bandera != ACTIVO_ESTADO) {
-																			?>
-																				<a href="<?= base_url() . "OrdersAppOrder/stokePriceRelation/" . $id . "/" . $idOrden . "/" . $this->encryption->encrypt($value->ID); ?>" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-																					<i class="fa fa-usd"></i>
-																				</a>
-																			<?php
-																			}
-																			?>
-
-																		</td>
-																	</tr>
-												<?php
-																}
+													//Verifico si la cotizaci�n tiene relaci�n con el c�digo del producto, servicio o elemento de la orden
+													if ($this->StokePriceModel->selectListFromStokePriceForCompare($value->ID, $codigo) > 0) {
+														//Verifico que la cotizaci�n tenga el seguimiento y este aprobado (autorizado)
+														if ($value->ID_SEGUIMIENTO == 46) {
+															//Verifico si la cotizaci�n est� relacionada con la orden
+															if ($this->FunctionsGeneral->getQuantityFieldFromTable("ORD_ORDEN", "ID_COTIZACION", $value->ID, "ID", $this->encryption->decrypt($idOrden)) > 0) {
+																$bandera = ACTIVO_ESTADO;
+															} else {
+																$bandera = null;
 															}
-														//}
-														$i++;
-													} //end foreach
-												} //end if
-												?>
-											</tbody>
+											?>
+															<tr>
 
-										</table>
-									</div>
+																<td align="right"><?= $value->CONSECUTIVO; ?></td>
+																<td><?= $value->FECHA ?></td>
+																<td align="right"><?php
+																					if ($value->TIPODOC != '') {
+																						echo "$ " . numberFormatEvolution($value->TOTAL - ($value->TOTAL * ($value->DESCUENTO / 100)));
+																					} else {
+																						echo "----";
+																					}
+
+
+
+																					?>
+
+																</td>
+																<td>
+
+																	<span class="<?= validaEstadosGenerales($bandera, 'CLASE') ?>">
+																		<?= validaEstadosGenerales($bandera, 'NOMBRE') ?>
+																	</span>
+																</td>
+
+																<td>
+																	<?php
+																	if ($bandera != ACTIVO_ESTADO) {
+																	?>
+																		<a href="<?= base_url() . "OrdersAppOrder/stokePriceRelation/" . $id . "/" . $idOrden . "/" . $this->encryption->encrypt($value->ID); ?>" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+																			<i class="fa fa-usd"></i>
+																		</a>
+																	<?php
+																	}
+																	?>
+
+																</td>
+															</tr>
+											<?php
+														}
+													}
+													//}
+													$i++;
+												} //end foreach
+											} //end if
+											?>
+										</tbody>
+
+									</table>
 								</div>
 							</div>
-
 						</div>
+
+					</div>
 					<?php
 					//}
 					?>

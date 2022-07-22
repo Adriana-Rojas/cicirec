@@ -147,6 +147,7 @@ class SystemPartnerCompany extends CI_Controller
 
 				$data['listaCiudad'] = $this->FunctionsAdmin->selectMunicipiosFromDepartamento($this->FunctionsGeneral->getFieldFromTable("ADM_MUNICIPIO", "ID_DEPARTAMENTO", $municipio));
 				$data['ciudad'] = $municipio;
+				//echo "<script> console.log('Consolekmunicipioo: " . $municipio . "');	</script>";
 				$data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "CORREO", $id);
 				$data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "TELEFONO", $id);
 
