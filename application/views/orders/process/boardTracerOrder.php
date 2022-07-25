@@ -1401,8 +1401,10 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 													echo "<br>" . $this->encryption->decrypt($value->OBSERVACION);
 												} else {
 
+													
 													$idSolicitud = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID_SOLICITUD", "CONSECUTIVO", $value->ID_COTI);
-													//echo "<br> COTIZACI&Oacute;N N&Uacute;MERO: ".$value->ID_COTI.
+													$idcotizacion = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID", "CONSECUTIVO", $value->ID_COTI);
+													//echo "<br> idcotizacion: ".$idcotizacion.
 													"<br>" . $this->encryption->decrypt($value->OBSERVACION);
 													$tempo = $this->encryption->decrypt($value->AUTORIZACION);
 													if ($tempo != '') {
@@ -1519,7 +1521,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 									?>
 										<div class="row">
 											<div class="col-sm-12">
-											<?php $id=6 ?>
+											<?php $id=$idcotizacion ?>
 												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?=  $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
 													<span class="hidden-xs"> Ver Cotización</span>
 												</a>
