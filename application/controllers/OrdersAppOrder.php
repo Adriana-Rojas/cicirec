@@ -2013,7 +2013,8 @@ class OrdersAppOrder extends CI_Controller
             $observacion=$this->encryption->encrypt($this->security->xss_clean($this->input->post('observacion')));
 			$adjunto1 = $this->input->post('adjunto1');
             echo $adjunto1;
-			$adjunto2="1";
+			$adjunto2 = $this->input->post('adjunto2');
+            echo $adjunto2;
             // Campos adicionales
             $campo1 = $this->security->xss_clean($this->input->post('campo1'));
             $campo2 = $this->security->xss_clean($this->input->post('campo2'));
@@ -2070,7 +2071,39 @@ class OrdersAppOrder extends CI_Controller
             } else {
                 $adjunto1 = null;
             }
+            $adjunto2 = null;
             
+            if (! empty($_FILES['adjunto2']['name'])) {
+                // Archivo 2
+                $mi_archivo = 'adjunto2';
+                $config['upload_path'] = STOKEPRICE_FOLDER . "";
+                if (! is_dir($config['upload_path'])) {
+                    mkdir($config['upload_path'], 777);
+                }
+                $config['file_name'] =  "_HC_" . date('YmdHis');
+                $config['allowed_types'] = "pdf";
+               
+                $this->load->library('upload', $config);
+                $tempo = '';
+                $this->upload->initialize($config);
+                if (! $this->upload->do_upload($mi_archivo)) {
+                    // *** ocurrio un error
+                    $data['uploadError'] = $this->upload->display_errors();
+                    $tempo = $this->upload->display_errors();
+                    $band = false;
+                } else {
+                    $band = true;
+                }
+                if (! $band) {
+                    $adjunto2 = null;
+                } else {
+                    $adjunto2 = $this->encryption->encrypt($config['file_name'] . ".pdf");
+                    ;
+                }
+                $data['uploadSuccess'] = $this->upload->data();
+            } else {
+                $adjunto2 = null;
+            }
 
             echo $this->session->userdata('proceso')." ".$proceso2;
             if($this->session->userdata('proceso')!=$proceso2 && $proceso2!=null){

@@ -1119,14 +1119,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									//}
 									?>
 									<?php
-									if ($adjunto2 != '') {
+									//if ($adjunto2 != '') {
 									?>
-										<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<!--<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
 											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Orden m&eacute;dica</span>
-										</a>
+										</a>-->
 
 									<?php
-									}
+								//	}
 									?>
 								</center>
 							</div>
