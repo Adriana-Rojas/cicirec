@@ -1517,6 +1517,18 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO1", "ID", $idSolicitud));
 											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
 									?>
+										<div class="row">
+											<div class="col-sm-12">
+											<?php $id=6 ?>
+												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?=  $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+													<span class="hidden-xs"> Ver Cotización</span>
+												</a>
+
+											</div>
+											<div class="col-sm-12">
+												<br>
+											</div>
+										</div>
 
 										<?php
 											//echo $adjunto1." ".$adjunto2;
@@ -1544,7 +1556,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											//Cargo informaci�n de la solicitud de cotizaci&oacute;n para los archivos adjuntos
 											//echo "<script>console.log('idSolicitud: " . $idSolicitud . "' );</script>";
 											//echo "<script>console.log('ordenNumero: " . $ordenNumero . "' );</script>";
-											$numeroordenNumero = preg_replace('/[^0-9]/', '', $ordenNumero); 
+											$numeroordenNumero = preg_replace('/[^0-9]/', '', $ordenNumero);
 											//echo "<script>console.log('numeroordenNumero: " . $numeroordenNumero . "' );</script>";
 
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ADJUNTO1", "CONS", $numeroordenNumero));
@@ -1552,7 +1564,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 									?>
 
 										<?php
-											echo $adjunto1." ".$adjunto2;
+											//echo $adjunto1." ".$adjunto2;
 											if ($adjunto1 != '') {
 										?>
 											<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto1; ?>" target="_blank">

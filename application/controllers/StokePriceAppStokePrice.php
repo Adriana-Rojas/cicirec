@@ -1081,6 +1081,8 @@ public function defineElementsListOfProducts($id){
         
         // Valido si la sessión existe en caso contrario saco al usuario
         $mainPage = "StokePriceAppStokePrice/board";
+		
+ echo "<script>console.log('Console: " .$this->encryption->decrypt($id) . "' );</script>";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
             $id = $this->FunctionsGeneral->getFieldFromTable("COT_COTIZACION", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
