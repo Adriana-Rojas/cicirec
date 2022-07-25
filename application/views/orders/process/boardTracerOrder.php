@@ -1540,7 +1540,43 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 										?>
 
 
-									<?php } ?>
+									<?php } else if ($value->ESTADO == 'ORDENAR') {
+											//Cargo informaci�n de la solicitud de cotizaci&oacute;n para los archivos adjuntos
+											//echo "<script>console.log('idSolicitud: " . $idSolicitud . "' );</script>";
+											//echo "<script>console.log('ordenNumero: " . $ordenNumero . "' );</script>";
+											$numeroordenNumero = preg_replace('/[^0-9]/', '', $ordenNumero); 
+											//echo "<script>console.log('numeroordenNumero: " . $numeroordenNumero . "' );</script>";
+
+											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ADJUNTO1", "CONS", $numeroordenNumero));
+											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ADJUNTO2", "CONS", $numeroordenNumero));
+									?>
+
+										<?php
+											//echo $adjunto1." ".$adjunto2;
+											if ($adjunto1 != '') {
+										?>
+											<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto1; ?>" target="_blank">
+												<i class="fa fa-file-pdf-o fa-4x pull-right" style="color: LightSeaGreen;"></i> <span class="hidden-xs"> </span>
+											</a>
+										<?php
+											}
+										?>
+										<?php
+											if ($adjunto2 != '') {
+										?>
+											<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank">
+												<i class="fa fa-file-pdf-o fa-4x pull-right" style="color: SteelBlue;"></i> <span class="hidden-xs"> </span>
+											</a>
+
+										<?php
+											}
+										?>
+
+
+									<?php }
+
+
+									?>
 										</li>
 								<?php
 									} // end foreach
