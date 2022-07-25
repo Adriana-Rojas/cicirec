@@ -1552,7 +1552,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 									?>
 
 										<?php
-											//echo $adjunto1." ".$adjunto2;
+											echo $adjunto1." ".$adjunto2;
 											if ($adjunto1 != '') {
 										?>
 											<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto1; ?>" target="_blank">

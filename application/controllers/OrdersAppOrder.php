@@ -2002,7 +2002,7 @@ class OrdersAppOrder extends CI_Controller
 				if (!is_dir($config['upload_path'])) {
 					mkdir($config['upload_path'], 777);
 				}
-				$config['file_name'] =  "_HC_" . date('YmdHis');
+				$config['file_name'] =  "1_HC_" . date('YmdHis');
 				$config['allowed_types'] = "pdf";
 
 				$this->load->library('upload', $config);
@@ -2019,7 +2019,8 @@ class OrdersAppOrder extends CI_Controller
 				if (!$band) {
 					$adjunto1 = null;
 				} else {
-					$adjunto1 = $this->encryption->encrypt($config['file_name'] . ".pdf");;
+					$adjunto1 = $this->encryption->encrypt($config['file_name'] . ".pdf");
+					//$adjunto1 = $this->$config['file_name'] . ".pdf";
 				}
 				$data['uploadSuccess'] = $this->upload->data();
 			} else {
@@ -2034,7 +2035,7 @@ class OrdersAppOrder extends CI_Controller
 				if (!is_dir($config['upload_path'])) {
 					mkdir($config['upload_path'], 777);
 				}
-				$config['file_name'] =  "_HC_" . date('YmdHis');
+				$config['file_name'] =  "2_HC_" . date('YmdHis');
 				$config['allowed_types'] = "pdf";
 
 				$this->load->library('upload', $config);
@@ -2052,6 +2053,7 @@ class OrdersAppOrder extends CI_Controller
 					$adjunto2 = null;
 				} else {
 					$adjunto2 = $this->encryption->encrypt($config['file_name'] . ".pdf");;
+					//$adjunto2 = $this->$config['file_name'] . ".pdf";
 				}
 				$data['uploadSuccess'] = $this->upload->data();
 			} else {
