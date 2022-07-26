@@ -363,7 +363,7 @@ $registros = 1;
 					<div class="form-group ">
 						<label class="col-md-12" for="adjunto2">Fecha y hora de solictud asegurador</label>
 						<div class="col-md-12">
-							<input type="datetime-local" class="form-control " id="adjunto2"
+							<input type="datetime-local" onclick="" class="form-control " id="adjunto2"
 								name="fechaCotizacion" required>
 							<div class="form-control-feedback"></div>
 						</div>

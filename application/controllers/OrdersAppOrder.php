@@ -1471,6 +1471,7 @@ class OrdersAppOrder extends CI_Controller
 		 */
 		// Valido si la session existe en caso contrario saco al usuario
 		$mainPage = "OrdersAppOrder/board";
+		//echo "<script>console.log('idOrden: " . $this->encryption->decrypt($idOrden) . "' );</script>";
 
 		if ($this->session->userdata('login') == 'SI') {
 			// echo "<center> Proceso: ".$this->session->userdata('proceso')." Brigada: ".$this->session->userdata('brigada')."</center>";

@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <td colspan="3">
+                                                <td colspan="5">
                                                     <?php
                                                 if ($botonesBoard!=null){
 		                                                foreach ($botonesBoard as $value) {

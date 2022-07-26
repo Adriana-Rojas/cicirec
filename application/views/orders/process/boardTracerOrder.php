@@ -1515,7 +1515,6 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 
 										if ($value->ESTADO == 'COTIZAR') {
 											//Cargo informaci�n de la solicitud de cotizaci&oacute;n para los archivos adjuntos
-
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO1", "ID", $idSolicitud));
 											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
 									?>
