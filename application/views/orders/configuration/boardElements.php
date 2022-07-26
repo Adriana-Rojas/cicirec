@@ -145,37 +145,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	</div>
 </div>
-<link href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css" rel="stylesheet">
 
-<script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
-
-
-
-<table id="table" data-toggle="table"  data-pagination="true" data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
-	<thead>
-		<tr>
-			<th data-field="id">ID</th>
-			<th data-field="name">Item Name</th>
-			<th data-field="price">Item Price</th>
-		</tr>
-	</thead>
-</table>
-
-<script>
-	var $table = $('#demo-foo-addrow')
-
-	function refreshTable() {
-		$table.bootstrapTable('refreshOptions', {
-			paginationSuccessivelySize: +$('#paginationSuccessivelySize').val(),
-			paginationPagesBySide: +$('#paginationPagesBySide').val(),
-			paginationUseIntermediate: $('#paginationUseIntermediate').prop('checked')
-		})
-	}
-
-	$(function() {
-		$('.toolbar input').change(refreshTable)
-	})
-</script>
 <!-- ============================================================== -->
 <!-- End PAge Content -->
 <!-- ============================================================== -->
