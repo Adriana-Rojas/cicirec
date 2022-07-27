@@ -30,8 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h4 class="card-title"><?= $board; ?></h4>
 				<h6 class="card-subtitle"></h6>
 				<div class="table-responsive">
-					<!--<table id="table" data-toggle="table"  data-pagination="true">-->
-					<table id="demo-foo-addrow" class="table  table-hover " data-toggle="table" data-pagination="true" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar" class="table-responsive">
+					<table id="demo-foo-addrow" class="table  table-hover " data-page-size="20"  data-toggle="table" data-pagination="true" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar" class="table-responsive">
 						<thead>
 							<tr>
 								<th>Acci&oacute;n</th>
