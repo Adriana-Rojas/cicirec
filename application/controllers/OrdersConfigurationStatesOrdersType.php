@@ -267,7 +267,7 @@ class OrdersConfigurationStatesOrdersType extends CI_Controller {
 					// Pinto la cabecera principal de las p�ginas internas
 					showCommon ( $this->session->userdata ( 'auxiliar' ), $this, $mainPage, null, null );
 					
-					echo $id;
+					//echo $id;
 					/**
 					 * Informaci�n relacionada con la plantilla principal Pinto la pantalla *
 					 */

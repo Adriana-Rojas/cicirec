@@ -1097,8 +1097,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">
-								<i class="fa fa-hospital-o   fa-2x"></i> Iinformaci&oacute;n
-								cl&iacute;nica<small> Datos espec&iacute;ficos</small>
+								<i class="fa fa-file-pdf-o   fa-2x"></i> Formato Toma De Medida  </small>
 							</h5>
 							<br>
 							<div class="clearfix" style="text-align:center;">
@@ -1107,13 +1106,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									//if ($adjunto1 != '') {
 									?>
 									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-14 Formato de toma de medidas Movilidad.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Toma de Medidas Movilidad</span>
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Toma de Medidas Movilidad</span>
 									</a>
 									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10 CONFIGURACIÓN DE PROTESIS MIEMBRO SUPERIOR V1 FORMULARIO.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Prótesis Miembro Superior</span>
-									</a>
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
+									</a>									
 									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9 CONFIGURACIÓN DE PROTESIS MIEMBRO INFERIOR.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Formato de Prótesis Miembro Inferior</span>
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Inferior</span>
 									</a>
 									<?php
 									//}
@@ -1132,15 +1131,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							</div>
 							<br>
 							<div class="form-group ">
-								<label class="col-md-12" for="adjunto1">Orden m&eacute;dica * </label>
+								<label class="col-md-12" for="adjunto1">Información Clínica Antropométrica </label>
 								<div class="col-md-12">
 									<input type="file" class="form-control " id="adjunto1" name="adjunto1">
 									<div class="form-control-feedback"></div>
 								</div>
 							</div>
 							<div class="form-group ">
-								<label class="col-md-12" for="adjunto2">Resumen de historia
-									cl&iacute;nica </label>
 								<div class="col-md-12">
 									<input type="file" class="form-control " id="adjunto2" name="adjunto2">
 									<div class="form-control-feedback"></div>
