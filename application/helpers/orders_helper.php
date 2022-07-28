@@ -593,10 +593,12 @@ if(!function_exists('trafficLightStokePrice')) {
 			$result = floor($segundosTranscurridos / 3600);
 			if($result == 1) {
 				$result .= " Hora";
+			}  else if($result <0){
+				$style = "background-color: red; color: #fff; text-align: center;";
 			} else if($result <= 24){
 				$style = "background-color: green; color: #fff; text-align: center;";
 			}
-			if($result == 0 || $result > 1){
+			if($result == 0 || $result > 1 || $result < 1){
 				$result .= " Horas";
 			}
 		   
@@ -609,7 +611,7 @@ if(!function_exists('trafficLightStokePrice')) {
 				}else if($result > 1){
 					$style = "background-color: red; color: #fff; text-align: center;";
 				}
-				if($result == 0 || $result > 1){
+				if($result == 0 || $result > 1 ){
 					$result .= " Dias";
 				}
 				
