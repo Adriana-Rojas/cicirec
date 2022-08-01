@@ -155,182 +155,179 @@ if ($ordenes != null) {
 		<div class="col-12">
 			<div class="card">
 				<div class="card-body">
+					<div class="table-responsive">
+						<table id="myTable" class="table m-t-30 table-hover ">
+							<thead>
+								<tr>
+									<th>Acci&oacute;n</th>
+									<th>N&uacute;mero de orden</th>
+									<th>Documento</th>
+									<th>Nombres y Apellidos</th>
+									<th>Cliente</th>
+									<th>Ciudad de Atencion</th>
 
-				</div>
+									<th width="18%">Elemento</th>
+									<th>Estado actual</th>
+									<th><i class="	fa fa-calendar"></i> Fecha inicio estado</th>
+									<th><i class="fa fa-calendar"></i> Dias en estado</th>
 
-				<div class="table-responsive">
-					<table id="myTable" class="table m-t-30 table-hover ">
-						<thead>
-							<tr>
-								<th>Acci&oacute;n</th>
-								<th>N&uacute;mero de orden</th>
-								<th>Documento</th>
-								<th>Nombres y Apellidos</th>
-								<th>Cliente</th>
-								<th>Ciudad de Atencion</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+								$i = 0;
+								foreach ($ordenes as $value) {
+									if ($i <= MAX_NOTIFICACIONES_BOARD) {
 
-								<th width="18%">Elemento</th>
-								<th>Estado actual</th>
-								<th><i class="	fa fa-calendar"></i> Fecha inicio estado</th>
-								<th><i class="fa fa-calendar"></i> Dias en estado</th>
+										$id = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_ADMISIONES", "ID_PCTE_ADM", "ID_AMSION", $value->HISTORIA);
 
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-							$i = 0;
-							foreach ($ordenes as $value) {
-								if ($i <= MAX_NOTIFICACIONES_BOARD) {
+										$paciente = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE", $id);
 
-									$id = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_ADMISIONES", "ID_PCTE_ADM", "ID_AMSION", $value->HISTORIA);
-
-									$paciente = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_NOM_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_NOM_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "PRI_APELL_PCTE", "ID_PCTE", $id) . " " . $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "SEG_APELL_PCTE", "ID_PCTE", $id);
-
-									$cedula = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "NUM_ID_PCTE", "ID_PCTE", $id);
-									//Orden encabezado
-									$idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $value->ID);
-									$datos = selectPatienInformationFromOrder($idEncOrden, $this);
-									$responsable = $datos[0];
-									$telefono = $datos[1];
-									$telefono2 = $datos[2];
-									$direccion = $datos[3];
-									$municipio = $datos[4];
+										$cedula = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_PACIENTES", "NUM_ID_PCTE", "ID_PCTE", $id);
+										//Orden encabezado
+										$idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $value->ID);
+										$datos = selectPatienInformationFromOrder($idEncOrden, $this);
+										$responsable = $datos[0];
+										$telefono = $datos[1];
+										$telefono2 = $datos[2];
+										$direccion = $datos[3];
+										$municipio = $datos[4];
 
 
-							?>
-									<tr>
+								?>
+										<tr>
 
-										<td class="text-center"><a href="<?= base_url() ?>OrdersAppOrder/tracerProcess/<?= $this->encryption->encrypt($value->HISTORIA); ?>/<?= $this->encryption->encrypt($value->ID); ?>" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-												<i class="fa fa fa-tachometer"></i> <span class="hidden-xs">
-													Seguimiento</span>
-											</a></td>
-										<td><?= $value->PREFIJO; ?> - <?= $value->CONS; ?></td>
-										<td><?= $cedula; ?></td>
-										<td><?= $paciente; ?></td>
-										<td><?= $responsable; ?></td>
+											<td class="text-center"><a href="<?= base_url() ?>OrdersAppOrder/tracerProcess/<?= $this->encryption->encrypt($value->HISTORIA); ?>/<?= $this->encryption->encrypt($value->ID); ?>" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+													<i class="fa fa fa-tachometer"></i> <span class="hidden-xs">
+														Seguimiento</span>
+												</a></td>
+											<td><?= $value->PREFIJO; ?> - <?= $value->CONS; ?></td>
+											<td><?= $cedula; ?></td>
+											<td><?= $paciente; ?></td>
+											<td><?= $responsable; ?></td>
 
-										<td><?= $municipio; ?></td>
+											<td><?= $municipio; ?></td>
 
 
-										<td><?= $value->NOMBRE; ?></td>
-										<td><i class="<?= $value->ICONO; ?>"></i> <?= $value->ESTADO; ?></td>
+											<td><?= $value->NOMBRE; ?></td>
+											<td><i class="<?= $value->ICONO; ?>"></i> <?= $value->ESTADO; ?></td>
 
-										<td class="text-center">
+											<td class="text-center">
+												<?php
+												if ($value->FECHA_ESTADO != null) {
+													$dateFormat = date("Y/m/d H:i", strtotime($value->FECHA_ESTADO));
+													echo $dateFormat;
+												} else {
+													echo $value->FECHA_ESTADO;
+												}
+
+
+												?>
+
+											</td>
+
 											<?php
-											if ($value->FECHA_ESTADO != null) {
-												$dateFormat = date("Y/m/d H:i", strtotime($value->FECHA_ESTADO));
-												echo $dateFormat;
-											} else {
-												echo $value->FECHA_ESTADO;
-											}
-
+											//Recogemos los valores de estados parametrizados
+											$estadoId = $value->ID_ESTADO;
+											$aMax = $value->ALTA_MAXIMO;
+											$aMin = $value->ALTA_MINIMO;
+											$mMax = $value->MEDIA_MAXIMO;
+											$mMin = $value->MEDIA_MINIMO;
+											$bMax = $value->BAJA_MAXIMO;
+											$bMin = $value->BAJA_MINIMO;
+											$aColor = $value->ALTA_COLOR;
+											$mColor = $value->MEDIA_COLOR;
+											$bColor = $value->BAJA_COLOR;
+											//recogemos las fechas actual y estado
+											$fechaActual = date("Y/m/d H:i");
+											$fechaEstado = $value->FECHA_ESTADO;
+											//obtener días
+											//$dia = calcDaysTrafficLight($fecha1, $fecha2);
+											//evaluamos valores según los estados asignados para dashboard
+											echo trafficLight($fechaActual, $fechaEstado, $estadoId, $dia, $aMin, $aMax, $mMin, $mMax, $bMin, $bMax, $aColor, $mColor, $bColor);
 
 											?>
 
-										</td>
-
-										<?php
-										//Recogemos los valores de estados parametrizados
-										$estadoId = $value->ID_ESTADO;
-										$aMax = $value->ALTA_MAXIMO;
-										$aMin = $value->ALTA_MINIMO;
-										$mMax = $value->MEDIA_MAXIMO;
-										$mMin = $value->MEDIA_MINIMO;
-										$bMax = $value->BAJA_MAXIMO;
-										$bMin = $value->BAJA_MINIMO;
-										$aColor = $value->ALTA_COLOR;
-										$mColor = $value->MEDIA_COLOR;
-										$bColor = $value->BAJA_COLOR;
-										//recogemos las fechas actual y estado
-										$fechaActual = date("Y/m/d H:i");
-										$fechaEstado = $value->FECHA_ESTADO;
-										//obtener días
-										//$dia = calcDaysTrafficLight($fecha1, $fecha2);
-										//evaluamos valores según los estados asignados para dashboard
-										echo trafficLight($fechaActual, $fechaEstado, $estadoId, $dia, $aMin, $aMax, $mMin, $mMax, $bMin, $bMax, $aColor, $mColor, $bColor);
-
-										?>
-
-									</tr>
-							<?php
-									$i++;
+										</tr>
+								<?php
+										$i++;
+									}
 								}
-							}
-							?>
-						</tbody>
+								?>
+							</tbody>
 
-					</table>
+						</table>
+					</div>
 				</div>
 			</div>
+			<!-- Column -->
 		</div>
-		<!-- Column -->
-	</div>
-	<!-- ============================================================== -->
-	<!-- End Review -->
-	<!-- ============================================================== -->
+		<!-- ============================================================== -->
+		<!-- End Review -->
+		<!-- ============================================================== -->
 
-<?php
+	<?php
 }
-?>
+	?>
 
-<!-- ============================================================== -->
-<!-- End PAge Content -->
-<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- End PAge Content -->
+	<!-- ============================================================== -->
 
-<?php
-if ($graficas) {
-?>
-	<script>
-		new Morris.Bar({
-			// ID of the element in which to draw the chart.
-			element: 'myfirstchart',
-			// Chart data records -- each entry in this array corresponds to a point on
-			// the chart.
-			data: [{
-					tipo: '<?= $tipo1 ?>',
-					value: <?= $valor1 ?>
-				},
-				{
-					tipo: '<?= $tipo2 ?>',
-					value: <?= $valor2 ?>
-				},
-				<?php if ($tipo3 != '') { ?> {
-						tipo: '<?= $tipo3 ?>',
-						value: <?= $valor3 ?>
+	<?php
+	if ($graficas) {
+	?>
+		<script>
+			new Morris.Bar({
+				// ID of the element in which to draw the chart.
+				element: 'myfirstchart',
+				// Chart data records -- each entry in this array corresponds to a point on
+				// the chart.
+				data: [{
+						tipo: '<?= $tipo1 ?>',
+						value: <?= $valor1 ?>
 					},
-				<?php } ?>
-				<?php if ($tipo4 != '') { ?> {
-						tipo: '<?= $tipo4 ?>',
-						value: <?= $valor4 ?>
+					{
+						tipo: '<?= $tipo2 ?>',
+						value: <?= $valor2 ?>
 					},
-				<?php } ?>
-				<?php if ($tipo5 != '') { ?> {
-						tipo: '<?= $tipo5 ?>',
-						value: <?= $valor5 ?>
-					},
-				<?php } ?>
-			],
-			// The name of the data record attribute that contains x-values.
-			xkey: 'tipo',
-			// A list of names of data record attributes that contain y-values.
-			ykeys: ['value'],
-			// Labels for the ykeys -- will be displayed when you hover over the
-			// chart.
-			labels: ['Value']
-		});
+					<?php if ($tipo3 != '') { ?> {
+							tipo: '<?= $tipo3 ?>',
+							value: <?= $valor3 ?>
+						},
+					<?php } ?>
+					<?php if ($tipo4 != '') { ?> {
+							tipo: '<?= $tipo4 ?>',
+							value: <?= $valor4 ?>
+						},
+					<?php } ?>
+					<?php if ($tipo5 != '') { ?> {
+							tipo: '<?= $tipo5 ?>',
+							value: <?= $valor5 ?>
+						},
+					<?php } ?>
+				],
+				// The name of the data record attribute that contains x-values.
+				xkey: 'tipo',
+				// A list of names of data record attributes that contain y-values.
+				ykeys: ['value'],
+				// Labels for the ykeys -- will be displayed when you hover over the
+				// chart.
+				labels: ['Value']
+			});
 
-		var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-		new Morris.Line({
-			// ID of the element in which to draw the chart.
-			element: 'mysecondchart',
-			data: [
-				<?= $historico; ?>
-			],
-			xkey: 'month',
-			ykeys: [<?= $historicoLetras; ?>],
-			labels: ['<?= $tipo1 ?>', '<?= $tipo2 ?>', <?php if ($tipo3 != '') { ?> '<?= $tipo3 ?>', <?php } ?> <?php if ($tipo4 != '') { ?> '<?= $tipo4 ?>', <?php } ?> <?php if ($tipo5 != '') { ?> '<?= $tipo5 ?>', <?php } ?>]
-		});
-	</script>
-<?php
-}
-?>
+			var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+			new Morris.Line({
+				// ID of the element in which to draw the chart.
+				element: 'mysecondchart',
+				data: [
+					<?= $historico; ?>
+				],
+				xkey: 'month',
+				ykeys: [<?= $historicoLetras; ?>],
+				labels: ['<?= $tipo1 ?>', '<?= $tipo2 ?>', <?php if ($tipo3 != '') { ?> '<?= $tipo3 ?>', <?php } ?> <?php if ($tipo4 != '') { ?> '<?= $tipo4 ?>', <?php } ?> <?php if ($tipo5 != '') { ?> '<?= $tipo5 ?>', <?php } ?>]
+			});
+		</script>
+	<?php
+	}
+	?>

@@ -30,7 +30,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h4 class="card-title"><?= $board; ?></h4>
 				<h6 class="card-subtitle"></h6>
 				<div class="table-responsive">
-					<table id="demo-foo-addrow" class="table  table-hover " data-page-size="20"  data-toggle="table" data-pagination="true" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar" class="table-responsive">
+					<table id="demo-foo-addrow" 
+					class="table  table-hover " 
+					data-page-size="10" 
+					data-toggle="table" 
+					data-pagination="true" 
+					data-search="true"
+					data-sort-name="Name"
+					data-sort-order="asc" 
+					data-show-pagination-switch="true"
+					data-filter-control="true" 
+					data-show-export="true" 
+					data-click-to-select="true" 
+					data-toolbar="#toolbar"  
+					class="table-responsive">
 						<thead>
 							<tr>
 								<th>Acci&oacute;n</th>
@@ -140,6 +153,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						})
 					</script>
 				</div>
+				<tfoot>
+					<tr>
+						<td colspan="5">
+							<?php
+							if ($botonesBoard != null) {
+								foreach ($botonesBoard as $value) {
+							?>
+									<a href="<?= base_url() . $value->PAGINA; ?>" class="btn btn-info btn-rounded">
+										<i class="<?= $value->ICONO ?>"></i>
+										<span class="hidden-xs"> <?= $value->NOMBRE ?></span>
+									</a>
+							<?php
+								}
+							} ?>
+
+
+						</td>
+
+						<td colspan="3">
+							<div class="text-right">
+								<ul class="pagination"> </ul>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
 			</div>
 		</div>
 

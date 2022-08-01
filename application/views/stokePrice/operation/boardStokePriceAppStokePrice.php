@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                            <div class="form-group">
                                		<label class="col-md-12" for="periodo">Periodo  *</label>
                                     <div class="col-md-12">
-	                                    <input class="form-control input-limit-datepicker" type="text" name="periodo" id="periodo"  />
+	                                    <input class="form-control input-limit-datepicker" type="text" name="periodo" id="periodo" value="2021/07/04 - <?php echo date("Y-m-d");?>" />
 	                                    <div class="form-control-feedback" > </div>
                                     </div>
                                </div>
