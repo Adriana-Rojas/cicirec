@@ -158,7 +158,7 @@ $db['default'] = array(
  ); */
 $db['default'] = array(
  'dsn'	=> '',
- 'hostname' => 'DESKTOPCIREC624\COMPAC',
+ 'hostname' => 'LAPTOPCIREC1051',
  'username' => 'sa',
  'port' => 1433, // or the port you configured on step 6
  'password' => 'cirec2020..',
@@ -183,7 +183,7 @@ $db['default'] = array(
 
  $db['esalud'] = array(
  		'dsn'	=> '',
- 		'hostname' => 'DESKTOPCIREC624\COMPAC',
+ 		'hostname' => 'LAPTOPCIREC1051',
  		'username' => 'sa',
  		'port' => 1433, // or the port you configured on step 6
  		'password' => 'cirec2020..',

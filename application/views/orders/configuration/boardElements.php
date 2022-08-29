@@ -30,11 +30,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h4 class="card-title"><?= $board; ?></h4>
 				<h6 class="card-subtitle"></h6>
 				<div class="table-responsive">
+					<!--<table id="demo-foo-addrow" class="table m-t-30 table-hover " data-page-size="20">
+-->             
 					<table id="demo-foo-addrow" 
 					class="table  table-hover " 
-					data-page-size="10" 
+					data-page-size="6000" 
 					data-toggle="table" 
-					data-pagination="true" 
+					--data-pagination="true" 
 					data-search="true"
 					data-sort-name="Name"
 					data-sort-order="asc" 

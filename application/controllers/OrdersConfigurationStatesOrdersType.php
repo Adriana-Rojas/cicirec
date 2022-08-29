@@ -201,17 +201,26 @@ class OrdersConfigurationStatesOrdersType extends CI_Controller {
 				$data ['valida'] = $this->encryption->encrypt ( 'edit' );
 				$data ['tempo'] = 'edit';
 				$data ['id'] = $this->encryption->encrypt ( $id );
+				//echo "<script>console.log('id: " . $data ['id'] . "' );</script>";
 				// Obtengo el ide de la relaci�n de proceso y tipo de orden
 				$idTordPro = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TORDPROEST", "ID_TORDPRO", $id );
+				//echo "<script>console.log('idTordPro: " . $idTordPro . "' );</script>";
 				// Obtengo el proceso
 				$proceso = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TORDPRO", "ID_PROCESO", $idTordPro );
+				//echo "<script>console.log('proceso: " . $proceso . "' );</script>";
 				$data ['proceso'] = $this->FunctionsGeneral->getFieldFromTable ( "ORD_PROCESO", "NOMBRE", $proceso );
+				//echo "<script>console.log('proceso: " . $data ['proceso'] . "' );</script>";
 				// obtengo el tipo de orden
 				$tipo = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TORDPRO", "ID_TIPOORDEN", $idTordPro );
+				//echo "<script>console.log('idEstado: " . $tipo . "' );</script>";
 				$data ['tipo'] = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TIPOORDEN", "NOMBRE", $tipo );
+				//echo "<script>console.log('estado: " . $data ['tipo'] . "' );</script>";
 				// Obtengo la informaci�n del estado
 				$idEstado = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TORDPROEST", "ID_ESTADO", $id );
+				//echo "<script>console.log('idEstado: " . $idEstado . "' );</script>";
 				$data ['estado'] = $this->FunctionsGeneral->getFieldFromTable ( "ORD_ESTADOS", "NOMBRE", $idEstado );
+				//echo "<script>console.log('estado: " . $data ['estado'] . "' );</script>";
+
 				// Pinto los valores de los diferentes tiempos
 				$data ['bajoMin'] = $this->FunctionsGeneral->getFieldFromTable ("ORD_TORDPROEST", "BMIN", $id );
 				$data ['bajoMax'] = $this->FunctionsGeneral->getFieldFromTable ( "ORD_TORDPROEST", "BMAX", $id );

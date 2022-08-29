@@ -1466,6 +1466,9 @@ class OrdersAppOrder extends CI_Controller
 
 	public function tracerProcess($id, $idOrden)
 	{
+		$this->encryption->decrypt($id);
+		//echo "<script>console.log('ID_FINok: " . $this->encryption->decrypt($idOrden) . "' );</script>";
+											
 		/**
 		 * Listo los diferentes pacientes que se han encontrado con los datos datos
 		 */
@@ -1615,8 +1618,9 @@ class OrdersAppOrder extends CI_Controller
 				$data['autName'] = $this->FunctionsGeneral->getFieldFromTableNotId('ORD_ORDEN', 'NOMBRE_AUTORIZA', 'ID', $idOrden);
 				// Pinto la lista genorica de parametros que se debe tener en cuenta dentro del sistema de parometros
 				// Pinto los estados siguientes
+				//echo "<script>console.log('ID_FINok: " . $idOrden . "' );</script>";
 				$data['listadoEstados'] = $this->OrdersModel->selectActualStateFromOrden($idOrden, $this->session->userdata('usuario'));
-
+							
 				// MOdifica despiece
 				$data['listaSiNo'] = $this->FunctionsAdmin->selectValoresListaAdministracion('SI_NO', '1');
 				// Retornar de suspendido

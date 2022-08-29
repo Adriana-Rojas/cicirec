@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Productos parametrizados</h4>
-                                <h6 class="card-subtitle"> Para un mejor desempe&ntilde;o de la aplicaci&oacute;n, debe filtrar el &aacute;rbol de productos y servicios para acceder a ellos </h6>
+                                <h6 class="card-subtitle"> Para un mejor desempe&ntilde;o de la aplicaci&oacute;n, debe filtrar el &aacute;rbol de productoss y servicios para acceder a ellos </h6>
                                 
                                 <?php if ($niveles==3){
 	                            ?>   

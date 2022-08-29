@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                        <div class="card">
 	                            <div class="card-body">
 	                                <h5 class="card-title"> Datos generales
-                                	<small class="font-gray">Identifique los datos relacionados al producto, elemento o servicio</small></h5>
+                                	<small class="font-gray">IdentifiqueE los datos relacionados al producto, elemento o servicio</small></h5>
     	                         	<div class="form-group " >
                                     	<label class="col-md-12" for="codigo">C&oacute;digo *</label>
                                         <div class="col-md-12">

@@ -1081,7 +1081,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 							<!-- Contenido del tab -->
 							<form class=" form-horizontal" role="form" action="<?= base_url() ?>OrdersAppOrder/saveTraceOrder" id="form_sample_3" method="post" autocomplete="off" enctype="multipart/form-data">
 								<div class="p-20">
-									<h3>Realizar seguimiento.</h3>
+									<h3>Realizar seguUimiento.</h3>
 									<p align="justify">Genere el seguimiento a la orden de acuerdo
 										al estado y perfil de usuario.</p>
 								</div>
@@ -1445,6 +1445,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 														<?php
 														$campo = $this->FunctionsGeneral->getFieldFromTable("ORD_ESTADOS", "CAMPO_ADC2", $value->ID_ESTADO);
 														if ($campo != VALUE_STATE_NOT) {
+															echo "<br><b>1: </b>" . $value->ID_ESTADO;
 															$valor = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDACTESTOBSADC", "ADICIONAL2", "ID_ORDACTESTOBS", $value->ID_OBSERVACION));
 															if ($campo == 52 || $campo == 54) {
 																$valor = findListInformation($this, $this->FunctionsGeneral->getFieldFromTable("ORD_ESTADOS", "LISTA_ADC2", $value->ID_ESTADO), $valor);

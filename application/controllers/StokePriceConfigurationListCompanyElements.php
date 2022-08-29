@@ -3,13 +3,13 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Controlador para definir los elementos aplicables a empresas especiales
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Controlador para definir los elementos aplicables a empresas especiales
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') or exit('No direct script access allowed');
 
@@ -32,21 +32,21 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
     public function board($id=null)
     {
         /**
-         * Panel principal en donde se listarán los diferentes registros creados para el parametro al cual se ha ingresado
+         * Panel principal en donde se listarï¿½n los diferentes registros creados para el parametro al cual se ha ingresado
          */
         
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationListCompany/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Pinto las vistas adicionales a través de la función pintaComun del helper hospitium
+            // Pinto las vistas adicionales a travï¿½s de la funciï¿½n pintaComun del helper hospitium
             //$mainPage = "StokePriceConfigurationListCompanyElements/board";
             $data = null;
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, "myTable", null);
-            // Pinto la información de los parametros de la aplicación
+            // Pinto la informaciï¿½n de los parametros de la aplicaciï¿½n
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             $id=$this->encryption->decrypt($id);
             $empresa= $this->FunctionsGeneral->getFieldFromTable("COT_EMPRESALISTA", "ID_EMPRESA", $id);
@@ -70,17 +70,17 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
             $data['listaLista'] = $this->StokePriceModel->selectListDefineRelationListElements($id);
             
             // Pinto plantilla principal
-            // Pinto la lista genérica de parametros que se debe tener en cuenta dentro del sistema de parámetros
+            // Pinto la lista genï¿½rica de parametros que se debe tener en cuenta dentro del sistema de parï¿½metros
             $this->load->view('stokePrice/configuration/boardCompanyListElements', $data);
             
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -90,20 +90,20 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
         /**
          * Formulario para crear un nuevo registro del parametro
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationListCompany/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
 
-            // Cargo la página principal
+            // Cargo la pï¿½gina principal
             $data = null;
             
-            // Pinto la cabecera principal de las páginas internas
+            // Pinto la cabecera principal de las pï¿½ginas internas
             showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
             
             //Envio variable de la empresa
             $data['idEmpresa'] = $empresa;
             
-            //Descifro información para obtener datos pertinentes
+            //Descifro informaciï¿½n para obtener datos pertinentes
             $empresa=$this->encryption->decrypt($empresa);
 
             $data['valida']=$this->encryption->encrypt('newRegister');
@@ -118,7 +118,7 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
             $data['empresa'] =$this->EsaludModel->getFieldFromTableNotId("T_APB","NOM_APB","ID_APB",$empresa);
             
             /**
-             * Información relacionada con la plantilla principal Pinto la pantalla *
+             * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
              */
             
             // Lista de aplica
@@ -137,17 +137,17 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
             
             // Cargo vista
             $this->load->view('stokePrice/configuration/formNewRegisterElementsList', $data);
-            // Cargo validación de formulario
+            // Cargo validaciï¿½n de formulario
             $this->load->view('validation/stokePrice/configuration/stokePriceConfigurationCompanyElementListValidation');
             
             /**
-             * Fin: Información relacionada con la plantilla principal Pinto la pantalla
+             * Fin: Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla
              */
             
-            // Pinto el final de la página (páginas internas)
+            // Pinto el final de la pï¿½gina (pï¿½ginas internas)
             showCommonEnds($this, null, null);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -157,21 +157,21 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
         /**
          * Formulario para crear un nuevo registro del parametro
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationListCompany/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Cargo la página principal
+            // Cargo la pï¿½gina principal
             $data = null;
 
             //Valido dato
             $id = $this->encryption->decrypt($id);
 
             if ($id != '') {
-                // Pinto la cabecera principal de las páginas internas
+                // Pinto la cabecera principal de las pï¿½ginas internas
                 showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
                 
                 /**
-                 * Información relacionada con la plantilla principal Pinto la pantalla *
+                 * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
                  */
                 
                 // Inicializo variables de la vista
@@ -196,7 +196,7 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
 
                 //Datos del codigo ingresado 
                 $idCodigo=$this->FunctionsGeneral->getFieldFromTable("COT_LISTAELEMENTOS", "ID_CODIGO", $id);
-
+				echo "<script>console.log('idCodigo: " . $idCodigo . "' );</script>";
                 $auxiliar=$this->FunctionsGeneral->getFieldFromTable("COT_LISTAELEMENTOS", "AUXILIAR", $id);
                 $precio=$this->FunctionsGeneral->getFieldFromTable("COT_LISTAELEMENTOS", "PRECIO", $id);
                 ;
@@ -228,7 +228,7 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
                 
                 
                 /**
-                 * Información relacionada con la plantilla principal Pinto la pantalla *
+                 * Informaciï¿½n relacionada con la plantilla principal Pinto la pantalla *
                  */
                 
                 // Lista de aplica
@@ -249,52 +249,52 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
             
                 // Cargo vista
                 $this->load->view('stokePrice/configuration/formNewRegisterElementsList', $data);
-                // Cargo validación de formulario
+                // Cargo validaciï¿½n de formulario
                 $this->load->view('validation/stokePrice/configuration/stokePriceConfigurationCompanyElementListValidation');
 
-                // Pinto el final de la página (páginas internas)
+                // Pinto el final de la pï¿½gina (pï¿½ginas internas)
                 showCommonEnds($this, null, null);
                 
 
             }else{
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationGeneral");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . "StokePriceConfigurationListCompanyElements/board");
 
             }
             
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
 
     /**
      * ***********************************************************************************************************
-     * RUTINAS PARA GUARDAR INFORMACIÒN
+     * RUTINAS PARA GUARDAR INFORMACIï¿½N
      * ****************************************************************************************************** *
      */
     public function saveRegister()
     {
         /**
-         * Guardo la información del parametro, para lo cual se puede crear o actualizar la misma dependiendo el valor que se reciba dentro de la variable valida
+         * Guardo la informaciï¿½n del parametro, para lo cual se puede crear o actualizar la misma dependiendo el valor que se reciba dentro de la variable valida
          */
         $mainPage = "StokePriceConfigurationListCompany/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Página principal a donde debo retornar
+            // Pï¿½gina principal a donde debo retornar
             $mainPage = "StokePriceConfigurationListCompanyElements/board";
 
             $idEmpresa = $this->encryption->decrypt($this->security->xss_clean($this->input->post('idEmpresa')));
             $codigo = $this->security->xss_clean($this->input->post('id'));
             $codigo =$this->FunctionsGeneral->getFieldFromTableNotId("COT_DESCRIPCION", "ID","CODIGO", $codigo);
-            //Valido información del código auxiliar
+            //Valido informaciï¿½n del cï¿½digo auxiliar
             $auxiliar = $this->security->xss_clean($this->input->post('auxiliar'));
             if ($auxiliar==''){
                 $auxiliar=null;
             }
-            //Valido información del precio de lista cerrada
+            //Valido informaciï¿½n del precio de lista cerrada
             $precio = $this->security->xss_clean($this->input->post('precio'));
             if ($precio==''){
                 $precio=null;
@@ -306,28 +306,28 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
                     // Creo el registro general
                     $this->StokePriceModel->insertListForCompanyElements($idEmpresa,$codigo,$auxiliar,$precio, $this->session->userdata('usuario'));
                     
-                    // Pinto mensaje para retornar a la aplicación
+                    // Pinto mensaje para retornar a la aplicaciï¿½n
                     $mensaje = "relationCompanyListElem";
                 } else {
-                    // Creo mensaje de creaciòn de usuario
+                    // Creo mensaje de creaciï¿½n de usuario
                     $mensaje = "ConfigExist";
                 }
             }else{
                 //Actualizo valores
                $this->FunctionsGeneral->updateByID("COT_LISTAELEMENTOS", "AUXILIAR", $auxiliar,  $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))), $this->session->userdata('usuario'));
 
-                $this->FunctionsGeneral->updateByID("COT_LISTAELEMENTOS", "PRECIO", $precio,  $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))), $this->session->userdata('usuario'));// Pinto mensaje para retornar a la aplicación
+                $this->FunctionsGeneral->updateByID("COT_LISTAELEMENTOS", "PRECIO", $precio,  $this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))), $this->session->userdata('usuario'));// Pinto mensaje para retornar a la aplicaciï¿½n
                 
                 $mensaje = "relationCompanyListElem";
             }
-            // Pinto mensaje para retornar a la aplicación
+            // Pinto mensaje para retornar a la aplicaciï¿½n
             $this->session->set_userdata('id', null);
             $this->session->set_userdata('auxiliar', $mensaje);
-            // Redirecciono la página
+            // Redirecciono la pï¿½gina
             $pagina="StokePriceConfigurationListCompanyElements/board/".$this->encryption->encrypt($idEmpresa);
             redirect(base_url() . $pagina);
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }
@@ -339,12 +339,12 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
         /**
          * Inactivo el registro para el cual se tiene asociado el valor $id
          */
-        // Valido si la sessión existe en caso contrario saco al usuario
+        // Valido si la sessiï¿½n existe en caso contrario saco al usuario
         $mainPage = "StokePriceConfigurationListCompany/board";
         if ($this->FunctionsAdmin->validateSession($mainPage)) {
-            // Página principal a donde debo retornar
+            // Pï¿½gina principal a donde debo retornar
              
-            // Cargo información de la lista teniendo en cuenta el id dado
+            // Cargo informaciï¿½n de la lista teniendo en cuenta el id dado
             // Obtengo el id del contacto
             $id = $this->FunctionsGeneral->getFieldFromTable("COT_LISTAELEMENTOS", "ID", $this->encryption->decrypt($id));
             if ($id != '') {
@@ -359,21 +359,21 @@ class StokePriceConfigurationListCompanyElements extends CI_Controller
 
                 //Obtengo ID de la empresa
                 $idEmpresa= $this->FunctionsGeneral->getFieldFromTable("COT_LISTAELEMENTOS", "ID_EMPRESA",$id);
-                // Pinto mensaje para retornar a la aplicación
+                // Pinto mensaje para retornar a la aplicaciï¿½n
                 $this->session->set_userdata('id', $idEmpresa);
                 $this->session->set_userdata('auxiliar', $message);
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 $pagina="StokePriceConfigurationListCompanyElements/board/".$this->encryption->encrypt($idEmpresa);
                 redirect(base_url() .$pagina);
             } else {
-                // Pinto mensaje para retornar a la aplicación informando que no hay información para la consulta realizada
+                // Pinto mensaje para retornar a la aplicaciï¿½n informando que no hay informaciï¿½n para la consulta realizada
                 $this->session->set_userdata('id', $id);
                 $this->session->set_userdata('auxiliar', "notInformationGeneral");
-                // Redirecciono la página
+                // Redirecciono la pï¿½gina
                 redirect(base_url() . $mainPage);
             }
         } else {
-            // Retorno a la página principal
+            // Retorno a la pï¿½gina principal
             header("Location: " . base_url());
         }
     }

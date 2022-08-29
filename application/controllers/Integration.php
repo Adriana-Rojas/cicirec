@@ -65,7 +65,7 @@ class Integration extends CI_Controller
 
 		$usuario = 'sa';
 		$pass = 'cirec2020..';
-		$servidor = 'DESKTOPCIREC624\COMPAC';
+		$servidor = 'LAPTOPCIREC1051';
 		$basedatos = 'produccion';
 		$info = array('Database' => $basedatos, 'UID' => $usuario, 'PWD' => $pass);
 		$conn = sqlsrv_connect($servidor, $info);
@@ -1285,11 +1285,13 @@ class Integration extends CI_Controller
 				$codigo = $this->input->post('codigo');
 			}
 			if ($codigo) {
-
+				//echo "<script>console.log('codigo: " . $codigo . "' );</script>";
 				$id = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "ID", "CODIGO", $codigo);
+				echo "<script>console.log('id: " . $id . "' );</script>";
 				if ($id != '') {
 					//Esta en el arbol, busco si es producto o interconsulta
 					$nombre = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "NOMBRE", "CODIGO", $codigo);
+					echo "<script>console.log('nombre: " . $nombre . "' );</script>";
 					$idTipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "ID_TIPOORDEN", "CODIGO", $codigo);
 					$tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "TIPOORDEN", "CODIGO", $codigo);
 					$descripcion = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ARBOLCODIGO", "DESCRIPCION", "CODIGO", $codigo);
@@ -1304,6 +1306,7 @@ class Integration extends CI_Controller
 					if ($id != '') {
 						//Esta en el arbol, busco si es producto o interconsulta
 						$nombre = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ELEMENTO", "NOMBRE", "CODIGO", $codigo);
+						echo "<script>console.log('nombre: " . $nombre . "' );</script>";
 						$proveedor = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ELEMENTO", "ID_PROVEEDOR", "CODIGO", $codigo);
 						//$id = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ELEMENTO","ID","CODIGO",$codigo);
 						$idTipoOrden = '0';
@@ -1321,11 +1324,12 @@ class Integration extends CI_Controller
 					$validador = '0';
 				}
 
-				if ($this->FunctionsGeneral->getFieldFromTableNotIdFields("COT_DESCRIPCION", "ID", "CODIGO", $id, "ID_TIPO", $tem) != '') {
+				//echo "aca:  . $nombre . ";
+				//if ($this->FunctionsGeneral->getFieldFromTableNotIdFields("COT_DESCRIPCION", "ID", "CODIGO", $id, "ID_TIPO", $tem) != '') {
 					echo $idTipoOrden . "|" . $tipoOrden . "|" . $id . "|" . $nombre . " " . $id . "|" . $descripcion . "|" . $proveedor . "|" . $validador;
-				} else {
-					echo '*' . "|" . '*' . "|" . '*' . "|" . '*' . "|" . '*';
-				}
+				//} else {
+				//	echo '*' . "|" . '*' . "|" . '*' . "|" . '*' . "|" . '*';
+				//}
 			}
 		} else {
 			// Retorno a la p�gina principal

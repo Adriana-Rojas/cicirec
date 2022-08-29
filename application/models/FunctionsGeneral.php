@@ -163,6 +163,7 @@ class FunctionsGeneral extends CI_Model {
     		$resultado = $consulta->row();
 	    	$return =$resultado->$campo;
 	    	return $return;
+          //  echo "<script>console.log('Console: " . $return . "' );</script>";
     	}
     }
 
@@ -186,6 +187,8 @@ class FunctionsGeneral extends CI_Model {
     	}
     	$consulta = $this->db->get();
     	
+//echo "<script>console.log('consulta: " . $consulta . "' );</script>";
+
     	if($consulta->num_rows()>0){
     		$resultado = $consulta->row();
     		$return =$resultado->$campo;
