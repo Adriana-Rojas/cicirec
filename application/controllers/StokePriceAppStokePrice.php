@@ -77,7 +77,7 @@ class StokePriceAppStokePrice extends CI_Controller
                     $fechaInicial = date('Y') . "/" . $meses[$mes][2] . "/01";
                     
                     $fechaFin = date('Y') . "/" . $meses[$mes][2] . "/" . $meses[$mes][3];
-                    $tempoFecha =$this->FunctionsGeneral->getFieldFromTableNotId("ADM_CALENDARIO", "ID", "FECHA", $fechaFin)+1;
+                    $tempoFecha =$this->FunctionsGeneral->getFieldFromTableNotId("ADM_CALENDARIO", "ID", "FECHA", $fechaFin);
                     $fechaFin =$this->FunctionsGeneral->getFieldFromTableNotId("ADM_CALENDARIO", "FECHA", "ID", $tempoFecha);
                 } else {
                     $fechaInicial = $this->session->userdata('variable1');

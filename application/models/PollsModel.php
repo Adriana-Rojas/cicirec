@@ -3,10 +3,10 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 Juan Carlos Escobar Baquero
- Correo electrónico:         jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:                  Clase en las cuales se definen las operaciones CRUD frente a las tablas que tienen relación con la aplicación Calificador y todos sus modulo
+ Correo electrï¿½nico:         jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:                  Clase en las cuales se definen las operaciones CRUD frente a las tablas que tienen relaciï¿½n con la aplicaciï¿½n Calificador y todos sus modulo
  */
 
 class PollsModel extends CI_Model {
@@ -19,7 +19,7 @@ class PollsModel extends CI_Model {
 	/* ---------------------------------------------------------- INSERT ---------------------------------------------------------*/
 
 	public function insertQuestions($nombre,$descripcion,$usuario){
-	    /** Se inserta la información de la tabla CAL_PREGUNTA*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_PREGUNTA*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_PREGUNTA','ID',1);
@@ -39,7 +39,7 @@ class PollsModel extends CI_Model {
 	}
 	
 	public function insertOptionsQuestions($contador,$valor,$usuario){
-		/** Se inserta la información de la tabla CAL_RESPUESTA*/
+		/** Se inserta la informaciï¿½n de la tabla CAL_RESPUESTA*/
 	
 		//Obtiene el siguiente ID
 		$consecutivo =$this->FunctionsGeneral->countMax('CAL_RESPUESTA','ID',1);
@@ -59,7 +59,7 @@ class PollsModel extends CI_Model {
 	}
 	
 	public function insertPoll($nombre,$descripcion,$datos,$observacion,$usuario){
-	    /** Se inserta la información de la tabla CAL_ENCUESTA*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_ENCUESTA*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_ENCUESTA','ID',1);
@@ -81,7 +81,7 @@ class PollsModel extends CI_Model {
 	}
 	
 	public function insertPollQuestions($encuesta,$pregunta,$usuario){
-	    /** Se inserta la información de la tabla CAL_ENCUPREG*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_ENCUPREG*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_ENCUPREG','ID',1);
@@ -102,7 +102,7 @@ class PollsModel extends CI_Model {
 	
 	
 	public function insertPollActual($encuesta,$usuario){
-	    /** Se inserta la información de la tabla CAL_EJECUTA*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_EJECUTA*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_EJECUTA','ID',1);
@@ -122,7 +122,7 @@ class PollsModel extends CI_Model {
 	}
 	
 	public function insertPollEvaluation($fecha,$hora,$encuesta,$tipo,$documento,$nombres,$apellidos,$correo,$telefono,$tratamiento,$observacion,$usuario){
-	    /** Se inserta la información de la tabla CAL_CALIFICADOR*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_CALIFICADOR*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_CALIFICADOR','ID',1);
@@ -151,7 +151,7 @@ class PollsModel extends CI_Model {
 	}
 	
 	public function insertPollEvaluationDetail($encuesta,$respuesta,$usuario){
-	    /** Se inserta la información de la tabla CAL_CALIFVALOR*/
+	    /** Se inserta la informaciï¿½n de la tabla CAL_CALIFVALOR*/
 	    
 	    //Obtiene el siguiente ID
 	    $consecutivo =$this->FunctionsGeneral->countMax('CAL_CALIFVALOR','ID',1);
@@ -204,7 +204,7 @@ class PollsModel extends CI_Model {
 	
 	public function getListValueQuestions() {
 	    /**
-	     * Obtiene el detalle de las lista de la relación de $id la cual corresponde la pregunta $id
+	     * Obtiene el detalle de las lista de la relaciï¿½n de $id la cual corresponde la pregunta $id
 	     */
 	    $sql = "select *
                 from CAL_PREGUNTA
@@ -220,7 +220,7 @@ class PollsModel extends CI_Model {
 	
 	public function getListValueQuestionsOption($id) {
 	    /**
-	     * Obtiene el detalle de las lista de la relación de $id la cual corresponde la pregunta $id
+	     * Obtiene el detalle de las lista de la relaciï¿½n de $id la cual corresponde la pregunta $id
 	     */
 	    $sql = "select *
                 from CAL_RESPUESTA
@@ -237,7 +237,7 @@ class PollsModel extends CI_Model {
 	
 	public function getListPolls() {
 	    /**
-	     * Lista las diferentes encuestas que se encuentran definidas dentro de la aplicación
+	     * Lista las diferentes encuestas que se encuentran definidas dentro de la aplicaciï¿½n
 	     */
 	    $sql = "select *
                 from CAL_ENCUESTA
@@ -259,7 +259,7 @@ class PollsModel extends CI_Model {
                 where CAL_ENCUPREG.ID_ENCUESTA='" . $id . "'
                 AND CAL_ENCUPREG.ESTADO='".ACTIVO_ESTADO."'
                 ";
-	    echo $sql;
+	   // echo $sql;
 	    $result = $this->db->query ( $sql );
 	    if ($result->num_rows () > 0) {
 	        return $result->result ();

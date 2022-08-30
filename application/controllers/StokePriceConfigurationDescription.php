@@ -221,15 +221,21 @@ class StokePriceConfigurationDescription extends CI_Controller
                 
                 // Lista de aplica
                 $data['readOnly'] = "readonly='readonly'";
-                //echo $id;
+                echo "<script>console.log('Id: " . $id . "' );</script>";
                 $codigo = $this->FunctionsGeneral->getFieldFromTableNotId("COT_DESCRIPCION", "CODIGO", "ID", $id);
+                echo "<script>console.log('codigo: " . $codigo . "' );</script>";
                 $tipo = $this->FunctionsGeneral->getFieldFromTableNotId("COT_DESCRIPCION", "ID_TIPO", "ID", $id);
+                echo "<script>console.log('tipo: " . $tipo . "' );</script>";
                 if ($tipo != '39') {
                     // Esta en el arbol, busco si es producto o interconsulta
                     $codigo = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "CODIGO", "ID", $codigo);
+                    echo "<script>console.log('codigo*: " . $codigo . "' );</script>";
                     $nombre = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "NOMBRE", "CODIGO", $codigo);
+                    echo "<script>console.log('nombre*: " . $nombre . "' );</script>";
                     $idTipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "ID_TIPOORDEN", "CODIGO", $codigo);
+                    echo "<script>console.log('idTipoOrden: " . $idTipoOrden . "' );</script>";
                     $tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "TIPOORDEN", "CODIGO", $codigo);
+                    echo "<script>console.log('tipo*: " . $tipoOrden . "' );</script>";
                     $data['valida'] = 1;
                 } else {
                     // Valido si es elemento

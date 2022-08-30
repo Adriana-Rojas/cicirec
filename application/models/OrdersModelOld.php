@@ -3,10 +3,10 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 Juan Carlos Escobar Baquero
- Correo electrónico:         jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	21/01/2019
- Propósito:                  Clase en las cuales se definen las operaciones CRUD frente a las tablas que tienen relación con la aplicación Órdenes y todos sus módulos
+ Correo electrï¿½nico:         jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	21/01/2019
+ Propï¿½sito:                  Clase en las cuales se definen las operaciones CRUD frente a las tablas que tienen relaciï¿½n con la aplicaciï¿½n ï¿½rdenes y todos sus mï¿½dulos
  */
 class OrdersModel extends CI_Model {
 	public function __construct() {
@@ -16,7 +16,7 @@ class OrdersModel extends CI_Model {
 	/* ---------------------------------------------------------- INSERT --------------------------------------------------------- */
 	public function insertElementGroup($nombre, $miembros, $tipo, $unidad,$iva, $usuario) {
 		/**
-		 * Se inserta la información de la tabla ORD_GRUELEM
+		 * Se inserta la informaciï¿½n de la tabla ORD_GRUELEM
 		 */
 		
 		// Obtiene el siguiente ID
@@ -40,7 +40,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function insertBodyPartsSection($nombre, $tiempo, $miembros, $usuario) {
 		/**
-		 * Se inserta la información de la tabla ORD_NIVELAMP
+		 * Se inserta la informaciï¿½n de la tabla ORD_NIVELAMP
 		 */
 		
 		// Obtiene el siguiente ID
@@ -63,7 +63,7 @@ class OrdersModel extends CI_Model {
 	public function insertValidateTablesOrders($nombre, $despiece, $tabla, $codigo, $nombreCampo, $adicional, $tablaAuxiliar, $codigoAuxiliar, $nombreCampoAuxiliar, $adicionalAuxiliar, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_VALIDA
+		 * Se inserta la informaciï¿½n de la tabla ORD_VALIDA
 		 */
 		
 		// Obtiene el siguiente ID
@@ -93,7 +93,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrdersType($nombre, $prioridad, $clase, $impresion, $valida, $clasificacion, $niveles, $prefijo, $maximo,$iva, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TIPOORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_TIPOORDEN
 		 */
 		
 		// Obtiene el siguiente ID
@@ -124,7 +124,7 @@ class OrdersModel extends CI_Model {
 	public function insertGroupCharacteristicsElements($grupo, $caracteristica, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_PARGRUELEM
+		 * Se inserta la informaciï¿½n de la tabla ORD_PARGRUELEM
 		 */
 		
 		// Obtiene el siguiente ID
@@ -146,7 +146,7 @@ class OrdersModel extends CI_Model {
 	public function insertValuesGroupCharacteristicsElements($idParGruElement, $valor, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_VALPARGRUELEM
+		 * Se inserta la informaciï¿½n de la tabla ORD_VALPARGRUELEM
 		 */
 		
 		// Obtiene el siguiente ID
@@ -168,7 +168,7 @@ class OrdersModel extends CI_Model {
 	public function insertValuesProviderGroupCharacteristicsElements($idParGruElement, $proveedor, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_PROGRUPAR
+		 * Se inserta la informaciï¿½n de la tabla ORD_PROGRUPAR
 		 */
 		
 		// Obtiene el siguiente ID
@@ -190,7 +190,7 @@ class OrdersModel extends CI_Model {
 	public function insertElements($codigo, $grupo, $proveedor, $nombre,  $comodin, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ELEMENTO
+		 * Se inserta la informaciï¿½n de la tabla ORD_ELEMENTO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -218,7 +218,7 @@ class OrdersModel extends CI_Model {
 	public function insertElementCost($idElemento, $valida, $costo, $usuario) {
 	    
 	    /**
-	     * Se inserta la información de la tabla ORD_ELEMCOSTO
+	     * Se inserta la informaciï¿½n de la tabla ORD_ELEMCOSTO
 	     */
 	    
 	    // Obtiene el siguiente ID
@@ -242,7 +242,7 @@ class OrdersModel extends CI_Model {
 	public function insertElementInformation($idElemento, $valor, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ELEPARELEM
+		 * Se inserta la informaciï¿½n de la tabla ORD_ELEPARELEM
 		 */
 		
 		// Obtiene el siguiente ID
@@ -264,7 +264,7 @@ class OrdersModel extends CI_Model {
 	public function insertStates($nombre, $tipo, $nivel, $grupo, $reproceso, $adjunto, $bloque, $icono, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ESTADOS
+		 * Se inserta la informaciï¿½n de la tabla ORD_ESTADOS
 		 */
 		
 		// Obtiene el siguiente ID
@@ -292,7 +292,7 @@ class OrdersModel extends CI_Model {
 	public function insertStateObservation($nombre, $estado, $tipo, $motivo, $cierra, $despiece, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_OBSESTADO
+		 * Se inserta la informaciï¿½n de la tabla ORD_OBSESTADO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -318,7 +318,7 @@ class OrdersModel extends CI_Model {
 	public function insertProcessOrderTypeRelation($proceso, $tipo, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TORDPRO
+		 * Se inserta la informaciï¿½n de la tabla ORD_TORDPRO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -340,7 +340,7 @@ class OrdersModel extends CI_Model {
 	public function insertProcessOrderTypeStateRelation($tordPro, $estado, $amin, $amax, $mmin, $mmax, $bmin, $bmax, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TORDPROEST
+		 * Se inserta la informaciï¿½n de la tabla ORD_TORDPROEST
 		 */
 		
 		// Obtiene el siguiente ID
@@ -368,7 +368,7 @@ class OrdersModel extends CI_Model {
 	public function insertStatesRelation($inicio, $fin, $orden, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_RELESTADO
+		 * Se inserta la informaciï¿½n de la tabla ORD_RELESTADO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -391,7 +391,7 @@ class OrdersModel extends CI_Model {
 	public function insertStatesRelationPass($tordProEst, $perfil, $permiso, $correo, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TORDPROESTPER
+		 * Se inserta la informaciï¿½n de la tabla ORD_TORDPROESTPER
 		 */
 		
 		// Obtiene el siguiente ID
@@ -415,7 +415,7 @@ class OrdersModel extends CI_Model {
 	public function insertWorkGroups($tipoOrden, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DEFEQUIPO
+		 * Se inserta la informaciï¿½n de la tabla ORD_DEFEQUIPO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -436,7 +436,7 @@ class OrdersModel extends CI_Model {
 	public function insertWorkGroupsRol($idDefEquipo, $rolPer, $obligatorio, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DETDEFEQUIPO
+		 * Se inserta la informaciï¿½n de la tabla ORD_DETDEFEQUIPO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -459,7 +459,7 @@ class OrdersModel extends CI_Model {
 	public function insertWorkGroupsOrder($tipoOrden, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DEFEQUIPOORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_DEFEQUIPOORDEN
 		 */
 		
 		// Obtiene el siguiente ID
@@ -480,7 +480,7 @@ class OrdersModel extends CI_Model {
 	public function insertWorkGroupsRolOrder($idDefEquipo, $rolPer, $obligatorio, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DETDEFEQUIPOORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_DETDEFEQUIPOORDEN
 		 */
 		
 		// Obtiene el siguiente ID
@@ -503,7 +503,7 @@ class OrdersModel extends CI_Model {
 	public function insertLevelHead($miembros, $valida, $nombre, $nivel, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DATOSNIV
+		 * Se inserta la informaciï¿½n de la tabla ORD_DATOSNIV
 		 */
 		
 		// Obtiene el siguiente ID
@@ -527,7 +527,7 @@ class OrdersModel extends CI_Model {
 	public function insertLevelBody($encLevel, $nombre, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DATOSNIVVAL
+		 * Se inserta la informaciï¿½n de la tabla ORD_DATOSNIVVAL
 		 */
 		
 		// Obtiene el siguiente ID
@@ -549,7 +549,7 @@ class OrdersModel extends CI_Model {
 	public function insertBodyPartOrderType($tipo, $miembro, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TIPOMIEM
+		 * Se inserta la informaciï¿½n de la tabla ORD_TIPOMIEM
 		 */
 		
 		// Obtiene el siguiente ID
@@ -571,7 +571,7 @@ class OrdersModel extends CI_Model {
 	public function insertTreeHead($nivel, $anterior, $tablaAnterior, $actual, $tablaActual, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ARBOL
+		 * Se inserta la informaciï¿½n de la tabla ORD_ARBOL
 		 */
 		
 		// Obtiene el siguiente ID
@@ -596,7 +596,7 @@ class OrdersModel extends CI_Model {
 	public function insertTreeValues($idArbol, $valor, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ARBOLVALORES
+		 * Se inserta la informaciï¿½n de la tabla ORD_ARBOLVALORES
 		 */
 		
 		// Obtiene el siguiente ID
@@ -618,7 +618,7 @@ class OrdersModel extends CI_Model {
 	public function insertTreeCodes($idArbolValor, $codigo, $nombre, $descripcion,  $tiempo, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ARBOLCODIGO
+		 * Se inserta la informaciï¿½n de la tabla ORD_ARBOLCODIGO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -643,7 +643,7 @@ class OrdersModel extends CI_Model {
 	public function insertTreeElementProduct($idArbolCodigo, $idElemento, $cantidad, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_DESPIECE
+		 * Se inserta la informaciï¿½n de la tabla ORD_DESPIECE
 		 */
 		
 		// Obtiene el siguiente ID
@@ -666,7 +666,7 @@ class OrdersModel extends CI_Model {
 	public function insertServicePackage($idArbolCodigo, $cantidad, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_PAQUETEVALORA
+		 * Se inserta la informaciï¿½n de la tabla ORD_PAQUETEVALORA
 		 */
 		
 		// Obtiene el siguiente ID
@@ -688,7 +688,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderHead($empresaAliada, $idEncbrig, $historia, $cerrado, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ENCORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_ENCORDEN
 		 */
 		
 		// Obtiene el siguiente ID
@@ -712,7 +712,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderBody($idEncOrden, $idTordPro, $cie10, $causa, $diagnostico, $cons, $idOrdenAnterior, $actividad, $cantidad, $observacion, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_ORDEN
 		 */
 		
 		// Obtiene el siguiente ID
@@ -742,7 +742,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderState($idOrden, $idTordProEst, $momento, $opcion, $contador, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ORDACTEST
+		 * Se inserta la informaciï¿½n de la tabla ORD_ORDACTEST
 		 */
 		// Obtiene el siguiente ID
 		$consecutivo = $this->FunctionsGeneral->countMax ( 'ORD_ORDACTEST', 'ID', 1 );
@@ -766,7 +766,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderStateObservation($idOrdActEst, $idObsEstado, $observacion, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ORDACTESTOBS
+		 * Se inserta la informaciï¿½n de la tabla ORD_ORDACTESTOBS
 		 */
 		// Obtiene el siguiente ID
 		$consecutivo = $this->FunctionsGeneral->countMax ( 'ORD_ORDACTESTOBS', 'ID', 1 );
@@ -788,7 +788,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderElementOfProduct($idOrden, $idElemento, $cantidad, $traslado, $salida, $serial, $lote, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ORDACTDES
+		 * Se inserta la informaciï¿½n de la tabla ORD_ORDACTDES
 		 */
 		// Obtiene el siguiente ID
 		$consecutivo = $this->FunctionsGeneral->countMax ( 'ORD_ORDACTDES', 'ID', 1 );
@@ -814,7 +814,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderTeamList($idOrdenEstado, $usuEquipo, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ORDENEQUIPO
+		 * Se inserta la informaciï¿½n de la tabla ORD_ORDENEQUIPO
 		 */
 		// Obtiene el siguiente ID
 		$consecutivo = $this->FunctionsGeneral->countMax ( 'ORD_ORDENEQUIPO', 'ID', 1 );
@@ -836,7 +836,7 @@ class OrdersModel extends CI_Model {
 	public function insertOrderStatistics($tipo1, $tipo2,$tipo3,$tipo4,$tipo5, $usuario) {
 	    
 	    /**
-	     * Se inserta la información de la tabla ORD_TIPOUSUARIOESTAD
+	     * Se inserta la informaciï¿½n de la tabla ORD_TIPOUSUARIOESTAD
 	     */
 	    // Obtiene el siguiente ID
 	    $consecutivo = $this->FunctionsGeneral->countMax ( 'ORD_TIPOUSUARIOESTAD', 'ID', 1 );
@@ -864,7 +864,7 @@ class OrdersModel extends CI_Model {
 	 */
 	public function updateValidateTablesOrders($id, $nombre, $despiece, $tabla, $codigo, $nombreCampo, $adicional, $tablaAuxiliar, $codigoAuxiliar, $nombreCampoAuxiliar, $adicionalAuxiliar, $usuario) {
 		/**
-		 * Se actualiza la información de la tabla ORD_VALIDA
+		 * Se actualiza la informaciï¿½n de la tabla ORD_VALIDA
 		 */
 		$data = array (
 				'DESPIECE' => $despiece,
@@ -887,7 +887,7 @@ class OrdersModel extends CI_Model {
 	public function updateOrdersType($id, $nombre, $prioridad, $clase, $impresion, $valida, $clasificacion, $niveles, $prefijo, $maximo,$iva, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_TIPOORDEN
+		 * Se inserta la informaciï¿½n de la tabla ORD_TIPOORDEN
 		 */
 		$data = array (
 				'NOMBRE' => $nombre,
@@ -910,7 +910,7 @@ class OrdersModel extends CI_Model {
 	public function updateElements($id, $grupo, $proveedor, $nombre, $usuario) {
 		
 		/**
-		 * Se inserta la información de la tabla ORD_ELEMENTO
+		 * Se inserta la informaciï¿½n de la tabla ORD_ELEMENTO
 		 */
 		
 		// Obtiene el siguiente ID
@@ -930,7 +930,7 @@ class OrdersModel extends CI_Model {
 	public function updateStates($id, $nombre, $tipo, $nivel, $grupo, $reproceso, $adjunto, $bloque, $icono, $usuario) {
 		
 		/**
-		 * Se actualiza la información de la tabla ORD_ESTADOS
+		 * Se actualiza la informaciï¿½n de la tabla ORD_ESTADOS
 		 */
 		$data = array (
 				'NOMBRE' => $nombre,
@@ -952,7 +952,7 @@ class OrdersModel extends CI_Model {
 	public function updateStateObservation($id, $nombre, $estado, $tipo, $motivo, $cierra, $despiece, $usuario) {
 		
 		/**
-		 * Se actualiza la información de la tabla ORD_OBSESTADO
+		 * Se actualiza la informaciï¿½n de la tabla ORD_OBSESTADO
 		 */
 		$data = array (
 				'NOMBRE' => $nombre,
@@ -970,7 +970,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function updateProcessOrderTypeStateRelation($id, $amin, $amax, $mmin, $mmax, $bmin, $bmax, $usuario) {
 		/**
-		 * Se actualiza la información de la tabla ORD_TORDPROEST
+		 * Se actualiza la informaciï¿½n de la tabla ORD_TORDPROEST
 		 */
 		// Defino array
 		$data = array (
@@ -990,7 +990,7 @@ class OrdersModel extends CI_Model {
 	public function updateLevelHead($id, $miembros, $valida, $nombre, $nivel, $usuario) {
 		
 		/**
-		 * Se actualiza la información de la tabla ORD_DATOSNIV
+		 * Se actualiza la informaciï¿½n de la tabla ORD_DATOSNIV
 		 */
 		$data = array (
 				'ID_MIEMBROS' => $miembros,
@@ -1008,7 +1008,7 @@ class OrdersModel extends CI_Model {
 	public function updateTreeCodes($id, $codigo, $nombre, $descripcion, $tiempo, $usuario) {
 		
 		/**
-		 * Se actualiza la información de la tabla ORD_ARBOLCODIGO
+		 * Se actualiza la informaciï¿½n de la tabla ORD_ARBOLCODIGO
 		 */
 		$data = array (
 				'CODIGO' => $codigo,
@@ -1027,14 +1027,14 @@ class OrdersModel extends CI_Model {
 	/* ---------------------------------------------------------- TODO DELETE --------------------------------------------------------- */
 	public function deleteValuesGroupCharacteristicsElements($id) {
 		/**
-		 * Elimina relaciones de los valores de los grupos y características
+		 * Elimina relaciones de los valores de los grupos y caracterï¿½sticas
 		 */
 		$this->db->where ( 'ID_PARGRUELEM', $id );
 		$this->db->delete ( 'ORD_VALPARGRUELEM' );
 	}
 	public function deleteProvidersGroupCharacteristicsElements($id) {
 		/**
-		 * Elimina relaciones de los valores de los grupos y características
+		 * Elimina relaciones de los valores de los grupos y caracterï¿½sticas
 		 */
 		$this->db->where ( 'ID_PARGRUELEM', $id );
 		$this->db->delete ( 'ORD_PROGRUPAR' );
@@ -1076,42 +1076,42 @@ class OrdersModel extends CI_Model {
 	}
 	public function deleteObsStateOrder($id) {
 		/**
-		 * Elimina la relación de observaciones para el id $id
+		 * Elimina la relaciï¿½n de observaciones para el id $id
 		 */
 		$this->db->where ( 'ID_ORDACTEST', $id );
 		$this->db->delete ( 'ORD_ORDACTESTOBS' );
 	}
 	public function deleteTeamStateOrder($id) {
 		/**
-		 * Elimina la relación del equipo de trabajo para el id $id
+		 * Elimina la relaciï¿½n del equipo de trabajo para el id $id
 		 */
 		$this->db->where ( 'ID_TORDPROEST', $id );
 		$this->db->delete ( 'ORD_ORDENEQUIPO' );
 	}
 	public function deleteStateOrder($id) {
 		/**
-		 * Elimina la relación de estados para la orden con id $id
+		 * Elimina la relaciï¿½n de estados para la orden con id $id
 		 */
 		$this->db->where ( 'ID', $id );
 		$this->db->delete ( 'ORD_ORDACTEST' );
 	}
 	public function deleteElementOfOrder($id) {
 		/**
-		 * Elimina la relación de despiece orden con id $id
+		 * Elimina la relaciï¿½n de despiece orden con id $id
 		 */
 		$this->db->where ( 'ID_ORDEN', $id );
 		$this->db->delete ( 'ORD_ORDACTDES' );
 	}
 	public function deleteOrder($id) {
 		/**
-		 * Elimina la relación de la orden con id $id
+		 * Elimina la relaciï¿½n de la orden con id $id
 		 */
 		$this->db->where ( 'ID', $id );
 		$this->db->delete ( 'ORD_ORDEN' );
 	}
 	public function deleteElementOfProductOrder($id) {
 		/**
-		 * Elimina la relación de la orden con id $id
+		 * Elimina la relaciï¿½n de la orden con id $id
 		 */
 		$this->db->where ( 'ID', $id );
 		$this->db->delete ( 'ORD_ORDACTDES' );
@@ -1119,7 +1119,7 @@ class OrdersModel extends CI_Model {
 	
 	public function deleteStatisticsRelation($usuario) {
 	    /**
-	     * Elimina la relación de la orden con id $id
+	     * Elimina la relaciï¿½n de la orden con id $id
 	     */
 	    $this->db->where ( 'ID_USUARIO', $usuario );
 	    $this->db->delete ( 'ORD_TIPOUSUARIOESTAD' );
@@ -1149,7 +1149,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function getListValueGroupCharacteristics($id) {
 		/**
-		 * Obtiene el detalle de las lista de la relación de $id la cual corresponde a grupos y caracteristicas
+		 * Obtiene el detalle de las lista de la relaciï¿½n de $id la cual corresponde a grupos y caracteristicas
 		 */
 		$sql = "select *
                 from ORD_VALPARGRUELEM
@@ -1164,7 +1164,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function getListProvidersGroupCharacteristics($id) {
 		/**
-		 * Obtiene el detalle de las lista de la relación de $id la cual corresponde a grupos y caracteristicas
+		 * Obtiene el detalle de las lista de la relaciï¿½n de $id la cual corresponde a grupos y caracteristicas
 		 */
 		$sql = "select ID_PROVEEDOR
                 from ORD_PROGRUPAR
@@ -1233,7 +1233,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function selectStatesOrdersTypeProcess($proceso = null, $tipo = null) {
 		/**
-		 * Selecciona la relación de estados que se encuentran frente a un tipo de orden y un proceso de atención
+		 * Selecciona la relaciï¿½n de estados que se encuentran frente a un tipo de orden y un proceso de atenciï¿½n
 		 */
 		
 		// Condiciones adicionales
@@ -1276,7 +1276,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function selectStatesOrdersTypeProcessWithFilter($estado, $tipo, $proceso) {
 		/**
-		 * Selecciona la relación de los estados
+		 * Selecciona la relaciï¿½n de los estados
 		 */
 		$sql = "select ORD_TORDPROEST.ID,	
 					 ORD_ESTADOS.NOMBRE as NOMBRE
@@ -1413,7 +1413,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function selectValuesFirstSubLevelDefinition($id, $subnivel, $tabla) {
 		/**
-		 * Selecciona los diferentes niveles que se deben tener en cuenta dentro de la definición del arbol
+		 * Selecciona los diferentes niveles que se deben tener en cuenta dentro de la definiciï¿½n del arbol
 		 */
 		if ($subnivel == 2) {
 			$sql = "SELECT *
@@ -1437,7 +1437,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function selectTreeInformation($pagina, $variable, $idNestable, $proceso = null) {
 		/**
-		 * Pinto lla estructura del árbol de productos y servicios, arrancando por el tipo de orden y posterior ejecución de funciones anidadas
+		 * Pinto lla estructura del ï¿½rbol de productos y servicios, arrancando por el tipo de orden y posterior ejecuciï¿½n de funciones anidadas
 		 */
 		
 		
@@ -1489,17 +1489,17 @@ class OrdersModel extends CI_Model {
 				$anidado = $this->selectTreeInformationFirstLevel ( $a->ID, $pagina );
 				// Valido de acuerdo al valor de proceso
 				if ($proceso == '') {
-					// Configuración
+					// Configuraciï¿½n
 					$nestable .= '
 					<li class="dd-item" data-id="TO_' . $a->ID . '">
 			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
 			            	' . $anidado . '
 		            </li>';
 				} else {
-					// Valido si se tiene la relación creada de PRoceso y Tipo de orden
+					// Valido si se tiene la relaciï¿½n creada de PRoceso y Tipo de orden
 					$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields ( "ORD_TORDPRO", "ID", "ID_TIPOORDEN", $a->ID, "ID_PROCESO", $proceso );
 					if ($idTordPro != '') {
-					    // Debo validar adicionalmente que exista como mínimo el estado ordenar
+					    // Debo validar adicionalmente que exista como mï¿½nimo el estado ordenar
 						$idTordProEst=$this->FunctionsGeneral->getFieldFromTableNotIdFields ( "ORD_TORDPROEST", "ID", "ID_TORDPRO", $idTordPro, "ID_ESTADO", ORDER_STATE );
 						if ($idTordProEst != '') {
 						    
@@ -1575,7 +1575,7 @@ class OrdersModel extends CI_Model {
 		 * Selecciona el primer subinivel del segundo Nivel del arbol de ordenes
 		 */
 	   if($this->FunctionsGeneral->getFieldFromTableNotId ( "ORD_TIPOORDEN", "ID_CLASETIPO", "ID", $tipoOrden )== 3){
-	        //Debo seleccionar el grupo de elementos de acuerdo al nivel de amputación relacionada  para esto encuentro el di_miembro
+	        //Debo seleccionar el grupo de elementos de acuerdo al nivel de amputaciï¿½n relacionada  para esto encuentro el di_miembro
 	        $idMiembro=$this->FunctionsGeneral->getFieldFromTableNotId ( "ORD_TIPOMIEM", "ID_MIEMBROS", "ID_TIPOORDEN", $tipoOrden );
 	        $nestable = '
 				<ol class="dd-list">
@@ -1657,7 +1657,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function selectTreeInformationSecondLevelSecondSub($id, $tipoOrden, $pagina) {
 		/**
-		 * Selecciona el primer subinivel del segundo Nivel del árbol de ordenes
+		 * Selecciona el primer subinivel del segundo Nivel del ï¿½rbol de ordenes
 		 */
 		$sql = "select VIEW_ORD_ARBOL_SS.ID AS ID,
 				VIEW_ORD_ARBOL_SS.SUBNIVEL2 AS NOMBRE
@@ -1864,7 +1864,7 @@ class OrdersModel extends CI_Model {
 	}
 	public function searchStateOrderType($tipoEstado, $tordPro) {
 		/**
-		 * Selecccion el id de la relación tipo de orden proceso estado para el tipoProceso $tordPro y el tipo Estado $tipoEstado
+		 * Selecccion el id de la relaciï¿½n tipo de orden proceso estado para el tipoProceso $tordPro y el tipo Estado $tipoEstado
 		 */
 		$sql = "select ORD_TORDPROEST.ID
 		  from ORD_ESTADOS,
@@ -1873,7 +1873,7 @@ class OrdersModel extends CI_Model {
 		  and ORD_TORDPROEST.ID_ESTADO=ORD_ESTADOS.ID
 		  and ORD_ESTADOS.TIPOESTADO='$tipoEstado'";
 		// ejecuto la consulta
-		ECHO $sql;
+		//ECHO $sql;
 		$result = $this->db->query ( $sql );
 		if ($result->num_rows () > 0) {
 			$resultado = $result->row ();
@@ -2090,7 +2090,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectActualState($idOrden) {
 		/**
-		 * Pinto los estados actuales a los cuales tiene relación la orden
+		 * Pinto los estados actuales a los cuales tiene relaciï¿½n la orden
 		 */
 		$sql = "select ORD_ESTADOS.NOMBRE,
 					   ORD_ESTADOS.ID,
@@ -2296,7 +2296,7 @@ class OrdersModel extends CI_Model {
 	}
 	
 	public function selectListPeopleFromOrder($idOrden){
-		/** Selecciono el listado de profesionales involucrados dentro del proceso de atención*/
+		/** Selecciono el listado de profesionales involucrados dentro del proceso de atenciï¿½n*/
 	
 		$sql="SELECT distinct
 				ADM_USUARIO.NOMBRES ,
@@ -2334,7 +2334,7 @@ class OrdersModel extends CI_Model {
 	}
 	
 	public function selectHistoryOrder($idOrden){
-		/** Selecciono el listado de profesionales involucrados dentro del proceso de atención*/
+		/** Selecciono el listado de profesionales involucrados dentro del proceso de atenciï¿½n*/
 	
 		$sql="SELECT
 					ORD_OBSESTADO.NOMBRE as TIPO_OBSERVACION,
@@ -2502,7 +2502,7 @@ class OrdersModel extends CI_Model {
 	
 	public function getStateRelatationFromOrderState($idOrden,$estado) {
 		/**
-		 * Obtengo la relación del estado actual $estado y la orden $idOrden
+		 * Obtengo la relaciï¿½n del estado actual $estado y la orden $idOrden
 		 */
 		$sql = "SELECT
 					ORD_ORDACTEST.ID,
@@ -2530,7 +2530,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectEstadosReprocesos($estado) {
 		/**
-		 * Obtengo la relación del estado actual $estado y la orden $idOrden
+		 * Obtengo la relaciï¿½n del estado actual $estado y la orden $idOrden
 		 */
 		$sql = "SELECT
 					ORD_ESTADOS.NOMBRE,
@@ -2605,7 +2605,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectStatesFromProcessKind($usuario,$proceso,$tipo,$condition) {
 	    /**
-	     * Seleccciona los diferentes estados de acuerdo al proceso y tipo recepcionado, al igual que la condición definida en $condition
+	     * Seleccciona los diferentes estados de acuerdo al proceso y tipo recepcionado, al igual que la condiciï¿½n definida en $condition
 	     */
 	    $sql = "SELECT
                     ORD_TORDPROEST.ID,
@@ -2647,7 +2647,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectOrdersFromState($estado) {
 	    /**
-	     * Seleccciona los diferentes estados de acuerdo al proceso y tipo recepcionado, al igual que la condición definida en $condition
+	     * Seleccciona los diferentes estados de acuerdo al proceso y tipo recepcionado, al igual que la condiciï¿½n definida en $condition
 	     */
 	    $sql = "   SELECT
                     ORD_ORDEN.CONS,
@@ -2685,7 +2685,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectQuantityOrderByProcess($opcion=null) {
 	    /**
-	     * Selecciona la cantidad de órdenes teniendo en cuenta la condición dada
+	     * Selecciona la cantidad de ï¿½rdenes teniendo en cuenta la condiciï¿½n dada
 	     */
 	    if ($opcion==null){
 	        $sql = "  SELECT *
@@ -2725,7 +2725,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectQuantityOrderByTipo($tipo) {
 	    /**
-	     * Selecciona la cantidad de órdenes teniendo en cuenta la condición dada
+	     * Selecciona la cantidad de ï¿½rdenes teniendo en cuenta la condiciï¿½n dada
 	     */
 	    $sql = "  SELECT count(*) AS CANTIDAD
                     FROM ORD_PROCESO, ORD_TORDPRO, ORD_ORDEN
@@ -2757,7 +2757,7 @@ class OrdersModel extends CI_Model {
 	
 	public function selectQuantityOrderByTipoFullDateCondition($tipo,$inicio,$fin) {
 	    /**
-	     * Selecciona la cantidad de órdenes teniendo en cuenta la condición dada
+	     * Selecciona la cantidad de ï¿½rdenes teniendo en cuenta la condiciï¿½n dada
 	     */
 	    $sql = "  SELECT count(*) AS CANTIDAD
                     FROM ORD_PROCESO, ORD_TORDPRO, ORD_ORDEN
