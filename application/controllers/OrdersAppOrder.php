@@ -795,7 +795,8 @@ class OrdersAppOrder extends CI_Controller
 			$data['listaCausas'] = $this->FunctionsGeneral->selectValoresListaTabla("ORD_CAUSAENFERMEDAD", 'DESC');
 			$data['causa'] = null;
 
-			if ($this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOORDEN", "ID_CLASETIPO", "ID", $tipoOrden) == 3) {
+			$data['claseTipo'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOORDEN", "ID_CLASETIPO", "ID", $tipoOrden);
+			if ($data['claseTipo'] == 3) {
 				$idMiembro = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOMIEM", "ID_MIEMBROS", "ID_TIPOORDEN", $tipoOrden);
 				$data['nombreTipo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "NOMBRE", $tipoOrden);
 				$data['niveles'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "NIVELES", $tipoOrden);

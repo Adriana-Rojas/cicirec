@@ -522,6 +522,7 @@ class OrdersConfigurationProductsDefinition extends CI_Controller
                 $data['valida'] = $this->encryption->encrypt('edit');
                 $data['mainPage'] = $mainPage;
                 $data['id'] = $this->encryption->encrypt($id);
+                echo "<script>console.log('Id: " . $id . "' );</script>";
                 // Obtengo el id del tipo de orden
                 $valores = retornaTipoOrdenFromArbolCodigo($id);
                 

@@ -43,6 +43,7 @@ class SystemTRMDefine extends CI_Controller
 			$data['mainPage'] = $mainPage;
 
 			$date = isset($_GET['date']) ? $_GET['date'] : date("Y-m-d");
+			//$date = isset($_GET['date']) ? $_GET['date'] : date("2022-05-04");
 			error_reporting(0);
 			try {
 				//Se incluye de forma obligatoria la libreria nusoap

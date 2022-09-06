@@ -742,6 +742,8 @@ class OrdersModel extends CI_Model
 		);
 		// Realizo el insert sobre la base de datos en la tabla ORD_ENCORDEN
 		$this->db->insert('ORD_ENCORDEN', $data);
+		echo "<script>console.log('data: " . $data . "' );</script>";
+		sleep(10);
 		return $consecutivo;
 	}
 	public function insertOrderBody($idEncOrden, $idTordPro, $cie10, $causa, $diagnostico, $cons, $idOrdenAnterior, $actividad, $cantidad, $observacion, $idCotizacion, $usuario, $adjunto1, $adjunto2)
@@ -1732,7 +1734,7 @@ class OrdersModel extends CI_Model
 					// Configuraci�n
 					$nestable .= '
 					<li class="dd-item" data-id="TO_' . $a->ID . '">
-			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: blue;"> ' . $a->NOMBRE . ' </div>
+			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
 			            	' . $anidado . '
 		            </li>';
 				} else {
@@ -1833,6 +1835,7 @@ class OrdersModel extends CI_Model
                     ORD_GRUELEM.ESTADO = '" . ACTIVO_ESTADO . "' AND
                     ORD_GRUELEM.ID_MIEMBROS = $idMiembro
                     ";
+			echo "<script>console.log('Console: " . $sql . "' );</script>";
 			$result = $this->db->query($sql);
 			if ($result->num_rows() > 0) {
 				$array = $result->result();
@@ -2215,8 +2218,8 @@ class OrdersModel extends CI_Model
                 AND ORD_TIPOORDEN.ID_CLASETIPO='3'
 			";
 
-		//echo $sql;
-		//echo "<script>console.log('Console: " . $sql . "' );</script>";	
+		echo $sql;
+		echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
@@ -2717,7 +2720,7 @@ class OrdersModel extends CI_Model
 	{
 		/** Selecciono los estados actuales para la orden $idOrden*/
 
-			$sql="select ORD_ESTADOS.NOMBRE,
+		$sql = "select ORD_ESTADOS.NOMBRE,
 					ORD_ORDACTEST.ID_TORDPROEST,
 					ORD_ORDACTEST.ID ,
 					ORD_ESTADOS.ID as ID_ESTADO,
@@ -2733,19 +2736,19 @@ class OrdersModel extends CI_Model
 			and ORD_ORDACTEST.ID_ORDEN=ORD_ORDEN.ID 
 			and ORD_ORDEN.ID_TORDPRO=ORD_TORDPROEST.ID_TORDPRO 
 			and ORD_TORDPROEST.ID=ORD_ORDACTEST.ID_TORDPROEST 
-			and ORD_ORDACTEST.MOMENTO='".OPEN_STATE."' 
+			and ORD_ORDACTEST.MOMENTO='" . OPEN_STATE . "' 
 			and ORD_TORDPROEST.ID_ESTADO=ORD_ESTADOS.ID 
 			and ORD_TORDPROEST.ID=ORD_TORDPROESTPER.ID_TORDPROEST 
 			and	ADM_ROLPERFIL.ID_PERFIL=ORD_TORDPROESTPER.ID_PERFIL
 			and ADM_ROLPERFIL.ID=ADM_USUROLPER.ID_ROLPERFIL
 			and ADM_USUROLPER.ID_USUARIO='$usuario'
-			and ADM_USUROLPER.ESTADO='".ACTIVO_ESTADO."'
-			and ADM_ROLPERFIL.ESTADO='".ACTIVO_ESTADO."'
-			and ORD_TORDPROESTPER.ESTADO='".ACTIVO_ESTADO."'
+			and ADM_USUROLPER.ESTADO='" . ACTIVO_ESTADO . "'
+			and ADM_ROLPERFIL.ESTADO='" . ACTIVO_ESTADO . "'
+			and ORD_TORDPROESTPER.ESTADO='" . ACTIVO_ESTADO . "'
 			and ORD_TORDPROESTPER.PERMISO='20'
-			AND ORD_TORDPROEST.ESTADO = '".ACTIVO_ESTADO."'
-			AND ORD_ORDACTEST.ESTADO = '".ACTIVO_ESTADO."'
-			AND ORD_ESTADOS.ESTADO = '".ACTIVO_ESTADO."'
+			AND ORD_TORDPROEST.ESTADO = '" . ACTIVO_ESTADO . "'
+			AND ORD_ORDACTEST.ESTADO = '" . ACTIVO_ESTADO . "'
+			AND ORD_ESTADOS.ESTADO = '" . ACTIVO_ESTADO . "'
 			order by ORD_ESTADOS.NOMBRE";/*
 		$sql = "SELECT
 				ORD_ESTADOS.NOMBRE,
