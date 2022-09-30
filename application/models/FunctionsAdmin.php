@@ -363,7 +363,7 @@ class FunctionsAdmin extends CI_Model
 		and ADM_ENCLISTA.ESTADO='S'
 		order by ADM_DETLISTA.ID $order
 		";
-         echo $sql."<br>";
+       //  echo $sql."<br>";
         // Cargo el resultado de la consulta dentro de un array de resultados
         $result = $this->db->query($sql);
         if ($result->num_rows() > 0) {

@@ -93,7 +93,7 @@ class StokePriceAppStokePrice extends CI_Controller
             $condicion = "and COT_SOLICITUD.FCREA between '" . $this->session->userdata('variable1') . " 00:00:00' and '" . $this->session->userdata('variable2') . " 23:59:59'";
             
             $data['listaLista'] = $this->StokePriceModel->selectListStokePriceFromRequest($condicion,1);
-
+            $data['seguimientodos']=  $this->StokePriceModel->selectListTraceListPriceStokeOne(65);
             $data['fecha'] = cambiaHoraServer(2);
             
             // Pinto plantilla principal

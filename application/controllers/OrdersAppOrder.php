@@ -419,6 +419,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $id . "' );</script>";
 
 			// Arbol para cambiar
 			$route = "OrdersAppOrder/formNewOrder/" . $this->encryption->encrypt($id) . "/";
@@ -498,6 +499,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE2: " . $id . "' );</script>";
 
 			// Pinto informacion del formulario
 			// Listado de anteriores.
@@ -774,6 +776,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE3: " . $id . "' );</script>";
 
 			// Pinto informacion del formulario
 			// Listado de anteriores.
@@ -954,6 +957,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE4: " . $id . "' );</script>";
 
 			/**
 			 * ************************** INICIO RUTA DEL PRODUCTO O SERVICIO *************************
@@ -1104,6 +1108,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE5: " . $id . "' );</script>";
 
 			/**
 			 * ************************** INICIO RUTA DEL PRODUCTO O SERVICIO *************************
@@ -1252,6 +1257,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE6: " . $id . "' );</script>";
 
 			/**
 			 * ************************** INICIO RUTA DEL PRODUCTO O SERVICIO *************************
@@ -1370,6 +1376,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// 1. Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE7: " . $id . "' );</script>";
 			// 2. Pinto el listado de ordenes
 			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden);
 			// 3. Informacion de la empresa
@@ -1439,6 +1446,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			echo "<script>console.log('ADMISION_STATE_ACTIVE8: " . $id . "' );</script>";
 
 			// Arbol para cambiar
 			$route = "OrdersAppOrder/formNewOrder/" . $this->encryption->encrypt($id) . "/";
@@ -1468,7 +1476,8 @@ class OrdersAppOrder extends CI_Controller
 	public function tracerProcess($id, $idOrden)
 	{
 		$this->encryption->decrypt($id);
-		//echo "<script>console.log('ID_FINok: " . $this->encryption->decrypt($idOrden) . "' );</script>";
+		echo "<script>console.log('idOrden: " . $this->encryption->decrypt($idOrden) . "' );</script>";
+		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
 											
 		/**
 		 * Listo los diferentes pacientes que se han encontrado con los datos datos
@@ -1503,6 +1512,7 @@ class OrdersAppOrder extends CI_Controller
 
 				// Pinto la informacion del paciente
 				$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+				echo "<script>console.log('ADMISION_STATE_ACTIVE9: " . $id . "' );</script>";
 				// Recibo el idOrden
 				$idOrden = $this->encryption->decrypt($idOrden);
 
@@ -1701,6 +1711,7 @@ class OrdersAppOrder extends CI_Controller
 
 				// Pinto la informacion del paciente
 				$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+				echo "<script>console.log('ADMISION_STATE_ACTIVE10: " . $id . "' );</script>";
 				// Recibo el idOrden
 				$idOrden = $this->encryption->decrypt($idOrden);
 
@@ -1878,6 +1889,7 @@ class OrdersAppOrder extends CI_Controller
 
 		// 1. Pinto la informacion del paciente
 		$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+		echo "<script>console.log('ADMISION_STATE_ACTIVE11: " . $id . "' );</script>";
 
 		/**
 		 * ************************** INICIO RUTA DEL PRODUCTO O SERVICIO *************************

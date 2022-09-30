@@ -3,20 +3,20 @@
  *************************************************************************
  *************************************************************************
  Creado por:                 	Juan Carlos Escobar Baquero
- Correo electrónico:          	jcescobarba@gmail.com
- Creación:                    	27/02/2018
- Modificación:                	2019/11/06
- Propósito:						Validación del formulario para la página newCustomer
+ Correo electrï¿½nico:          	jcescobarba@gmail.com
+ Creaciï¿½n:                    	27/02/2018
+ Modificaciï¿½n:                	2019/11/06
+ Propï¿½sito:						Validaciï¿½n del formulario para la pï¿½gina newCustomer
  *************************************************************************
  *************************************************************************
- ******************** BOGOTÁ COLOMBIA 2017 *******************************
+ ******************** BOGOTï¿½ COLOMBIA 2017 *******************************
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $rules='';
 $messages='';
 for ($i=1;$i<=$maxCaracteristicas;$i++){
-	//Defino lo obligatorio para los artículos
+	//Defino lo obligatorio para los artï¿½culos
 	$rules.="caracteristica$i: {
 	required: true
 	},
@@ -48,7 +48,7 @@ for ($i=1;$i<=$maxCaracteristicas;$i++){
                         },
                         id:{
                             required: true,
-                            max:999999
+                            max:9999999
                         },
                         nombre:{
                             required: true
@@ -75,7 +75,7 @@ for ($i=1;$i<=$maxCaracteristicas;$i++){
                     	comodin:"Seleccione si el elemento es o no un comod&iacute;n dentro del sistema de informaci&oacute;n",
                     	id:{
                             required: "Digite el c&oacute;digo del elemento que desea crear o modificar",
-                            max:"El c&oacute;digo del elemento no debe ser mayor a 999999"
+                            max:"El c&oacute;digo del elemento no debe ser mayor a 9999999"
                         }
                         ,
                         nombre:"Digite el nombre del elemento que desea crear o modificar",

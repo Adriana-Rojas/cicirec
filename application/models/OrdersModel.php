@@ -2180,45 +2180,49 @@ class OrdersModel extends CI_Model
 		 * Listo las ordenes que se han creado dentro de la cabecera de orden $encabezado
 		 */
 		$sql = "SELECT
-    				ORD_ORDEN.ID,
-    				ORD_ARBOLCODIGO.CODIGO,
-    				ORD_ARBOLCODIGO.NOMBRE,
-    				ORD_ORDEN.CONS,
-    				ORD_ORDEN.CANTIDAD,
-    				ORD_TIPOORDEN.PREFIJO,
-                    ORD_ORDEN.OBSERVACION
-				from ORD_ARBOLCODIGO,
-				     ORD_ORDEN,
-				     ORD_TORDPRO,
-					 ORD_TIPOORDEN
-				where ORD_ORDEN.ID_ENCORDEN='$encabezado'
-				and ORD_ORDEN.ACTIVIDAD=ORD_ARBOLCODIGO.ID
-				and ORD_ORDEN.ESTADO='" . ACTIVO_ESTADO . "'
-			    AND ORD_TORDPRO.ID=ORD_ORDEN.ID_TORDPRO
-				and ORD_TORDPRO.ID_TIPOORDEN=ORD_TIPOORDEN.ID
-                AND ORD_TIPOORDEN.ID_CLASETIPO! ='3'
-				union all
-                SELECT
-    				ORD_ORDEN.ID,
-    				ORD_ELEMENTO.CODIGO,
-    				ORD_ELEMENTO.NOMBRE,
-    				ORD_ORDEN.CONS,
-    				ORD_ORDEN.CANTIDAD,
-    				ORD_TIPOORDEN.PREFIJO,
-                    ORD_ORDEN.OBSERVACION
-				from ORD_ELEMENTO,
-				     ORD_ORDEN,
-				     ORD_TORDPRO,
-					 ORD_TIPOORDEN
-				where ORD_ORDEN.ID_ENCORDEN='$encabezado'
-				and ORD_ORDEN.ACTIVIDAD=ORD_ELEMENTO.ID
-				and ORD_ORDEN.ESTADO='" . ACTIVO_ESTADO . "'
-			    AND ORD_TORDPRO.ID=ORD_ORDEN.ID_TORDPRO
-				and ORD_TORDPRO.ID_TIPOORDEN=ORD_TIPOORDEN.ID
-                AND ORD_TIPOORDEN.ID_CLASETIPO='3'
+		ORD_ORDEN.ID,
+		ORD_ARBOLCODIGO.CODIGO,
+		ORD_ARBOLCODIGO.NOMBRE,
+		ORD_ORDEN.CONS,
+		ORD_ORDEN.CANTIDAD,
+		ORD_TIPOORDEN.PREFIJO,
+		ORD_ORDEN.OBSERVACION
+	FROM
+		ORD_ARBOLCODIGO,
+		ORD_ORDEN,
+		ORD_TORDPRO,
+		ORD_TIPOORDEN
+	WHERE
+		ORD_ORDEN.ID_ENCORDEN = '$encabezado'
+	AND ORD_ORDEN.ACTIVIDAD = ORD_ARBOLCODIGO.ID
+	AND ORD_ORDEN.ESTADO = '" . ACTIVO_ESTADO . "'
+	AND ORD_TORDPRO.ID = ORD_ORDEN.ID_TORDPRO
+	AND ORD_TORDPRO.ID_TIPOORDEN = ORD_TIPOORDEN.ID
+	AND ORD_TIPOORDEN.ID_CLASETIPO ! = '3'
+	UNION ALL
+		SELECT
+			ORD_ORDEN.ID,
+			ORD_ELEMENTO.CODIGO,
+			ORD_ELEMENTO.NOMBRE,
+			ORD_ORDEN.CONS,
+			ORD_ORDEN.CANTIDAD,
+			ORD_TIPOORDEN.PREFIJO,
+			ORD_ORDEN.OBSERVACION
+		FROM
+			ORD_ELEMENTO,
+			ORD_ORDEN,
+			ORD_TORDPRO,
+			ORD_TIPOORDEN
+		WHERE
+			ORD_ORDEN.ID_ENCORDEN = '$encabezado'
+		AND ORD_ORDEN.ACTIVIDAD = ORD_ELEMENTO.ID
+		AND ORD_ORDEN.ESTADO = '" . ACTIVO_ESTADO . "'
+		AND ORD_TORDPRO.ID = ORD_ORDEN.ID_TORDPRO
+		AND ORD_TORDPRO.ID_TIPOORDEN = ORD_TIPOORDEN.ID
+		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		echo $sql;
+		//echo $sql;
 		echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -2499,7 +2503,7 @@ class OrdersModel extends CI_Model
 				 and ORD_PARGRUELEM.ID_GRUELEM='$grupo'
 				 and ORD_PARGRUELEM.ESTADO='" . ACTIVO_ESTADO . "'
 				 and ORD_PARELEM.ESTADO='" . ACTIVO_ESTADO . "'		" . "order by  ORD_PARELEM.ID";
-		// echo $sql;
+		 echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();

@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     messages: {
                     	codigo:{
                             required: "Digite el c&oacute;digo del producto o servicio que desea crear o modificar",
-                            max:"El c&oacute;digo del elemento no debe ser mayor a 999999"
+                            max:"El c&oacute;digo del elemento no debe ser mayor a 9999999"
                         }
                         ,
                         nombre:"Digite el nombre del producto o servicio que desea crear o modificar",

@@ -875,6 +875,32 @@ class StokePriceModel extends CI_Model {
 	    }
 	}
 
+public function selectListTraceListPriceStokeOne($id) {
+	    /** Selecci�n el detalle del seguimiento a la cotizaci�n con id $id*/
+	    $sql="SELECT  
+                     COT_TIPOSEG.NOMBRE AS TIPO
+             FROM COT_TIPOSEG, 
+                    COT_SEGUIMIENTO,
+                    ADM_USUROLPER,
+					ADM_USUARIO,
+					ADM_ROLPERFIL,
+					ADM_PERFIL
+             WHERE COT_SEGUIMIENTO.ID_COTIZACION=$id
+	          AND COT_SEGUIMIENTO.ID_TIPOSEG=COT_TIPOSEG.ID
+             AND COT_SEGUIMIENTO.ESTADO='".ACTIVO_ESTADO."'
+            AND ADM_USUROLPER.ID_USUARIO = ADM_USUARIO.ID
+			AND ADM_USUROLPER.ID_ROLPERFIL = ADM_ROLPERFIL.ID
+			AND ADM_ROLPERFIL.ID_PERFIL = ADM_PERFIL.ID
+            AND COT_SEGUIMIENTO.UCREA = ADM_USUARIO.ID 
+";
+	    //echo $sql;
+	    $result=$this->db->query($sql);
+	    if($result->num_rows()>0){
+	        return $result->result();
+	    }else{
+	        return null;
+	    }
+	}
 
 	public function selectListTraceHistoryStokePrice($id) {
 	    /** Selecci�n el detalle del seguimiento a la cotizaci�n con id $id*/

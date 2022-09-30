@@ -23,6 +23,7 @@ if ($listaLista != null) {
 	$valida = false;
 }
 
+
 if ($paciente != null) {
 	foreach ($paciente as $value) {
 		$idResponsable = $value->ID_RESPONSABLE;
@@ -52,7 +53,7 @@ if ($datos[2] != '') {
 $direccion = $datos[3];
 $municipio = $datos[4];
 $ideps = $datos[7];
-//echo "<script>console.log('ConsoleQ: " . $value->NUM_ID_PCTE . "' );</script>";
+echo "<script>console.log('ConsoleQ: " . $value->NUM_ID_PCTE . "' );</script>";
 $correo = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "CORREO", "DOCUMENTO", $value->NUM_ID_PCTE));
 
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_CONTACTOUSUARIO", "ID_CONVENIO", "ID_ENCORDEN", $idEncOrden);
