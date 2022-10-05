@@ -1699,7 +1699,6 @@ class OrdersModel extends CI_Model
 		}
 
 		//echo $sql;
-		echo "<script>console.log('sql selectTreeInformation: " . $sql . "' );</script>";
 		// Tengo los resultados principales frente a tipo de orden
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -1731,16 +1730,14 @@ class OrdersModel extends CI_Model
 				// Obtengo Primer nivel
 				$anidado = $this->selectTreeInformationFirstLevel($a->ID, $pagina);
 				// Valido de acuerdo al valor de proceso
-
-			echo "<script>console.log('proceso: " . $proceso . "' );</script>";
-				/*if ($proceso == '') {*/
+				if ($proceso == '') {
 					// Configuraci�n
 					$nestable .= '
 					<li class="dd-item" data-id="TO_' . $a->ID . '">
 			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
 			            	' . $anidado . '
 		            </li>';
-				/*} else {
+				} else {
 					// Valido si se tiene la relaci�n creada de PRoceso y Tipo de orden
 					$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $a->ID, "ID_PROCESO", $proceso);
 					//echo $idTordPro . " ";
@@ -1760,13 +1757,13 @@ class OrdersModel extends CI_Model
 								// Se pinta el menu respectivo
 								$nestable .= '
 							<li class="dd-item" data-id="TO_' . $a->ID . '">
-					            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: red;"> ' . $a->NOMBRE . ' </div>
+					            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
 					            	' . $anidado . '
 				            </li>';
 							}
 						}
 					}
-				}*/
+				}
 			}
 		}
 
@@ -2225,7 +2222,7 @@ class OrdersModel extends CI_Model
 		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		echo $sql;
+		//echo $sql;
 		echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -2506,7 +2503,7 @@ class OrdersModel extends CI_Model
 				 and ORD_PARGRUELEM.ID_GRUELEM='$grupo'
 				 and ORD_PARGRUELEM.ESTADO='" . ACTIVO_ESTADO . "'
 				 and ORD_PARELEM.ESTADO='" . ACTIVO_ESTADO . "'		" . "order by  ORD_PARELEM.ID";
-		 echo $sql;
+		echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
