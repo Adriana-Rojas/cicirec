@@ -419,7 +419,9 @@ class StokePriceModel extends CI_Model {
 			'IVA' => $valueIva
 	    );
 	    // Realizo el insert sobre la base de datos en la tabla COT_DETALLECOTI
-	    $this->db->insert ( 'COT_DETALLECOTI', $data );
+	    $this->db->insert ( 'COT_DETALLECOTI', $data );	    
+	   // echo $consecutivo;
+	     echo "<script>console.log('Console: " . $consecutivo . "' );</script>";
 	    return $consecutivo;
 	}
 

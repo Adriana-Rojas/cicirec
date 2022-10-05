@@ -1699,6 +1699,7 @@ class OrdersModel extends CI_Model
 		}
 
 		//echo $sql;
+		echo "<script>console.log('sql selectTreeInformation: " . $sql . "' );</script>";
 		// Tengo los resultados principales frente a tipo de orden
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -1730,17 +1731,19 @@ class OrdersModel extends CI_Model
 				// Obtengo Primer nivel
 				$anidado = $this->selectTreeInformationFirstLevel($a->ID, $pagina);
 				// Valido de acuerdo al valor de proceso
-				if ($proceso == '') {
+
+			echo "<script>console.log('proceso: " . $proceso . "' );</script>";
+				/*if ($proceso == '') {*/
 					// Configuraci�n
 					$nestable .= '
 					<li class="dd-item" data-id="TO_' . $a->ID . '">
 			            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
 			            	' . $anidado . '
 		            </li>';
-				} else {
+				/*} else {
 					// Valido si se tiene la relaci�n creada de PRoceso y Tipo de orden
 					$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $a->ID, "ID_PROCESO", $proceso);
-					echo $idTordPro . " ";
+					//echo $idTordPro . " ";
 					if ($idTordPro != '') {
 						// Debo validar adicionalmente que exista como m�nimo el estado ordenar
 						$idTordProEst = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPROEST", "ID", "ID_TORDPRO", $idTordPro, "ID_ESTADO", ORDER_STATE);
@@ -1757,13 +1760,13 @@ class OrdersModel extends CI_Model
 								// Se pinta el menu respectivo
 								$nestable .= '
 							<li class="dd-item" data-id="TO_' . $a->ID . '">
-					            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: white;"> ' . $a->NOMBRE . ' </div>
+					            	<div class="dd-handle ' . BG_BOX_INTERFACE . '" style="color: red;"> ' . $a->NOMBRE . ' </div>
 					            	' . $anidado . '
 				            </li>';
 							}
 						}
 					}
-				}
+				}*/
 			}
 		}
 
@@ -2222,7 +2225,7 @@ class OrdersModel extends CI_Model
 		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		//echo $sql;
+		echo $sql;
 		echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {

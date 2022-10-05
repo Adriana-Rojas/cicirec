@@ -423,6 +423,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// Arbol para cambiar
 			$route = "OrdersAppOrder/formNewOrder/" . $this->encryption->encrypt($id) . "/";
+			echo "<script>console.log('OrdersAppOrder/formNewOrde: " . $id . "' );</script>";
 			$data['route'] = $route;
 			// Nombre del proceso
 			$data['tipoProceso'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_PROCESO", "NOMBRE", "ID", $this->session->userdata('proceso'));
@@ -437,7 +438,7 @@ class OrdersAppOrder extends CI_Controller
 			} else {
 				// Ordenes creadas hasta el momento
 				$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'));
-				$data['encOrden'] = $this->session->userdata('encOrden');
+				//$data['encOrden'] = $this->session->userdata('encOrden');
 				$data['id'] = $this->encryption->encrypt($id);
 
 				$this->load->view('orders/process/boardCreateOrderPlusInformation', $data);
