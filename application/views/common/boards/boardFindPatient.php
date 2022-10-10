@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <th>Historia</th>
                                                 <th>Documento</th>
                                                 <th >Nombre y apellidos</th>
-                                                <th>Responsable</th>
+                                                <!--<th>Responsable</th>-->
                                                 <th>Edad</th>
                                                 <th>Genero</th>
                                                 
@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <td><?= $value->ID_PCTE;?></td>
                                                 <td><?= $value->TP_ID_PCTE," ",$value->NUM_ID_PCTE;?></td>
                                                 <td><?= $value->PRI_NOM_PCTE," ",$value->SEG_NOM_PCTE," ",$value->PRI_APELL_PCTE," ",$value->SEG_APELL_PCTE;?></td>
-                                                <td><?= $value->RESPONSABLE;?></td>
+                                                <!--<td><?= $value->RESPONSABLE;?></td>-->
                                                 <td><?=intervaloTiempo($value->FECH_NCTO_PCTE,cambiaHoraServer(2),31104000);
                                                 	?> A&ntilde;os
                                                 </td>

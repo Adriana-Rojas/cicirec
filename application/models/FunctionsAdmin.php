@@ -262,7 +262,7 @@ class FunctionsAdmin extends CI_Model
         and  ADM_MODFUNCIONES.FUNCION='$funcion'
         order by ADM_MODFUNCIONES.ID
         ";
-        //   echo $sql."<br>";
+         //  echo $sql."<br>";
         // Cargo el resultado de la consulta dentro de un array de resultados
         
         $result = $this->db->query($sql);

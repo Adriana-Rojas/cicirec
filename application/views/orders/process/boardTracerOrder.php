@@ -1402,7 +1402,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 													echo "<br>" . $this->encryption->decrypt($value->OBSERVACION);
 												} else {
 
-													
+
 													$idSolicitud = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID_SOLICITUD", "CONSECUTIVO", $value->ID_COTI);
 													$idcotizacion = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID", "CONSECUTIVO", $value->ID_COTI);
 													//echo "<br> idcotizacion: ".$idcotizacion.
@@ -1522,8 +1522,8 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 									?>
 										<div class="row">
 											<div class="col-sm-12">
-											<?php $id=$idcotizacion ?>
-												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?=  $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+												<?php $id = $idcotizacion ?>
+												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
 													<span class="hidden-xs"> Ver Cotización</span>
 												</a>
 
@@ -1884,9 +1884,8 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 			</div>
 
 		</div>
-
-		<a href="<?= base_url() . '/MainApp/board'; ?>" class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10">
-			<i class="fa fa-arrow-left"></i> <span class="hidden-xs"> Retornar</span>
+		<a  class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10">
+			<i class="fa fa-arrow-left"></i> <span class="hidden-xs" onClick="history.go(-1);"> Retornar</span>
 		</a> <br> <br> <br>
 	</div>
 

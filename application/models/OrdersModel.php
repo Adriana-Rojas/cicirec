@@ -1740,13 +1740,15 @@ class OrdersModel extends CI_Model
 				} else {
 					// Valido si se tiene la relaci�n creada de PRoceso y Tipo de orden
 					$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $a->ID, "ID_PROCESO", $proceso);
+					//echo "<script>console.log('Console: " . $idTordPro . "' );</script>";
+					//echo "<script>console.log('ID_TIPOORDEN: " . $a->ID . "' );</script>";
+					//echo "<script>console.log('ID_PROCESO: " . $proceso . "' );</script>";
 					//echo $idTordPro . " ";
 					if ($idTordPro != '') {
 						// Debo validar adicionalmente que exista como m�nimo el estado ordenar
 						$idTordProEst = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPROEST", "ID", "ID_TORDPRO", $idTordPro, "ID_ESTADO", ORDER_STATE);
+						echo "<script>console.log('idTordProEst: " . $idTordProEst . "' );</script>";
 						if ($idTordProEst != '') {
-
-
 							//Verifico adicionalmente si el usuario tiene permiso para crear dicho tipo de orden
 							$idRolPerfil = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_USUROLPER", "ID_ROLPERFIL", "ID_USUARIO", $this->session->userdata('usuario'));
 							$idPerfil = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ADM_ROLPERFIL", "ID_PERFIL", "ID", $idRolPerfil);
