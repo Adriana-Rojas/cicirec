@@ -83,6 +83,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							if ($listaLista != null) {
 								$i = 1;
 								foreach ($listaLista as $value) {
+
 									//Verifico si hay ordenes activas para el id de la cotizaci�n
 									$band = false;
 									if ($value->ID != '') {
@@ -97,7 +98,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										}
 									}
 
+
+
+
 									if ($value->ID != '' && $value->ID_SEGUIMIENTO == 46 && $band) {
+										echo "<script>console.log('band: " . $band . "' );</script>";
 							?>
 										<tr>
 											<td>
@@ -204,6 +209,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										$i++;
 									}
 								} //end foreach
+
 							} //end if
 							?>
 						</tbody>

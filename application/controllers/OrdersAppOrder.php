@@ -204,9 +204,9 @@ class OrdersAppOrder extends CI_Controller
 			$this->session->set_userdata('variable2', $fechaFin);
 			$data['fechaInicial'] = $this->session->userdata('variable1');
 			$data['fechaFinal'] = $this->session->userdata('variable2');
-			$condicion = "and COT_SOLICITUD.FCREA between '" . $this->session->userdata('variable1') . "' and '" . $this->session->userdata('variable2') . "'";
+			$condicion = "and VIEW_MAL.FECHA_SOLICITUD between '" . $this->session->userdata('variable1') . "' and '" . $this->session->userdata('variable2') . "'";
 
-			$data['listaLista'] = $this->StokePriceModel->selectListStokePriceFromRequest($condicion, 2);
+			$data['listaLista'] = $this->StokePriceModel->selectListStokePriceFromRequest($condicion, 5);
 			$data['fecha'] = cambiaHoraServer(2);
 
 			// Pinto plantilla principal
@@ -1523,10 +1523,12 @@ class OrdersAppOrder extends CI_Controller
 				// ECHO $codigo;
 				$idProceso = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_PROCESO", "ID", $idTordPro);
 				$tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_TIPOORDEN", "ID", $idTordPro);
+				echo "<script>console.log(tipoOrden: ORD_TORDPRO " . $tipoOrden. "' );</script>";
 				// Nombre del proceso
 				$data['tipoProceso'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_PROCESO", "NOMBRE", "ID", $idProceso);
 
 				$data['ordenNumero'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipoOrden) . " - " . $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "CONS", $idOrden);
+				echo "<script>console.log('data'ordenNumero': " . $data['ordenNumero']. "' );</script>";
 				//cotizacion
 				$idCotizacion = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_COTIZACION", "ID", $idOrden);
 				$idSolicitud = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID_SOLICITUD", "ID", $idCotizacion);
