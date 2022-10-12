@@ -1479,7 +1479,7 @@ class OrdersAppOrder extends CI_Controller
 		$this->encryption->decrypt($id);
 		echo "<script>console.log('idOrden: " . $this->encryption->decrypt($idOrden) . "' );</script>";
 		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
-											
+
 		/**
 		 * Listo los diferentes pacientes que se han encontrado con los datos datos
 		 */
@@ -1523,12 +1523,12 @@ class OrdersAppOrder extends CI_Controller
 				// ECHO $codigo;
 				$idProceso = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_PROCESO", "ID", $idTordPro);
 				$tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_TIPOORDEN", "ID", $idTordPro);
-				echo "<script>console.log(tipoOrden: ORD_TORDPRO " . $tipoOrden. "' );</script>";
+				echo "<script>console.log(tipoOrden: ORD_TORDPRO " . $tipoOrden . "' );</script>";
 				// Nombre del proceso
 				$data['tipoProceso'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_PROCESO", "NOMBRE", "ID", $idProceso);
 
 				$data['ordenNumero'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "PREFIJO", $tipoOrden) . " - " . $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "CONS", $idOrden);
-				echo "<script>console.log('data'ordenNumero': " . $data['ordenNumero']. "' );</script>";
+				echo "<script>console.log('data'ordenNumero': " . $data['ordenNumero'] . "' );</script>";
 				//cotizacion
 				$idCotizacion = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_COTIZACION", "ID", $idOrden);
 				$idSolicitud = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "ID_SOLICITUD", "ID", $idCotizacion);
@@ -1537,7 +1537,7 @@ class OrdersAppOrder extends CI_Controller
 
 				$data['numeroCotizacion'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "CONSECUTIVO", "ID", $idCotizacion);
 				//echo "<script>console.log('idCotizacion': " . $idCotizacion. "' );</script>";
-				$data['id_usuario'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIOCOTI", "ID_USUARIO", "ID_COTIZACION", $idCotizacion);				
+				$data['id_usuario'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIOCOTI", "ID_USUARIO", "ID_COTIZACION", $idCotizacion);
 				$data['docpaciente'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "DOCUMENTO", "ID", $data['id_usuario']);
 				$data['paciente'] = $this->EsaludModel->getPatientInformation($data['docpaciente'], 6, ADMISION_STATE_ACTIVE);
 				$data['numeroAutorizacion'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SEGUIMIENTO", "AUTORIZACION", "ID_COTIZACION", $idCotizacion));
@@ -1638,7 +1638,7 @@ class OrdersAppOrder extends CI_Controller
 				// Pinto los estados siguientes
 				//echo "<script>console.log('ID_FINok: " . $idOrden . "' );</script>";
 				$data['listadoEstados'] = $this->OrdersModel->selectActualStateFromOrden($idOrden, $this->session->userdata('usuario'));
-							
+
 				// MOdifica despiece
 				$data['listaSiNo'] = $this->FunctionsAdmin->selectValoresListaAdministracion('SI_NO', '1');
 				// Retornar de suspendido
