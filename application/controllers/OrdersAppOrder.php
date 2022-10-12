@@ -419,7 +419,11 @@ class OrdersAppOrder extends CI_Controller
 
 			// Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
-			echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $id . "' );</script>";
+			foreach ($data['paciente'] as $value) {
+				$value->NUM_ID_PCTE;
+				//echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $value->NUM_ID_PCTE . "' );</script>";
+			}
+			
 
 			// Arbol para cambiar
 			$route = "OrdersAppOrder/formNewOrder/" . $this->encryption->encrypt($id) . "/";
@@ -437,7 +441,8 @@ class OrdersAppOrder extends CI_Controller
 				$this->load->view('orders/process/boardCreateOrder', $data);
 			} else {
 				// Ordenes creadas hasta el momento
-				$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'));
+				echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $value->NUM_ID_PCTE . "' );</script>";
+				$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'),$value->NUM_ID_PCTE);
 				//$data['encOrden'] = $this->session->userdata('encOrden');
 				$data['id'] = $this->encryption->encrypt($id);
 
