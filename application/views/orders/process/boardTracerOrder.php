@@ -53,7 +53,7 @@ if ($datos[2] != '') {
 $direccion = $datos[3];
 $municipio = $datos[4];
 $ideps = $datos[7];
-echo "<script>console.log('ConsoleQ: " . $value->NUM_ID_PCTE . "' );</script>";
+echo "<script>console.log('NUM_ID_PCTE: " . $value->NUM_ID_PCTE . "' );</script>";
 $correo = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "CORREO", "DOCUMENTO", $value->NUM_ID_PCTE));
 
 $alida = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_CONTACTOUSUARIO", "ID_CONVENIO", "ID_ENCORDEN", $idEncOrden);
@@ -772,6 +772,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 				</div>
 				<div class="row">
 					<p class="text-muted"><strong>Cotizaci&oacute;n: </strong> <?= $numeroCotizacion; ?></p>
+					
 				</div>
 				<div class="row">
 					<p class="text-muted">

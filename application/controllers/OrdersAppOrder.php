@@ -1512,7 +1512,7 @@ class OrdersAppOrder extends CI_Controller
 				 */
 
 				// Pinto la informacion del paciente
-				$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+				//$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
 				echo "<script>console.log('ADMISION_STATE_ACTIVE9: " . $id . "' );</script>";
 				// Recibo el idOrden
 				$idOrden = $this->encryption->decrypt($idOrden);
@@ -1536,6 +1536,10 @@ class OrdersAppOrder extends CI_Controller
 				$idaliada = $this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ID_ALIADA", "ID", $idSolicitud);
 
 				$data['numeroCotizacion'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_COTIZACION", "CONSECUTIVO", "ID", $idCotizacion);
+				//echo "<script>console.log('idCotizacion': " . $idCotizacion. "' );</script>";
+				$data['id_usuario'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIOCOTI", "ID_USUARIO", "ID_COTIZACION", $idCotizacion);				
+				$data['docpaciente'] = $this->FunctionsGeneral->getFieldFromTableNotId("COT_USUARIO", "DOCUMENTO", "ID", $data['id_usuario']);
+				$data['paciente'] = $this->EsaludModel->getPatientInformation($data['docpaciente'], 6, ADMISION_STATE_ACTIVE);
 				$data['numeroAutorizacion'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SEGUIMIENTO", "AUTORIZACION", "ID_COTIZACION", $idCotizacion));
 				$dateAutorizacion = $this->FunctionsGeneral->getFieldFromTableNotId("COT_SEGUIMIENTO", "FCREA", "ID_COTIZACION", $idCotizacion);
 				$dateCreate = date_create($dateAutorizacion);

@@ -155,9 +155,17 @@ class EsaludModel extends CI_Model {
     		$condicion
     		
     		";
+    	}else  if($option==6){
+    		// Busqueda de informaci�n por admision
+    		$sql="select $busqueda
+    		from $tablas
+    		where T_PACIENTES.NUM_ID_PCTE ='$search'
+    		$condicion
+    		
+    		";
     	}
     	//ejecuto la consulta
-    	//echo $sql;	
+    	echo $sql;	
     	$result=$esaludDb->query($sql);
     	if($result->num_rows()>0){
     		return $result->result();
