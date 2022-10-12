@@ -102,7 +102,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 
 									if ($value->ID != '' && $value->ID_SEGUIMIENTO == 46 && $band) {
-										echo "<script>console.log('band: " . $band . "' );</script>";
+									//	echo "<script>console.log('band: " . $band . "' );</script>";
 							?>
 										<tr>
 											<td>

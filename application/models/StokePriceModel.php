@@ -827,7 +827,7 @@ class StokePriceModel extends CI_Model
 			$condicion
 ";
 		}
-		echo $sql;
+		//echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
@@ -851,7 +851,7 @@ class StokePriceModel extends CI_Model
 				FROM
 					VIEW_SEGUIMIENTOS
 			)";
-		echo $sql;
+		//echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();

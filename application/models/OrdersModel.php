@@ -2505,7 +2505,7 @@ class OrdersModel extends CI_Model
 				 and ORD_PARGRUELEM.ID_GRUELEM='$grupo'
 				 and ORD_PARGRUELEM.ESTADO='" . ACTIVO_ESTADO . "'
 				 and ORD_PARELEM.ESTADO='" . ACTIVO_ESTADO . "'		" . "order by  ORD_PARELEM.ID";
-		echo $sql;
+		//echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
