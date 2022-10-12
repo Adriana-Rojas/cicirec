@@ -165,7 +165,7 @@ class EsaludModel extends CI_Model {
     		";
     	}
     	//ejecuto la consulta
-    	echo $sql;	
+    	//echo $sql;	
     	$result=$esaludDb->query($sql);
     	if($result->num_rows()>0){
     		return $result->result();
