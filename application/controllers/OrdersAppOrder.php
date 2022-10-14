@@ -1420,7 +1420,7 @@ class OrdersAppOrder extends CI_Controller
 			header("Location: " . base_url());
 		}
 	}
-	public function printOrder1($id, $encOrden = null)
+	public function printOrder1($id, $encOrden)
 	{
 		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
 		echo "<script>console.log('encOrden: " . $this->encryption->decrypt($encOrden) . "' );</script>";
@@ -1436,6 +1436,7 @@ class OrdersAppOrder extends CI_Controller
 			// Encabezado de la orden
 			$encOrden = $this->encryption->decrypt($encOrden);
 
+			echo "<script>console.log('encOrden2: " . $encOrden . "' );</script>";
 			// Pinto la interfaz para imprimir las ordenes
 			// Pinto las vistas adicionales a travos de la funcion pintaComun del helper hospitium
 			$mainPage = $this->session->userdata('pagina');
@@ -1462,7 +1463,7 @@ class OrdersAppOrder extends CI_Controller
 			foreach ($data['paciente'] as $value) {
 				$value->NUM_ID_PCTE;
 			}
-			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'), $value->NUM_ID_PCTE);
+			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden, $value->NUM_ID_PCTE);
 
 			// 3. Informacion de la empresa
 			$listParameters = $this->SystemModel->getParameters(1);
