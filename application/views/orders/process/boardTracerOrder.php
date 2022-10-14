@@ -772,7 +772,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 				</div>
 				<div class="row">
 					<p class="text-muted"><strong>Cotizaci&oacute;n: </strong> <?= $numeroCotizacion; ?></p>
-					
+
 				</div>
 				<div class="row">
 					<p class="text-muted">
@@ -1533,6 +1533,18 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 												<br>
 											</div>
 										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<?php $id = $idcotizacion ?>
+												<a href="<?= base_url() ?>OrdersAppOrder/printOrder1/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+													<span class="hidden-xs"> Orden de Producción</span>
+												</a>
+
+											</div>
+											<div class="col-sm-12">
+												<br>
+											</div>
+										</div>
 
 										<?php
 											//echo $adjunto1." ".$adjunto2;
@@ -1885,7 +1897,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 			</div>
 
 		</div>
-		<a  class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10">
+		<a class="btn  btn-primary btn-rounded pull-left waves-effect waves-light m-r-10">
 			<i class="fa fa-arrow-left"></i> <span class="hidden-xs" onClick="history.go(-1);"> Retornar</span>
 		</a> <br> <br> <br>
 	</div>

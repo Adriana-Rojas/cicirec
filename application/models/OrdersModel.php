@@ -2240,7 +2240,7 @@ class OrdersModel extends CI_Model
 		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		echo $sql;
+		//echo $sql;
 		//echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -2249,6 +2249,80 @@ class OrdersModel extends CI_Model
 			return null;
 		}
 	}
+	public function selectListOrdersFromHead2($idOrden, $cc)
+	{
+		/**
+		 * Listo las ordenes que se han creado dentro de la cabecera de orden $encabezado
+		 */
+		$sql = "SELECT
+		ORD_ORDEN.ID,
+		ORD_ARBOLCODIGO.CODIGO,
+		ORD_ARBOLCODIGO.NOMBRE,
+		ORD_ORDEN.CONS,
+		ORD_ORDEN.CANTIDAD,
+		ORD_TIPOORDEN.PREFIJO,
+		ORD_ORDEN.OBSERVACION,
+		COT_USUARIOCOTI.ID_USUARIO,
+		COT_USUARIO.DOCUMENTO
+	FROM
+		ORD_ARBOLCODIGO,
+		ORD_ORDEN,
+		ORD_TORDPRO,
+		ORD_TIPOORDEN,
+		COT_USUARIOCOTI,
+		COT_USUARIO
+	WHERE
+	ORD_ORDEN.ID = '$idOrden'
+	AND COT_USUARIO.DOCUMENTO= $cc
+	AND ORD_ORDEN.ID_COTIZACION = COT_USUARIOCOTI.ID_COTIZACION
+	AND COT_USUARIOCOTI.ID_USUARIO = COT_USUARIO.ID
+	AND ORD_ORDEN.ACTIVIDAD = ORD_ARBOLCODIGO.ID
+	AND ORD_ORDEN.ACTIVIDAD = ORD_ARBOLCODIGO.ID
+	AND ORD_ORDEN.ACTIVIDAD = ORD_ARBOLCODIGO.ID
+	AND ORD_ORDEN.ESTADO = '" . ACTIVO_ESTADO . "'
+	AND ORD_TORDPRO.ID = ORD_ORDEN.ID_TORDPRO
+	AND ORD_TORDPRO.ID_TIPOORDEN = ORD_TIPOORDEN.ID
+	AND ORD_TIPOORDEN.ID_CLASETIPO ! = '3'
+	UNION ALL
+		SELECT
+			ORD_ORDEN.ID,
+			ORD_ELEMENTO.CODIGO,
+			ORD_ELEMENTO.NOMBRE,
+			ORD_ORDEN.CONS,
+			ORD_ORDEN.CANTIDAD,
+			ORD_TIPOORDEN.PREFIJO,
+			ORD_ORDEN.OBSERVACION,
+			COT_USUARIOCOTI.ID_USUARIO,
+			COT_USUARIO.DOCUMENTO
+		FROM
+			ORD_ELEMENTO,
+			ORD_ORDEN,
+			ORD_TORDPRO,
+			ORD_TIPOORDEN,
+			COT_USUARIOCOTI,
+			COT_USUARIO
+		WHERE
+		ORD_ORDEN.ID = '$idOrden'			
+		AND COT_USUARIO.DOCUMENTO= $cc
+		AND ORD_ORDEN.ID_COTIZACION = COT_USUARIOCOTI.ID_COTIZACION
+		AND COT_USUARIOCOTI.ID_USUARIO = COT_USUARIO.ID
+		AND ORD_ORDEN.ACTIVIDAD = ORD_ELEMENTO.ID
+		AND ORD_ORDEN.ESTADO = '" . ACTIVO_ESTADO . "'
+		AND ORD_TORDPRO.ID = ORD_ORDEN.ID_TORDPRO
+		AND ORD_TORDPRO.ID_TIPOORDEN = ORD_TIPOORDEN.ID
+		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
+			";
+
+		//echo $sql;
+		//echo "<script>console.log('Console: " . $sql . "' );</script>";
+		$result = $this->db->query($sql);
+		if ($result->num_rows() > 0) {
+			return $result->result();
+		} else {
+			return null;
+		}
+	}
+
 	public function selectNextStatesProcess($idTordProEst, $orden)
 	{
 		/**
@@ -2373,7 +2447,7 @@ class OrdersModel extends CI_Model
         where VIEW_ORD_ORDENESACTUALES.ID_USUARIO='$usuario'
         ORDER BY VIEW_ORD_ORDENESACTUALES.FECHA_ORDEN ASC ";
 
-		 echo $sql;
+		// echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
