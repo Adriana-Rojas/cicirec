@@ -423,7 +423,7 @@ class OrdersAppOrder extends CI_Controller
 				$value->NUM_ID_PCTE;
 				//echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $value->NUM_ID_PCTE . "' );</script>";
 			}
-			
+
 
 			// Arbol para cambiar
 			$route = "OrdersAppOrder/formNewOrder/" . $this->encryption->encrypt($id) . "/";
@@ -442,7 +442,7 @@ class OrdersAppOrder extends CI_Controller
 			} else {
 				// Ordenes creadas hasta el momento
 				echo "<script>console.log('ADMISION_STATE_ACTIVE1: " . $value->NUM_ID_PCTE . "' );</script>";
-				$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'),$value->NUM_ID_PCTE);
+				$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'), $value->NUM_ID_PCTE);
 				//$data['encOrden'] = $this->session->userdata('encOrden');
 				$data['id'] = $this->encryption->encrypt($id);
 
@@ -1347,6 +1347,8 @@ class OrdersAppOrder extends CI_Controller
 
 	public function printOrder($id, $encOrden = null)
 	{
+		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
+		echo "<script>console.log('encOrden: " . $this->encryption->decrypt($encOrden) . "' );</script>";
 		/**
 		 * Pinto el impreso de la orden *
 		 */
@@ -1380,11 +1382,13 @@ class OrdersAppOrder extends CI_Controller
 			// Pinto los permisos del tablero de control
 			$idModule = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODULO", "ID", "PAGINA", $mainPage);
 
-			// 1. Pinto la informacion del paciente
+			// Pinto la informacion del paciente
 			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
-			echo "<script>console.log('ADMISION_STATE_ACTIVE7: " . $id . "' );</script>";
-			// 2. Pinto el listado de ordenes
-			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden);
+			foreach ($data['paciente'] as $value) {
+				$value->NUM_ID_PCTE;
+			}
+			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'), $value->NUM_ID_PCTE);
+
 			// 3. Informacion de la empresa
 			$listParameters = $this->SystemModel->getParameters(1);
 			foreach ($listParameters as $value) {
@@ -2021,7 +2025,7 @@ class OrdersAppOrder extends CI_Controller
 			$idEmpresa = $this->security->xss_clean($this->input->post('idEmpresa'));
 			$convenio2 = $this->security->xss_clean($this->input->post('convenio'));
 			$proceso2 = $this->security->xss_clean($this->input->post('proceso'));
-
+			echo "<script>console.log('proceso2: " . $proceso2 . "' );</script>";
 
 			$adjunto1 = null;
 
@@ -2169,6 +2173,9 @@ class OrdersAppOrder extends CI_Controller
 			// Obtengo relacion entre proceso y tipo de orden
 			$tordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $tipoOrden, "ID_PROCESO", $this->session->userdata('proceso'));
 			// Realizo el insert de la orden
+			echo "<script>console.log('tipoOrden: " . $tipoOrden . "' );</script>";
+			echo "<script>console.log('proceso: " . $this->session->userdata('proceso') . "' );</script>";
+
 			$idOrden = $this->OrdersModel->insertOrderBody($encabezado, $tordPro, $this->security->xss_clean($this->input->post('cie10')), $this->security->xss_clean($this->input->post('causa')), $this->encryption->encrypt($this->security->xss_clean($this->input->post('diagnostico'))), $consecutivoOrden, $predecesora, $this->security->xss_clean($this->input->post('codigo')), $this->security->xss_clean($this->input->post('cantidad')), $observacion, $cotizacion, $this->session->userdata('usuario'), $adjunto1, $adjunto2);
 
 
@@ -2443,7 +2450,15 @@ class OrdersAppOrder extends CI_Controller
 			if ($idOrden == null) {
 				// Proceso de ordenes
 				// Obtengo el listado de ordenes
-				$ordenes = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'));
+				// Pinto la informacion del paciente
+				$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+				foreach ($data['paciente'] as $value) {
+					$value->NUM_ID_PCTE;
+					//echo "<script>console.log('Console: " . $value- . "' );</script>";
+				}
+				$ordenes = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'), $value->NUM_ID_PCTE);
+
+				//$ordenes = $this->OrdersModel->selectListOrdersFromHead($this->session->userdata('encOrden'));
 
 				if ($ordenes != null) {
 					foreach ($ordenes as $orden) {

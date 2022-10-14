@@ -742,7 +742,7 @@ class OrdersModel extends CI_Model
 		);
 		// Realizo el insert sobre la base de datos en la tabla ORD_ENCORDEN
 		$this->db->insert('ORD_ENCORDEN', $data);
-		echo "<script>console.log('data: " . $data . "' );</script>";
+		//echo "<script>console.log('data: " . $data . "' );</script>";
 		sleep(10);
 		return $consecutivo;
 	}
@@ -2240,7 +2240,7 @@ class OrdersModel extends CI_Model
 		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		//echo $sql;
+		echo $sql;
 		//echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
@@ -2373,7 +2373,7 @@ class OrdersModel extends CI_Model
         where VIEW_ORD_ORDENESACTUALES.ID_USUARIO='$usuario'
         ORDER BY VIEW_ORD_ORDENESACTUALES.FECHA_ORDEN ASC ";
 
-		// echo $sql;
+		 echo $sql;
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();
