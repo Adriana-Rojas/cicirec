@@ -1463,8 +1463,8 @@ class OrdersAppOrder extends CI_Controller
 			foreach ($data['paciente'] as $value) {
 				$value->NUM_ID_PCTE;
 			}
-			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden, $value->NUM_ID_PCTE);
-
+			//$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden, $value->NUM_ID_PCTE);
+			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead1($encOrden, $value->NUM_ID_PCTE);
 			// 3. Informacion de la empresa
 			$listParameters = $this->SystemModel->getParameters(1);
 			foreach ($listParameters as $value) {
