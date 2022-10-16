@@ -2240,7 +2240,7 @@ class OrdersModel extends CI_Model
 		AND ORD_TIPOORDEN.ID_CLASETIPO = '3'
 			";
 
-		echo $sql;
+		//echo $sql;
 		//echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
