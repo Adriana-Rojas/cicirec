@@ -101,6 +101,7 @@ class SystemPartnerCompany extends CI_Controller
 			$data['empresa'] = NULL;
 			$data['correo'] = null;
 			$data['telefono'] = null;
+			$data['direccion'] = null;
 
 			//Cargo vista
 			$this->load->view('system/partnerDefine/newRegister', $data);
@@ -150,6 +151,7 @@ class SystemPartnerCompany extends CI_Controller
 				//echo "<script> console.log('Consolekmunicipioo: " . $municipio . "');	</script>";
 				$data['correo'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "CORREO", $id);
 				$data['telefono'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "TELEFONO", $id);
+				$data['direccion'] = $this->FunctionsGeneral->getFieldFromTable("ADM_ALIADA", "DIRECCION", $id);
 
 				//cARGO LISTADO DE EMPRESAS
 				$data['listaEmpresas'] = $this->EsaludModel->getCompaniesInformation();
@@ -196,10 +198,11 @@ class SystemPartnerCompany extends CI_Controller
 			$municipio = strtoupper($this->security->xss_clean($this->input->post('ciudad')));
 			$correo = strtoupper($this->security->xss_clean($this->input->post('correo')));
 			$telefono = strtoupper($this->security->xss_clean($this->input->post('telefono')));
+			$direccion = strtoupper($this->security->xss_clean($this->input->post('direccion')));
 			if ($this->encryption->decrypt($this->security->xss_clean($this->input->post('valida'))) == 'newRegister') {
-				if ($this->FunctionsGeneral->getQuantityFieldFromTable("ADM_ALIADA", "EMPRESA", $empresa, 'ID_MUNICIPIO', $municipio, 'CORREO', $correo, 'TELEFONO', $telefono) == 0) {
+				if ($this->FunctionsGeneral->getQuantityFieldFromTable("ADM_ALIADA", "EMPRESA", $empresa, 'ID_MUNICIPIO', $municipio, 'CORREO', $correo, 'TELEFONO', $telefono,'DIRECCION', $direccion) == 0) {
 					//Creo el registro
-					$id = $this->FunctionsGeneral->insertcuatroParameter(
+					$id = $this->FunctionsGeneral->insertcincoParameter(
 						"ADM_ALIADA",
 						$this->session->userdata('usuario'),
 						"EMPRESA",
@@ -209,7 +212,9 @@ class SystemPartnerCompany extends CI_Controller
 						"CORREO",
 						$correo,
 						"TELEFONO",
-						$telefono
+						$telefono,
+						"DIRECCION",
+						$direccion
 					);
 
 					//Pinto mensaje para retornar a la aplicaci�n
@@ -249,10 +254,19 @@ class SystemPartnerCompany extends CI_Controller
 					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
 					$this->session->userdata('usuario')
 				);
+
 				$this->FunctionsGeneral->updateByID(
 					"ADM_ALIADA",
 					"TELEFONO",
 					$telefono,
+					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
+					$this->session->userdata('usuario')
+				);
+				
+				$this->FunctionsGeneral->updateByID(
+					"ADM_ALIADA",
+					"DIRECCION",
+					$direccion,
 					$this->encryption->decrypt($this->security->xss_clean($this->input->post('id'))),
 					$this->session->userdata('usuario')
 				);

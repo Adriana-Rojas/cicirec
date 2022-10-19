@@ -141,6 +141,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<input class="form-control " type="text" name="telefono" id="telefono" placeholder="Ej. 4565656" value="<?= $telefono; ?>" />
 						</div>
 					</div>
+					<div class="form-group">
+						<label class="col-md-12" for="direccion">Dirección </label>
+						<div class="col-md-12">
+							<input class="form-control " type="text" name="direccion" id="direccion" placeholder="Ej. Calle 16e #03-09 sur" value="<?= $direccion; ?>" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

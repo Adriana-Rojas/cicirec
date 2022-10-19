@@ -35,6 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <th>Departamento</th>
                                                 <th>Ciudad (municipio)</th>
                                                 <th>Correo </th>
+                                                <th>Dirección</th>
                                                 <th>Tel&eacute;fono</th>
                                                 <th>Estado</th>
                                                 <th>Acci&oacute;n</th>
@@ -60,6 +61,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 </td>
 												<td>
                                                     <?= $value->CORREO;?>
+                                                </td>
+                                                <td>
+                                                    <?= $value->DIRECCION;?>
                                                 </td>
                                                 <td>
                                                     <?= $value->TELEFONO;?>

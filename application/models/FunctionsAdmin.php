@@ -436,7 +436,8 @@ class FunctionsAdmin extends CI_Model
     				  ADM_DEPARTAMENTO.NOMBRE as DEPARTAMENTO,
     					ADM_ALIADA.ESTADO,
                         ADM_ALIADA.CORREO,
-                        ADM_ALIADA.TELEFONO
+                        ADM_ALIADA.TELEFONO,
+                        ADM_ALIADA.DIRECCION
 	    	from ADM_ALIADA, ADM_MUNICIPIO, ADM_DEPARTAMENTO
 	    	where ADM_ALIADA.ID_MUNICIPIO=ADM_MUNICIPIO.ID
 	    	and ADM_MUNICIPIO.ID_DEPARTAMENTO=ADM_DEPARTAMENTO.ID
