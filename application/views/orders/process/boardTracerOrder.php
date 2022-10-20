@@ -752,7 +752,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 				<div class="row">
 					<p class="text-muted">
 
-						<strong>Edad: </strong><?= intervaloTiempo($edad, cambiaHoraServer(2), 31104000); ?> A&ntilde;os
+						<strong>Edad: </strong>28 A&ntilde;os
 					</p>
 				</div>
 			</div>
@@ -1067,7 +1067,6 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 					<?php
 					//if ($idResponsable == NEPS) {
 					?>
-					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cotizacion" role="tab"><span class="hidden-sm-up"><i class="fa fa-usd "></i></span> <span class="hidden-xs-down">Relacionar cotizaci&oacute;n</span></a></li>
 					<?php
 					//	}
 					?>
@@ -1520,18 +1519,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO1", "ID", $idSolicitud));
 											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
 									?>
-										<div class="row">
-											<div class="col-sm-12">
-												<?php $id = $idcotizacion ?>
-												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
-													<span class="hidden-xs"> Ver Cotización</span>
-												</a>
-
-											</div>
-											<div class="col-sm-12">
-												<br>
-											</div>
-										</div>
+										
 										<div class="row">
 											<div class="col-sm-12">
 												<?php $id = $idcotizacion ?>
