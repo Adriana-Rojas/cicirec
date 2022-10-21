@@ -472,7 +472,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							</div>
 						</div>
 						<div class="form-group pais">
-							<label class="col-md-12" for="ciudad">Ciudad  (Municipio)* </label>
+							<label class="col-md-12" for="ciudad">Ciudad (Municipio)* </label>
 							<div class="col-md-12">
 								<select class="form-control" id="ciudad" name="ciudad">
 									<option value="">--- Seleccione una opci&oacute;n ---</option>
@@ -1097,35 +1097,41 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">
-								<i class="fa fa-file-pdf-o   fa-2x"></i> Formato Toma De Medida  </small>
+								<i class="fa fa-file-pdf-o   fa-2x"></i> Formato Toma De Medida </small>
 							</h5>
 							<br>
 							<div class="clearfix" style="text-align:center;">
 								<center>
 									<?php
-									//if ($adjunto1 != '') {
+									if ($nombreTipo == 'SILLAS' || $nombreTipo == 'AYUDAS MOVILIDAD' || $nombreTipo == 'HOME CARE' || $nombreTipo == 'COJINES' || $nombreTipo == 'AYUDAS DE MOVILIDAD IVA') {
 									?>
-									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-14 Formato de toma de medidas Movilidad.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Toma de Medidas Movilidad</span>
-									</a>
-									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10 CONFIGURACIÓN DE PROTESIS MIEMBRO SUPERIOR V1 FORMULARIO.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
-									</a>									
-									<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9 CONFIGURACIÓN DE PROTESIS MIEMBRO INFERIOR.docx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Inferior</span>
-									</a>
+										<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-14.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Toma de Medidas Movilidad</span>
+										</a>
 									<?php
-									//}
+									}
+									?>
+									<?php
+									if ($nombreTipo == 'PRÓTESIS' || $nombreTipo == 'CAMBIOS DE SOCKET' || $nombreTipo == 'COMPONENTES PRÓTESIS MMII' || $nombreTipo == 'COMPONENTES PRÓTESIS MMSS' || $nombreTipo == 'ORTOPROTESIS') {
+									?>
+										<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
+										</a>
+										<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Inferior</span>
+										</a>
+									<?php
+									}
 									?>
 									<?php
 									//if ($adjunto2 != '') {
 									?>
-										<!--<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+									<!--<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
 											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Orden m&eacute;dica</span>
 										</a>-->
 
 									<?php
-								//	}
+									//	}
 									?>
 								</center>
 							</div>
