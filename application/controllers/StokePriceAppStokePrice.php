@@ -611,7 +611,7 @@ class StokePriceAppStokePrice extends CI_Controller
                     $data['adjunto2'] = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
                     $data['hide'] = null;
 
-                    // Cargo vista
+                    // Cargo vista aca
                     $this->load->view('stokePrice/operation/formTraceStokePrice', $data);
 
                     // Cargo validación de formulario

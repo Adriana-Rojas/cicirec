@@ -2877,6 +2877,7 @@ class OrdersModel extends CI_Model
 					AND ORD_HISTORY_ORDEN.ESTADO_OBS = '" . ACTIVO_ESTADO . "'
 			order by ORD_HISTORY_ORDEN.FOBS asc";
 		//echo $sql;
+		echo "<script>console.log('Console: " . $sql . "' );</script>";
 		$result = $this->db->query($sql);
 		if ($result->num_rows() > 0) {
 			return $result->result();

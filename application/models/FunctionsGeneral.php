@@ -207,32 +207,26 @@ class FunctionsGeneral extends CI_Model
 		}
 		$sql = "SELECT
 		TOP 1 T.NOMBRE AS TIPO
-	FROM
-		COT_TIPOSEG T,
-		COT_COTIZACION C,
-		COT_SEGUIMIENTO S,
-		ADM_USUROLPER U,
-		ADM_USUARIO US,
-		ADM_ROLPERFIL R,
-		ADM_PERFIL P
-	WHERE
-		C.CONSECUTIVO = $CONSECUTIVO
-	AND C.ID = S.ID_COTIZACION
-	AND S.ID_TIPOSEG = T.ID
-	AND S.ESTADO = 'S'
-	AND U.ID_USUARIO = US.ID
-	AND U.ID_ROLPERFIL = R.ID
-	AND R.ID_PERFIL = P.ID
-	AND S.UCREA = US.ID 
-	ORDER BY
-	T.ID DESC";
-
-
-
-		/*$this->db->select(TIPO);
-		$this->db->from($table);
-		$this->db->where($campoBusqueda, $valor);*/
-		echo $sql;
+		FROM
+			COT_TIPOSEG T,
+			COT_COTIZACION C,
+			COT_SEGUIMIENTO S,
+			ADM_USUROLPER U,
+			ADM_USUARIO US,
+			ADM_ROLPERFIL R,
+			ADM_PERFIL P
+		WHERE
+			C.CONSECUTIVO = $CONSECUTIVO
+		AND C.ID = S.ID_COTIZACION
+		AND S.ID_TIPOSEG = T.ID
+		AND S.ESTADO = 'S'
+		AND U.ID_USUARIO = US.ID
+		AND U.ID_ROLPERFIL = R.ID
+		AND R.ID_PERFIL = P.ID
+		AND S.UCREA = US.ID 
+		ORDER BY
+		S.ID DESC";
+		//echo $sql;
 		$consulta = $this->db->query($sql);
 		if ($consulta->num_rows() > 0) {
 			$resultado = $consulta->row();
