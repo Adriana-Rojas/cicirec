@@ -752,7 +752,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 				<div class="row">
 					<p class="text-muted">
 
-						<strong>Edad: </strong>28 A&ntilde;os
+						<strong>Edad: </strong><?= intervaloTiempo($edad, cambiaHoraServer(2), 31104000); ?> A&ntilde;os
 					</p>
 				</div>
 			</div>
@@ -1057,6 +1057,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 					<?php if ($valida) { ?>
 						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#elements" role="tab"><span class="hidden-sm-up"><i class="fa fa-american-sign-language-interpreting"></i></span> <span class="hidden-xs-down">Despiece</span></a></li>
 					<?php } ?>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#team" role="tab"><span class="hidden-sm-up"><i class="fa fa-users"></i></span> <span class="hidden-xs-down">Equipo</span></a></li>
 					<?php
 					if ($perfilDefinido != '') {
 					?>
@@ -1067,6 +1068,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 					<?php
 					//if ($idResponsable == NEPS) {
 					?>
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cotizacion" role="tab"><span class="hidden-sm-up"><i class="fa fa-usd "></i></span> <span class="hidden-xs-down">Relacionar cotizaci&oacute;n</span></a></li>
 					<?php
 					//	}
 					?>
@@ -1519,7 +1521,18 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO1", "ID", $idSolicitud));
 											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
 									?>
-										
+										<div class="row">
+											<div class="col-sm-12">
+												<?php $id = $idcotizacion ?>
+												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+													<span class="hidden-xs"> Ver Cotización</span>
+												</a>
+
+											</div>
+											<div class="col-sm-12">
+												<br>
+											</div>
+										</div>
 										<div class="row">
 											<div class="col-sm-12">
 												<?php $id = $idcotizacion ?>
@@ -1838,7 +1851,46 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 							<!-- Contenido del tab -->
 						</div>
 					<?php } ?>
-					
+					<div class="tab-pane " id="team" role="tabpanel">
+						<div class="p-20">
+							<h3>Equipo de trabajo.</h3>
+							<p align="justify">Lista de funcionarios que han intervenido en
+								el proceso del paciente.</p>
+							<div class="table-responsive m-t-40">
+								<table id="myTableTeam" class="display nowrap table table-hover table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>Cargo</th>
+											<th>Profesional</th>
+
+											<th>Estados</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										if ($listadoPersonas != null) {
+											foreach ($listadoPersonas as $value) {
+												// ECHO $value->PERFIL;
+										?>
+												<tr>
+													<td><?= $value->PERFIL; ?></td>
+													<td><?= $value->NOMBRES . " " . $value->APELLIDOS; ?></td>
+													<td><?= $value->ESTADO; ?></td>
+												</tr>
+										<?php
+											} // end foreach
+										} // end if
+										?>
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+						<!-- Contenido del tab -->
+
+						<!-- Contenido del tab -->
+					</div>
 				</div>
 
 

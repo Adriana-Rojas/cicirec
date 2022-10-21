@@ -82,7 +82,7 @@ class FunctionsGeneral extends CI_Model
 		$this->db->insert($table, $data);
 		return $consecutivo;
 	}
-	public function insertcincoParameter($table, $usuario, $field, $value, $field2, $value2, $field3, $value3, $field4, $value4,$field5, $value5)
+	public function insertcincoParameter($table, $usuario, $field, $value, $field2, $value2, $field3, $value3, $field4, $value4, $field5, $value5)
 	{
 		/** Se se inserta la informaci�n en la tabla $table para el campo $field con el valor $value*/
 
@@ -202,9 +202,9 @@ class FunctionsGeneral extends CI_Model
 	public function getSeguimiento($CONSECUTIVO, $campo = 'TIPO')
 	{
 
-if ($CONSECUTIVO==null){
-    $CONSECUTIVO=0;
-}
+		if ($CONSECUTIVO == null) {
+			$CONSECUTIVO = 0;
+		}
 		$sql = "SELECT
 		TOP 1 T.NOMBRE AS TIPO
 	FROM
@@ -232,7 +232,7 @@ if ($CONSECUTIVO==null){
 		/*$this->db->select(TIPO);
 		$this->db->from($table);
 		$this->db->where($campoBusqueda, $valor);*/
-		//echo $sql;
+		echo $sql;
 		$consulta = $this->db->query($sql);
 		if ($consulta->num_rows() > 0) {
 			$resultado = $consulta->row();
