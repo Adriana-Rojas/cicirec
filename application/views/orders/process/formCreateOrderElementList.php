@@ -1112,16 +1112,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									}
 									?>
 									<?php
-									if ($nombreTipo == 'PRÓTESIS' || $nombreTipo == 'CAMBIOS DE SOCKET' || $nombreTipo == 'COMPONENTES PRÓTESIS MMII' || $nombreTipo == 'COMPONENTES PRÓTESIS MMSS' || $nombreTipo == 'ORTOPROTESIS') {
+									if ($nombreTipo == 'PROTESIS' ||
+										$nombreTipo == 'CAMBIOS DE SOCKET' ||
+										$nombreTipo == 'COMPONENTES PRÓTESIS MMII' ||
+										$nombreTipo == 'COMPONENTES PRÓTESIS MMSS' ||
+										$nombreTipo == 'ORTOPROTESIS') {
+										if ($tipoMiembro == 'Miembros superiores') {
 									?>
-										<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
-										</a>
-										<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-											<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Inferior</span>
-										</a>
+											<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+												<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
+											</a>
+										<?php
+										}
+
+										if ($tipoMiembro == 'Miembros Inferiores') {
+										?>
+											<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-9.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+												<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Inferior</span>
+											</a>
 									<?php
+										}
 									}
+
 									?>
 									<?php
 									//if ($adjunto2 != '') {

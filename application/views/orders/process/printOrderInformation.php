@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                                        <address>
 	                                            <h3> &nbsp;<b class="text-danger"><?= $value->PRI_NOM_PCTE," ",$value->SEG_NOM_PCTE," ",$value->PRI_APELL_PCTE," ",$value->SEG_APELL_PCTE;?></b></h3>
 	                                            <p class="text-muted m-l-5"><strong>Documento de identidad </strong>  <?= $value->TP_ID_PCTE," ",$value->NUM_ID_PCTE;?>
-	                                                <br/> <strong>Registro </strong> <?= $value->ID_PCTE;?>
+	                                                <br/> <strong>Historia </strong> <?= $value->ID_PCTE;?>
 	                                                <br/> <strong> Edad </strong><?=intervaloTiempo($value->FECH_NCTO_PCTE,cambiaHoraServer(2),31104000);?> A&ntilde;os
 	                                                <br/> <strong>Responsable </strong><?= $responsable;?>
 	                                                
@@ -92,13 +92,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <td><?= $value->NOMBRE;?></td>
                                                     <td><?=  $this->encryption->decrypt ($value->OBSERVACION);?></td>
                                                     <td class="text-right"><?= $value->CANTIDAD;?> </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-center"></td>
-                                                    <td>1600719</td>
-                                                    <td>KIT ADICIONAL-PROTESIS MIEMBRO INFERIOR</td>
-                                                    <td></td>
-                                                    <td></td>
                                                 </tr>
 	                                                <?php 
 	                                                }//end foreach
