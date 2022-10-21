@@ -1164,6 +1164,9 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											</div>
 										</div>
 										<div class="form-group adjunto" style="display: none;">
+											<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-18-10.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+												<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Prótesis Miembro Superior</span>
+											</a>
 											<label class="col-md-12" for="adjunto">Adjunto </label>
 											<div class="col-md-12">
 												<input type="file" class="form-control adjunto" id="adjunto" name="adjunto" disabled="disabled">
