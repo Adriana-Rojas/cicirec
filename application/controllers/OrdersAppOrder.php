@@ -1612,7 +1612,8 @@ class OrdersAppOrder extends CI_Controller
 				$idTordPro = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_TORDPRO", "ID", $idOrden);
 				$idArbol = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ACTIVIDAD", "ID", $idOrden);
 				$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD", $idOrden);
-				// ECHO $codigo;
+
+				
 				$idProceso = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_PROCESO", "ID", $idTordPro);
 				$tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_TIPOORDEN", "ID", $idTordPro);
 				echo "<script>console.log(tipoOrden: ORD_TORDPRO " . $tipoOrden . "' );</script>";
@@ -1636,15 +1637,13 @@ class OrdersAppOrder extends CI_Controller
 				$dateAutorizacion = $this->FunctionsGeneral->getFieldFromTableNotId("COT_SEGUIMIENTO", "FCREA", "ID_COTIZACION", $idCotizacion);
 				$dateCreate = date_create($dateAutorizacion);
 				$data['fechaAutorizacion'] = date_format($dateCreate, "Y/m/d");
+
 				if ($this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOORDEN", "ID_CLASETIPO", "ID", $tipoOrden) == 3) {
 					$idMiembro = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TIPOMIEM", "ID_MIEMBROS", "ID_TIPOORDEN", $tipoOrden);
 					$data['nombreTipo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "NOMBRE", $tipoOrden);
 					$data['niveles'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "NIVELES", $tipoOrden);
 					$data['idValida'] = $this->FunctionsGeneral->getFieldFromTable("ORD_TIPOORDEN", "ID_VALIDA", $tipoOrden);
 
-					// para saber que documento muestro superior o inferior
-					$data['tipoMiembro'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOL_ZS", "MIEMBROSNOMBRE", "TIPOORDENID", $tipoOrden);
-					echo "<script>console.log('tipoMiembro3: " . $data['tipoMiembro'] . "' );</script>";
 					// Nombre del miembro seleccionado
 					$data['nombreMiembros'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOL_ZS", "NIVELAMP", "TIPOORDENID", $tipoOrden);
 					// Nombre del miembro seleccionado - DETALLE
@@ -1655,6 +1654,8 @@ class OrdersAppOrder extends CI_Controller
 					// echo $idArbol;
 					$data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "NOMBRE", $codigo);
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "CODIGO", $codigo);
+					echo "<script>console.log('codigo3: " . $codigo . "' );</script>";
+					echo "<script>console.log('codigo3: " . $data['codigo'] . "' );</script>";
 				} else {
 
 					/**
@@ -1666,6 +1667,8 @@ class OrdersAppOrder extends CI_Controller
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
 					$idArbol = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "ID_ARBOLVALORES", $codigo);
+					echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
+					echo "<script>console.log('codigo2: " . $data['codigo'] . "' );</script>";
 
 					$idTipoMiem = $this->FunctionsGeneral->getFieldFromTable("VIEW_ORD_ARBOL_TS", "ID_TIPOMIEM", $idArbol);
 					if ($idTipoMiem == '') {
@@ -1752,6 +1755,11 @@ class OrdersAppOrder extends CI_Controller
 
 
 				$data['listaPadre'] = $this->FunctionsGeneral->selectValoresListaTabla("ORD_TIPOBITACORA", 'DESC');
+
+				echo "<script>console.log('codigo1: " . $data['codigo'] . "' );</script>";
+				// para saber que documento muestro nivel
+				$data['nivel'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "PRIMERNIVEL", "CODIGO", $data['codigo']);
+				echo "<script>console.log('nivel: " . $data['nivel'] . "' );</script>";
 
 				// Pinto pantalla de seguimiento
 				$this->load->view('orders/process/boardTracerOrder', $data);
