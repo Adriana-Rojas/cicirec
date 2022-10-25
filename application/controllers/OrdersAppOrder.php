@@ -1667,8 +1667,8 @@ class OrdersAppOrder extends CI_Controller
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
 					$idArbol = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "ID_ARBOLVALORES", $codigo);
-					echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
-					echo "<script>console.log('codigo2: " . $data['codigo'] . "' );</script>";
+					//echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
+					//echo "<script>console.log('codigo2: " . $data['codigo'] . "' );</script>";
 
 					$idTipoMiem = $this->FunctionsGeneral->getFieldFromTable("VIEW_ORD_ARBOL_TS", "ID_TIPOMIEM", $idArbol);
 					if ($idTipoMiem == '') {
@@ -1756,10 +1756,10 @@ class OrdersAppOrder extends CI_Controller
 
 				$data['listaPadre'] = $this->FunctionsGeneral->selectValoresListaTabla("ORD_TIPOBITACORA", 'DESC');
 
-				echo "<script>console.log('codigo1: " . $data['codigo'] . "' );</script>";
+				///echo "<script>console.log('codigo1: " . $data['codigo'] . "' );</script>";
 				// para saber que documento muestro nivel
 				$data['nivel'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOLPRODUCTOS", "PRIMERNIVEL", "CODIGO", $data['codigo']);
-				echo "<script>console.log('nivel: " . $data['nivel'] . "' );</script>";
+				///echo "<script>console.log('nivel: " . $data['nivel'] . "' );</script>";
 
 				// Pinto pantalla de seguimiento
 				$this->load->view('orders/process/boardTracerOrder', $data);

@@ -1100,6 +1100,9 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 
 													?>
 															<option value="<?= $value->ID_ESTADO; ?>"><?= $value->NOMBRE; ?></option>
+															<?php
+															echo "<script>console.log('codigo2: " . $value->NOMBRE  . "' );</script>";
+															?>
 													<?php
 														}
 													}
@@ -1108,6 +1111,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 												<div class="form-control-feedback"></div>
 											</div>
 										</div>
+								
 										<div class="form-group ">
 											<label class="col-md-12" for="tipo">Observaci&oacute;n *</label>
 											<div class="col-md-12">
@@ -1118,6 +1122,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 												<div class="form-control-feedback"></div>
 											</div>
 										</div>
+
 										<div class="form-group tipoObs" style="display: none;">
 											<label class="col-md-12" for="tipoObs">Clasificaci&oacute;n
 												observaci&oacute;n *</label>
@@ -1165,75 +1170,78 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 										</div>
 										<div class="form-group adjunto" style="display: none;">
 											<?php
-											if ($nivel == 'TRANSFEMORAL ') {
+											echo "<script>console.log('codigo2" . paintActualState($this, $idPinta)  . "codigo2' );</script>";
+											if (paintActualState($this, $idPinta) == 'TOMAR MOLDE <BR>') {
+												if ($nivel == 'TRANSFEMORAL ') {
 											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'TRANSTIBIAL') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'TRANSHUMERAL') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-31.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'A TRAVÉS DE CADERA') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-32X.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'TRANSRADIAL ') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-32.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'PIE - TOBILLO') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-38.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'RODILLA, TOBILLO Y PIE' || $nivel == 'CADERA, RODILLA, TOBILLO Y PIE') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-40.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'PARCIAL DE MANO ') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-45.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'COLUMNA') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-39.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
+												<?php
+												}
+												if ($nivel == 'CADERA') {
+												?>
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-43.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
+													</a>
 											<?php
-											}
-											if ($nivel == 'TRANSTIBIAL') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'TRANSHUMERAL') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-31.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'A TRAVÉS DE CADERA') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-32X.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'TRANSRADIAL ') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-32.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'PIE - TOBILLO') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-38.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'RODILLA, TOBILLO Y PIE' || $nivel == 'CADERA, RODILLA, TOBILLO Y PIE') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-40.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'PARCIAL DE MANO ') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-45.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'COLUMNA') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-39.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
-											}
-											if ($nivel == 'CADERA') {
-											?>
-												<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-43.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
-													<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis transfemoral</span>
-												</a>
-											<?php
+												}
 											}
 											?>
 											<label class="col-md-12" for="adjunto">Adjunto </label>
