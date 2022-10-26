@@ -1174,14 +1174,14 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											if (paintActualState($this, $idPinta) == 'TOMAR MOLDE <BR>') {
 												if ($nivel == 'TRANSFEMORAL ') {
 											?>
-													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-36.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FOT-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
 														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis TRANSFEMORAL</span>
 													</a>
 												<?php
 												}
 												if ($nivel == 'TRANSTIBIAL') {
 												?>
-													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-35.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+													<a href="<?= base_url() . STOKEPRICE_FOLDER . 'FO-07-36.xlsx'; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
 														<i class="fa fa-paperclip "></i> <span class="hidden-xs"> TM Protesis TRANSTIBIAL</span>
 													</a>
 												<?php

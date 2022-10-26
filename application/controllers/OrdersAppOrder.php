@@ -1504,6 +1504,82 @@ class OrdersAppOrder extends CI_Controller
 			header("Location: " . base_url());
 		}
 	}
+	public function printOrder2($id, $encOrden)
+	{
+		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
+		echo "<script>console.log('encOrden: " . $this->encryption->decrypt($encOrden) . "' );</script>";
+		/**
+		 * Pinto el impreso de la orden *
+		 */
+		$mainPage = "OrdersAppOrder/board";
+		if ($this->session->userdata('login') == 'SI') {
+
+			$id = $this->encryption->decrypt($id);
+			// Asigno el valor a la cookie de historia clonica
+			$this->session->set_userdata('id', $id);
+			// Encabezado de la orden
+			$encOrden = $this->encryption->decrypt($encOrden);
+
+			echo "<script>console.log('encOrden2: " . $encOrden . "' );</script>";
+			// Pinto la interfaz para imprimir las ordenes
+			// Pinto las vistas adicionales a travos de la funcion pintaComun del helper hospitium
+			$mainPage = $this->session->userdata('pagina');
+			$data = null;
+
+			$data['mainPage'] = $mainPage;
+
+			$data['returnPage'] = "OrdersAppOrder/board";
+			// Pinto la cabecera principal de laspaginas internas
+			showCommon($this->session->userdata('auxiliar'), $this, $mainPage, null, null);
+			// Pinto la informacion de los parametros de la aplicacion
+			// Incluyo el Nestable
+			$data['variable'] = 0;
+
+			/**
+			 * Informacion relacionada con la plantilla principal Pinto la pantalla *
+			 */
+
+			// Pinto los permisos del tablero de control
+			$idModule = $this->FunctionsGeneral->getFieldFromTableNotId("ADM_MODULO", "ID", "PAGINA", $mainPage);
+
+			// Pinto la informacion del paciente
+			$data['paciente'] = $this->EsaludModel->getPatientInformation($id, 5, ADMISION_STATE_ACTIVE);
+			foreach ($data['paciente'] as $value) {
+				$value->NUM_ID_PCTE;
+			}
+			//$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead($encOrden, $value->NUM_ID_PCTE);
+			$data['listaLista'] = $this->OrdersModel->selectListOrdersFromHead1($encOrden, $value->NUM_ID_PCTE);
+			// 3. Informacion de la empresa
+			$listParameters = $this->SystemModel->getParameters(1);
+			foreach ($listParameters as $value) {
+				$data['direccion'] = $value->DIRECCION;
+				$data['telefono'] = $value->TELEFONO;
+				$data['correo'] = $value->CORREO;
+				$data['empresa'] = $value->NOMBRE;
+			}
+			// 4. Fecha Orden
+			$data['fechaOrden'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ENCORDEN", "FCREA", "ID", $encOrden);
+			// 5. Generador de la orden
+			$usuarioSession = $this->Users->getNombresUsuario($this->session->userdata('usuario'));
+			$data['nombreUsuario'] = $usuarioSession->NOMBRES;
+			$data['apellidoUsuario'] = $usuarioSession->APELLIDOS;
+			$usuarioSession = $this->Users->getUsersProfile($this->session->userdata('usuario'));
+			$data['especialidad'] = $usuarioSession->PERFIL;
+
+			// Pinto plantilla principal
+			$this->load->view('orders/process/printOrderInformationPaciente', $data);
+
+			/**
+			 * Fin: Informacion relacionada con la plantilla principal Pinto la pantalla
+			 */
+
+			// Pinto el final de la pogina (poginas internas)
+			showCommonEnds($this, null, null);
+		} else {
+			// Retorno a la pogina principal
+			header("Location: " . base_url());
+		}
+	}
 	public function orderList($id, $opcion = null)
 	{
 		/**
