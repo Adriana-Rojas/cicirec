@@ -151,9 +151,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -165,9 +163,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -179,9 +175,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -193,9 +187,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -260,9 +252,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -273,9 +263,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -286,9 +274,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -299,9 +285,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -311,9 +295,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -323,9 +305,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -335,9 +315,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -347,9 +325,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -362,9 +338,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -377,9 +351,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -416,9 +388,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -429,9 +399,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -443,9 +411,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -457,9 +423,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -471,9 +435,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -485,9 +447,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -499,9 +459,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -513,9 +471,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -526,9 +482,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -539,9 +493,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -552,9 +504,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -565,9 +515,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -579,9 +527,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -593,9 +539,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -607,9 +551,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -621,9 +563,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -634,9 +574,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -647,9 +585,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -660,9 +596,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -673,9 +607,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -739,8 +671,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -752,8 +682,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -765,9 +693,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -779,9 +705,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1330,9 +1254,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1343,9 +1265,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1356,9 +1276,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1369,9 +1287,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1382,9 +1298,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1395,9 +1309,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1408,9 +1320,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1421,9 +1331,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1434,9 +1342,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1447,9 +1353,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1460,9 +1364,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1473,9 +1375,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1486,9 +1386,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1499,9 +1397,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1512,9 +1408,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1525,9 +1419,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1538,9 +1430,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1551,9 +1441,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1565,9 +1453,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1579,9 +1465,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1593,9 +1477,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1607,9 +1489,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1621,9 +1501,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1635,9 +1513,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1649,9 +1525,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1663,9 +1537,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1677,9 +1549,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1691,9 +1561,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1705,9 +1573,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1719,9 +1585,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1733,9 +1597,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1747,9 +1609,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1761,9 +1621,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1775,9 +1633,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1789,9 +1645,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1803,9 +1657,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1817,9 +1669,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1831,9 +1681,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1845,9 +1693,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1859,9 +1705,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1873,9 +1717,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1887,9 +1729,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1901,9 +1741,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1915,9 +1753,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1929,9 +1765,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1943,9 +1777,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1957,9 +1789,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1971,9 +1801,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1985,9 +1813,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -1999,9 +1825,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2013,9 +1837,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2027,9 +1849,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2041,9 +1861,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2055,9 +1873,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2070,9 +1886,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2085,9 +1899,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2100,9 +1912,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2115,9 +1925,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2130,9 +1938,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2145,9 +1951,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2160,9 +1964,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2175,9 +1977,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2190,9 +1990,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2205,9 +2003,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2220,9 +2016,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2235,9 +2029,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2250,9 +2042,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2265,9 +2055,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2280,9 +2068,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2295,9 +2081,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2310,9 +2094,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2325,9 +2107,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
                 text-decoration: underline;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2339,9 +2119,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2353,9 +2131,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2367,9 +2143,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2381,9 +2155,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2395,9 +2167,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2409,9 +2179,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2423,9 +2191,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2437,9 +2203,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2451,9 +2215,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2465,9 +2227,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2479,9 +2239,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2493,9 +2251,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2507,9 +2263,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2521,9 +2275,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2535,9 +2287,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2549,9 +2299,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2563,9 +2311,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2577,9 +2323,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2592,9 +2336,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2607,9 +2349,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2621,9 +2361,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2635,9 +2373,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2649,9 +2385,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2663,9 +2397,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2677,9 +2409,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2691,9 +2421,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2705,9 +2433,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2719,9 +2445,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2733,9 +2457,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2747,9 +2469,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2761,9 +2481,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2775,9 +2493,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2789,9 +2505,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2803,9 +2517,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2817,9 +2529,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2831,9 +2541,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2845,9 +2553,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2859,9 +2565,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2872,9 +2576,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2885,9 +2587,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2899,9 +2599,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2913,9 +2611,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2927,9 +2623,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2941,9 +2635,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2955,9 +2647,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2969,9 +2659,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2983,9 +2671,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -2997,9 +2683,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -3010,9 +2694,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -3023,9 +2705,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -3036,9 +2716,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -3049,9 +2727,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 10pt;
+                color: #000000; 
                 background-color: white
               }
 
@@ -3065,8 +2741,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3080,8 +2754,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3095,8 +2767,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3110,8 +2780,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3125,8 +2793,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3140,8 +2806,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3155,8 +2819,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3170,8 +2832,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3185,8 +2845,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3200,8 +2858,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3215,8 +2871,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3230,8 +2884,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3245,8 +2897,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3260,8 +2910,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3275,8 +2923,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3290,8 +2936,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: none #000000;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3305,8 +2949,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
@@ -3320,8 +2962,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-right: 1px solid #000000 !important;
                 text-decoration: underline;
                 color: #000000;
-                font-family: 'Times New Roman';
-                font-size: 9pt;
                 background-color: white
               }
 
