@@ -193,7 +193,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -205,7 +205,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -216,7 +216,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -227,7 +227,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -348,7 +348,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -359,7 +359,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -690,7 +690,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -701,7 +701,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -712,7 +712,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -723,7 +723,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -734,7 +734,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -745,7 +745,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -756,7 +756,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -767,7 +767,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -778,7 +778,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -789,7 +789,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -800,7 +800,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -811,7 +811,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -822,7 +822,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -833,7 +833,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -844,7 +844,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -855,7 +855,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -867,7 +867,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -879,7 +879,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -891,7 +891,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -903,7 +903,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -915,7 +915,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -927,7 +927,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -939,7 +939,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -951,7 +951,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -963,7 +963,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -975,7 +975,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -987,7 +987,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -999,7 +999,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1011,7 +1011,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1023,7 +1023,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: 2px solid #000000 !important;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1035,7 +1035,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1047,7 +1047,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: none #000000;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1059,7 +1059,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1071,7 +1071,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-left: none #000000;
                 border-right: 2px solid #000000 !important;
                 font-weight: bold;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1082,7 +1082,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1093,7 +1093,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1104,7 +1104,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1115,7 +1115,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: none #000000;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1126,7 +1126,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -1137,7 +1137,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 border-top: 2px solid #000000 !important;
                 border-left: none #000000;
                 border-right: none #000000;
-                color: #000000; 
+                color: #000000;
                 background-color: white
               }
 
@@ -3052,8 +3052,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
           </head>
 
           <body>
-
-            <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
+            <table width=110% border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0">
               <col class="col0">
               <col class="col1">
               <col class="col2">
@@ -3090,14 +3089,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row1">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img style="position: absolute; z-index: 1; left: 0px; top: 13px; width: 127px; height: 64px;" src="zip:///home/CloudConvertio/tmp/in_work/a65b577c4f9d45c0c6f11c650e283462.xlsx#xl/media/image4.png" border="0" /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%"  /></div>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION COLOMBIA. CIREC <br />
                     &nbsp;ACTA DE ENTREGA Y CERTIFICADO DE GARANTIA<br />
@@ -3143,10 +3138,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row6">
                   <td class="column0">&nbsp;</td>
@@ -3166,8 +3157,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12 style10 s">T.I. </td>
                   <td class="column13 style15 null"></td>
                   <td class="column14 style12 s">C.C</td>
-                  <td class="column15 style14 null"></td>
-                  <td class="column16 style8 null"></td>
+
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
@@ -3210,25 +3200,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <tr class="row10">
                   <td class="column0">&nbsp;</td>
                   <td class="column1 style106 null style114" colspan="15" rowspan="4"></td>
-                  <td class="column16 style8 null"></td>
+
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row11">
                   <td class="column0">&nbsp;</td>
-                  <td class="column16 style8 null"></td>
+
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row12">
                   <td class="column0">&nbsp;</td>
-                  <td class="column16 style8 null"></td>
+
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row13">
                   <td class="column0">&nbsp;</td>
-                  <td class="column16 style8 null"></td>
+
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
@@ -3244,10 +3234,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row15">
                   <td class="column0">&nbsp;</td>
@@ -3260,192 +3246,87 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <br />
                     <br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row16">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
                   <td class="column16">&nbsp;</td>
                   <td class="column17">&nbsp;</td>
                   <td class="column18 style17 null"></td>
                 </tr>
                 <tr class="row17">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row18">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row19">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row20">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row21">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row22">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row23">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row24">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row25">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row26">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row27">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row28">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row29">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row30">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row31">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row32">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row33">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row34">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row35">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row36">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row37">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row38">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row39">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row40">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row41">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row42">
                   <td class="column0">&nbsp;</td>
@@ -3453,31 +3334,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column5 style80 s style88" colspan="10" rowspan="4">• Cuando en sus condiciones normales de uso presente fallas.<br />
                     • Por defectos de fabricación.<br />
                     • Por defectos de fabricación o deterioro prematuro.</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row43">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row44">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row45">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row46">
                   <td class="column0">&nbsp;</td>
@@ -3490,31 +3355,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     • Abandono injustificado del proceso de rehabilitación, dejando el dispositivo médico en la institución o llevándolo por más de tres (3) meses en calidad de préstamo.<br />
                     • Perjuicios, pérdidas o daños del dispositivo medico causados intencionalmente. <br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row47">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row48">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row49">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row50">
                   <td class="column0">&nbsp;</td>
@@ -3532,10 +3381,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row51">
                   <td class="column0">&nbsp;</td>
@@ -3553,10 +3398,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row52">
                   <td class="column0">&nbsp;</td>
@@ -3574,10 +3415,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row53">
                   <td class="column0">&nbsp;</td>
@@ -3595,10 +3432,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row54">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
@@ -3610,27 +3443,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column11 style24 s style27" colspan="3" rowspan="2">Código: </td>
                   <td class="column14 style24 s style27" colspan="2" rowspan="2">FO-11-22</td>
                   <td class="column16 style3 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row55">
                   <td class="column16 style3 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row56">
                   <td class="column11 style28 s style29" colspan="3">Versión:</td>
                   <td class="column14 style28 n style29" colspan="2">3</td>
                   <td class="column16 style3 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row57">
                   <td class="column11 style28 s style29" colspan="3">Fecha de Emisión:</td>
                   <td class="column14 style30 n style31" colspan="2">4/2/2018</td>
                   <td class="column16 style9 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row58">
                   <td class="column0 style5 null"></td>
@@ -3650,8 +3475,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14 style9 null"></td>
                   <td class="column15 style9 null"></td>
                   <td class="column16 style9 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row59">
                   <td class="column0 style5 null"></td>
@@ -3671,8 +3494,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14 style9 null"></td>
                   <td class="column15 style9 null"></td>
                   <td class="column16 style9 null"></td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row60">
                   <td class="column0">&nbsp;</td>
@@ -3682,59 +3503,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     • Componentes susceptibles de desgaste o deterioro de sus condiciones debido al uso para el cual fue formulado (Guayas, bujes, extensores en caucho, Correas, cinturones, velcro, fundas de neopreno, espumas y medias).<br />
                     • Componentes susceptibles de desgaste o deterioro de sus condiciones debido al uso para el cual fue formulado (Correas, cinturones, velcro).<br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row61">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row62">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row63">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row64">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row65">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row66">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row67">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row68">
                   <td class="column0">&nbsp;</td>
@@ -3743,31 +3532,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     • Corrosión <br />
                     • Producida por la exposición a ambientes húmedos, agentes químicos y secreciones corporales como el sudor.<br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row69">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row70">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row71">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row72">
                   <td class="column0">&nbsp;</td>
@@ -3777,66 +3550,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     • En los casos en que la reparación de algún componente del dispositivo médico no pueda ser efectuada en CIREC, ésta será enviada al fabricante. con un tiempo aproximado de respuesta de cuarenta y cinco (45) días.<br />
                     • Para elementos importados como pies y rodillas, el cambio se hará sólo una vez durante la vigencia de la garantía. <br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row73">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row74">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row75">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row76">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row77">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row78">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row79">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row80">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row81">
                   <td class="column0">&nbsp;</td>
@@ -3854,10 +3591,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row82">
                   <td class="column0">&nbsp;</td>
@@ -3865,38 +3598,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <br />
                     Los tiempos de análisis por parte de las casas matriz para informar si procede o no garantía son:<br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row83">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row84">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row85">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row86">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row87">
                   <td class="column0">&nbsp;</td>
@@ -3916,10 +3629,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row88">
                   <td class="column0">&nbsp;</td>
@@ -3937,10 +3646,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row89">
                   <td class="column0">&nbsp;</td>
@@ -3958,10 +3663,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row90">
                   <td class="column0">&nbsp;</td>
@@ -3979,10 +3680,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row91">
                   <td class="column0">&nbsp;</td>
@@ -4000,10 +3697,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row92">
                   <td class="column0">&nbsp;</td>
@@ -4021,10 +3714,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row93">
                   <td class="column0">&nbsp;</td>
@@ -4042,39 +3731,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row94">
                   <td class="column0">&nbsp;</td>
                   <td class="column1 style100 s style102" colspan="14" rowspan="4">Recibo explicación de las condiciones de manejo y uso de los elementos y firmo el documento aceptando a satisfacción el elemento entregado.</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row95">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row96">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row97">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row98">
                   <td class="column0">&nbsp;</td>
@@ -4085,10 +3754,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row99">
                   <td class="column0">&nbsp;</td>
@@ -4106,10 +3771,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row100">
                   <td class="column0">&nbsp;</td>
@@ -4127,10 +3788,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row101">
                   <td class="column0">&nbsp;</td>
@@ -4148,10 +3805,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column12">&nbsp;</td>
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row102">
                   <td class="column0">&nbsp;</td>
@@ -4160,38 +3813,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     DOCUMENTO IDENTIFICACION _________________________________________ <br />
                     DIRECCION ________________________ TELEFONO ______________________<br />
                   </td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row103">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row104">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row105">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
                 <tr class="row106">
                   <td class="column0">&nbsp;</td>
-                  <td class="column15">&nbsp;</td>
-                  <td class="column16">&nbsp;</td>
-                  <td class="column17">&nbsp;</td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
               </tbody>
             </table>
