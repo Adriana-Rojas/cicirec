@@ -16,9 +16,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 
 <link href="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.css" rel="stylesheet">
-
 <script src="https://unpkg.com/bootstrap-table@1.20.2/dist/bootstrap-table.min.js"></script>
-
 
 <!-- ============================================================== -->
 <!-- Start Page Content -->
@@ -30,22 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h4 class="card-title"><?= $board; ?></h4>
 				<h6 class="card-subtitle"></h6>
 				<div class="table-responsive">
-					<!--<table id="demo-foo-addrow" class="table m-t-30 table-hover " data-page-size="20">
--->             
-					<table id="demo-foo-addrow" 
-					class="table  table-hover " 
-					data-page-size="6000" 
-					data-toggle="table" 
-					--data-pagination="true" 
-					data-search="true"
-					data-sort-name="Name"
-					data-sort-order="asc" 
-					data-show-pagination-switch="true"
-					data-filter-control="true" 
-					data-show-export="true" 
-					data-click-to-select="true" 
-					data-toolbar="#toolbar"  
-					class="table-responsive">
+					<table id="demo-foo-addrow" class="footable" data-page-size="400" data-page-list="[5,20,15]" data-toggle="table" data-sort-order="asc" data-pagination="true" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar" class="table-responsive">
 						<thead>
 							<tr>
 								<th>Acci&oacute;n</th>
@@ -173,7 +156,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 						</td>
 
-						<td colspan="3">
+						<td colspan="2">
 							<div class="text-right">
 								<ul class="pagination"> </ul>
 							</div>

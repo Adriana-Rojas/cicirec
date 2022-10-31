@@ -2346,6 +2346,7 @@ class OrdersAppOrder extends CI_Controller
 
 			// Obtengo relacion entre proceso y tipo de orden
 			$tordPro = $this->FunctionsGeneral->getFieldFromTableNotIdFields("ORD_TORDPRO", "ID", "ID_TIPOORDEN", $tipoOrden, "ID_PROCESO", $this->session->userdata('proceso'));
+			echo "<script>console.log('tordPro: " . $tordPro . "' );</script>";
 			// Realizo el insert de la orden
 			echo "<script>console.log('tipoOrden: " . $tipoOrden . "' );</script>";
 			echo "<script>console.log('proceso: " . $this->session->userdata('proceso') . "' );</script>";

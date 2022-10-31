@@ -28,45 +28,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- ============================================================== -->
 <div class="row">
   <div class="col-md-12">
-    <div class="card card-body printableArea">
-      <img src="<?= base_url() ?>/assets/images/logoCirec.png" width="292 px" height="96 px">
+    <div class="card card-body printableArea">      
       <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1); ?></small>
       <hr>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="pull-right text-right">
-            <address>
-              <p class="m-t-30"><b>Generaci&oacute;n de las &oacute;rdenes :</b> <i class="fa fa-calendar"></i> <?= $fechaOrden; ?></p>
-
-            </address>
-          </div>
-
-        </div>
-      </div>
       <?php
       foreach ($paciente as $value) {
         $datos = selectPatienInformationFromOrder($this->session->userdata('encOrden'), $this);
-
         $responsable = $datos[0];
-
-      ?>
-
-        <div class="row">
-          <div class="col-md-12">
-            <div class="pull-left">
-              <address>
-                <h3> &nbsp;<b class="text-danger"><?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></b></h3>
-                <p class="text-muted m-l-5"><strong>Documento de identidad </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?>
-                  <br /> <strong>Registro </strong> <?= $value->ID_PCTE; ?>
-                  <!--<br/> <strong> Edad </strong>//intervaloTiempo($value->FECH_NCTO_PCTE,cambiaHoraServer(2),31104000);?> A&ntilde;os-->
-                  <br /> <strong> Edad </strong>28 A&ntilde;os
-                  <br /> <strong>Responsable </strong>NUEVA EMPRESA PROMOTORA DE SALUD S A<?= $responsable; ?>
-
-              </address>
-            </div>
-          </div>
-        </div>
-      <?php
       } ?>
       <div class="row">
         <div class="col-md-12">
@@ -3092,7 +3060,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row1">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%"  /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%" /></div>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION COLOMBIA. CIREC <br />
                     &nbsp;ACTA DE ENTREGA Y CERTIFICADO DE GARANTIA<br />
@@ -3124,11 +3092,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row5">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
+                  <td class="column1 style89 null style89" colspan="9"><br><br><H1><b>DATOS USUARIO</b></H1></td>
                   <td class="column6">&nbsp;</td>
                   <td class="column7">&nbsp;</td>
                   <td class="column8">&nbsp;</td>
@@ -3140,70 +3104,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14">&nbsp;</td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1 style99 s style99" colspan="9">EL CENTRO INTEGRAL DE REHABILITACION COLOMBIA hace entrega con fecha </td>
-                  <td class="column10 style22 null style22" colspan="3"></td>
-                  <td class="column13 style23 s style23" colspan="3">&nbsp;&nbsp;&nbsp;al usuario (a)</td>
-                  <td class="column16 style1 null"></td>
-                  <td class="column17 style1 null"></td>
-                  <td class="column18">&nbsp;</td>
-                </tr>
-                <tr class="row7">
-                  <td class="column0 style6 null"></td>
-                  <td class="column1 style104 null style105" colspan="6"></td>
-                  <td class="column7 style99 s style99" colspan="3">identificado con tipo de documento </td>
-                  <td class="column10 style10 s">R.C</td>
-                  <td class="column11 style18 null"></td>
-                  <td class="column12 style10 s">T.I. </td>
-                  <td class="column13 style15 null"></td>
-                  <td class="column14 style12 s">C.C</td>
+                  <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= $fechaOrden; ?></td>
+                  <td class="column1 " colspan="2" rowspan="3"><b>Nombres y Apellidos :<br> </b> &nbsp;<b class="text-danger">  <?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " \n ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></td>
+                  <td class="column5 " colspan="2" rowspan="3"><strong>Documento<br> </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?></td>
+                  <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br>  </strong> <?= $value->ID_PCTE; ?></td>
+                  <td class="column13 " colspan="2" rowspan="3"> <strong> Edad <br> </strong><?= intervaloTiempo($value->FECH_NCTO_PCTE, cambiaHoraServer(2), 31104000); ?>Años</td>
+                  <td class="column14 " colspan="4" rowspan="3"> <strong>Responsable<br>  </strong>NUEVA EMPRESA PROMOTORA DE SALUD S A<?= $responsable; ?></td>
 
-                  <td class="column17 style8 null"></td>
-                  <td class="column18">&nbsp;</td>
                 </tr>
-                <tr class="row8">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1 style16 s">CE</td>
-                  <td class="column2 style11 null"></td>
-                  <td class="column3 style13 s">P.A</td>
-                  <td class="column4 style11 null"></td>
-                  <td class="column5 style13 s">&nbsp;con numero </td>
-                  <td class="column6 style21 null"></td>
-                  <td class="column7 style19 s">de </td>
-                  <td class="column8 style20 null"></td>
-                  <td class="column9 style99 s style99" colspan="7">El siguiente dispositivo médico / ayuda de movilidad:</td>
-                  <td class="column16 style4 null"></td>
-                  <td class="column17 style4 null"></td>
-                  <td class="column18">&nbsp;</td>
-                </tr>
-                <tr class="row9">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1 style7 null"></td>
-                  <td class="column2 style7 null"></td>
-                  <td class="column3 style7 null"></td>
-                  <td class="column4 style7 null"></td>
-                  <td class="column5 style7 null"></td>
-                  <td class="column6 style7 null"></td>
-                  <td class="column7 style7 null"></td>
-                  <td class="column8 style7 null"></td>
-                  <td class="column9 style7 null"></td>
-                  <td class="column10 style7 null"></td>
-                  <td class="column11 style7 null"></td>
-                  <td class="column12 style7 null"></td>
-                  <td class="column13 style7 null"></td>
-                  <td class="column14 style7 null"></td>
-                  <td class="column15 style7 null"></td>
-                  <td class="column16 style7 null"></td>
-                  <td class="column17 style7 null"></td>
-                  <td class="column18">&nbsp;</td>
-                </tr>
-                <tr class="row10">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1 style106 null style114" colspan="15" rowspan="4"></td>
-
-                  <td class="column17 style8 null"></td>
-                  <td class="column18">&nbsp;</td>
-                </tr>
+                
                 <tr class="row11">
                   <td class="column0">&nbsp;</td>
 
