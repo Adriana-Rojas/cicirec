@@ -28,7 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- ============================================================== -->
 <div class="row">
   <div class="col-md-12">
-    <div class="card card-body printableArea">      
+    <div class="card card-body printableArea">
       <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1); ?></small>
       <hr>
       <?php
@@ -3092,7 +3092,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row5">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1 style89 null style89" colspan="9"><br><br><H1><b>DATOS USUARIO</b></H1></td>
+                  <td class="column1 style89 null style89" colspan="9"><br><br>
+                    <H1><b>DATOS USUARIO</b></H1>
+                  </td>
                   <td class="column6">&nbsp;</td>
                   <td class="column7">&nbsp;</td>
                   <td class="column8">&nbsp;</td>
@@ -3105,14 +3107,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row6">
                   <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= $fechaOrden; ?></td>
-                  <td class="column1 " colspan="2" rowspan="3"><b>Nombres y Apellidos :<br> </b> &nbsp;<b class="text-danger">  <?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " \n ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></td>
+                  <td class="column1 " colspan="2" rowspan="3"><b>Nombres y Apellidos :<br> </b> &nbsp;<b class="text-danger"> <?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " \n ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></td>
                   <td class="column5 " colspan="2" rowspan="3"><strong>Documento<br> </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?></td>
-                  <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br>  </strong> <?= $value->ID_PCTE; ?></td>
+                  <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br> </strong> <?= $value->ID_PCTE; ?></td>
                   <td class="column13 " colspan="2" rowspan="3"> <strong> Edad <br> </strong><?= intervaloTiempo($value->FECH_NCTO_PCTE, cambiaHoraServer(2), 31104000); ?>Años</td>
-                  <td class="column14 " colspan="4" rowspan="3"> <strong>Responsable<br>  </strong>NUEVA EMPRESA PROMOTORA DE SALUD S A<?= $responsable; ?></td>
+                  <td class="column14 " colspan="4" rowspan="3"> <strong>Responsable<br> </strong>NUEVA EMPRESA PROMOTORA DE SALUD S A<?= $responsable; ?></td>
 
                 </tr>
-                
+
                 <tr class="row11">
                   <td class="column0">&nbsp;</td>
 
@@ -3153,6 +3155,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <br />
                     El período de garantía de los elementos entregados:<br />
                     <br />
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/img1.png" width="100%" /></div>
                     <br />
                   </td>
                 </tr>
@@ -3344,7 +3347,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row54">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img style="position: absolute; z-index: 1; left: 0px; top: 14px; width: 129px; height: 65px;" src="zip:///home/CloudConvertio/tmp/in_work/a65b577c4f9d45c0c6f11c650e283462.xlsx#xl/media/image4.png" border="0" /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%" /></div>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION DE COLOMBIA. CIREC <br />
                     CERTIFICADO DE GARANTIA<br />
@@ -3524,7 +3527,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column0">&nbsp;</td>
                   <td class="column1">&nbsp;</td>
                   <td class="column2 style0 null">
-                    <div style="position: relative;"><img style="position: absolute; z-index: 1; left: 13px; top: 5px; width: 317px; height: 82px;" src="zip:///home/CloudConvertio/tmp/in_work/a65b577c4f9d45c0c6f11c650e283462.xlsx#xl/media/image3.png" border="0" /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/img2.png" width="1300%" /></div>
                   </td>
                   <td class="column3">&nbsp;</td>
                   <td class="column4">&nbsp;</td>
@@ -3539,40 +3542,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column13">&nbsp;</td>
                   <td class="column14">&nbsp;</td>
                 </tr>
-                <tr class="row88">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
-                </tr>
-                <tr class="row89">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
-                </tr>
+
                 <tr class="row90">
                   <td class="column0">&nbsp;</td>
                   <td class="column1">&nbsp;</td>
