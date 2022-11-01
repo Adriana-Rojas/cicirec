@@ -1504,8 +1504,15 @@ class OrdersAppOrder extends CI_Controller
 			header("Location: " . base_url());
 		}
 	}
-	public function printOrder2($id, $encOrden)
+	public function printOrder2($id, $encOrden, $idOrden)
 	{
+		$idOrden2 = $this->encryption->decrypt($idOrden);
+		echo "<script>console.log('idOrde2: " . $this->encryption->decrypt($idOrden2) . "' );</script>";
+		//$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD",  $this->encryption->decrypt($idOrden2));
+		$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD",  '4');
+		$data['producto'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
+		$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
+
 		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
 		echo "<script>console.log('encOrden: " . $this->encryption->decrypt($encOrden) . "' );</script>";
 		/**
@@ -1557,6 +1564,7 @@ class OrdersAppOrder extends CI_Controller
 				$data['correo'] = $value->CORREO;
 				$data['empresa'] = $value->NOMBRE;
 			}
+
 			// 4. Fecha Orden
 			$data['fechaOrden'] = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ENCORDEN", "FCREA", "ID", $encOrden);
 			// 5. Generador de la orden
@@ -1565,6 +1573,8 @@ class OrdersAppOrder extends CI_Controller
 			$data['apellidoUsuario'] = $usuarioSession->APELLIDOS;
 			$usuarioSession = $this->Users->getUsersProfile($this->session->userdata('usuario'));
 			$data['especialidad'] = $usuarioSession->PERFIL;
+			$data['producto'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
+			$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
 			// Pinto plantilla principal
 			$this->load->view('orders/process/printOrderInformationPaciente', $data);
@@ -1689,7 +1699,7 @@ class OrdersAppOrder extends CI_Controller
 				$idArbol = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ACTIVIDAD", "ID", $idOrden);
 				$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD", $idOrden);
 
-				
+
 				$idProceso = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_PROCESO", "ID", $idTordPro);
 				$tipoOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_TORDPRO", "ID_TIPOORDEN", "ID", $idTordPro);
 				echo "<script>console.log(tipoOrden: ORD_TORDPRO " . $tipoOrden . "' );</script>";
@@ -1743,8 +1753,9 @@ class OrdersAppOrder extends CI_Controller
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
 					$idArbol = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "ID_ARBOLVALORES", $codigo);
-					//echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
-					//echo "<script>console.log('codigo2: " . $data['codigo'] . "' );</script>";
+					echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
+					echo "<script>console.log('idOrden: " . $idOrden . "' );</script>";
+					echo "<script>console.log('datacodigo2: " . $data['codigo'] . "' );</script>";
 
 					$idTipoMiem = $this->FunctionsGeneral->getFieldFromTable("VIEW_ORD_ARBOL_TS", "ID_TIPOMIEM", $idArbol);
 					if ($idTipoMiem == '') {

@@ -3127,15 +3127,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
-                <tr class="row13">
+                <tr class="row14">  
                   <td class="column0">&nbsp;</td>
-
-                  <td class="column17 style8 null"></td>
-                  <td class="column18">&nbsp;</td>
-                </tr>
-                <tr class="row14">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1 style89 null style89" colspan="5"></td>
+                  <td class="column1 " colspan="9">
+                    <strong><br>Producto: </strong> <?= $producto; ?><br><br></td>
+                  </td>
                   <td class="column6">&nbsp;</td>
                   <td class="column7">&nbsp;</td>
                   <td class="column8">&nbsp;</td>

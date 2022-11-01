@@ -1625,7 +1625,18 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 												<br>
 											</div>
 										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<?php $id = $idcotizacion ?>
+												<a href="<?= base_url() ?>OrdersAppOrder/printOrder2/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden). "/" . $this->encryption->encrypt($idOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+													<span class="hidden-xs"> Formato de entrega de elementos</span>
+												</a>
 
+											</div>
+											<div class="col-sm-12">
+												<br>
+											</div>
+										</div>
 										<?php
 											//echo $adjunto1." ".$adjunto2;
 											if ($adjunto1 != '') {
