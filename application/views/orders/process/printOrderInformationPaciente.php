@@ -32,10 +32,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1); ?></small>
       <hr>
       <?php
-      $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $idPinta);
-      $datos = selectPatienInformationFromOrder($idEncOrden, $this);
-      $responsable = $datos[0];
-      ?>
+      foreach ($paciente as $value) {
+        $datos = selectPatienInformationFromOrder($this->session->userdata('encOrden'), $this);
+        $responsable = $datos[0];
+      } ?>
       <div class="row">
         <div class="col-md-12">
 
@@ -3131,7 +3131,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column0">&nbsp;</td>
                   <td class="column1 " colspan="9">
                     <strong><br>Producto: </strong> <?= $codigo . " - " . $nombre; ?><br><br>
-                  </td>
                   </td>
                   <td class="column6">&nbsp;</td>
                   <td class="column7">&nbsp;</td>
