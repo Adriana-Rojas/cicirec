@@ -641,6 +641,10 @@ class OrdersAppOrder extends CI_Controller
 			$condicion = "and COT_TARIFAEMPRESA.ESTADO='" . ACTIVO_ESTADO . "'";
 			$data['listaEmpresa'] = $this->StokePriceModel->selectListDefineRelationCompanyRates($condicion);
 
+			// para saber que documento muestro superior o inferior
+			$data['tipoMiembro'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOL_ZS", "MIEMBROSNOMBRE", "TIPOORDENID", $tipoOrden);
+			echo "<script>console.log('tipoMiembro2: " . $data['tipoMiembro'] . "' );</script>";
+			
 			// Pinto plantilla principal
 			$this->load->view('orders/process/formCreateOrderElementList', $data);
 
@@ -924,7 +928,9 @@ class OrdersAppOrder extends CI_Controller
 			// Listado de empresas
 			$condicion = "and COT_TARIFAEMPRESA.ESTADO='" . ACTIVO_ESTADO . "'";
 			$data['listaEmpresa'] = $this->StokePriceModel->selectListDefineRelationCompanyRates($condicion);
-
+			// para saber que documento muestro superior o inferior
+			$data['tipoMiembro'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOL_ZS", "MIEMBROSNOMBRE", "TIPOORDENID", $tipoOrden);
+			echo "<script>console.log('tipoMiembro2: " . $data['tipoMiembro'] . "' );</script>";
 
 			// Pinto plantilla principal
 			$this->load->view('orders/process/formCreateOrderElementList', $data);
