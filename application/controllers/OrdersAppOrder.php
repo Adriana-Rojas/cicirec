@@ -644,7 +644,7 @@ class OrdersAppOrder extends CI_Controller
 			// para saber que documento muestro superior o inferior
 			$data['tipoMiembro'] = $this->FunctionsGeneral->getFieldFromTableNotId("VIEW_ORD_ARBOL_ZS", "MIEMBROSNOMBRE", "TIPOORDENID", $tipoOrden);
 			echo "<script>console.log('tipoMiembro2: " . $data['tipoMiembro'] . "' );</script>";
-			
+
 			// Pinto plantilla principal
 			$this->load->view('orders/process/formCreateOrderElementList', $data);
 
@@ -1513,7 +1513,7 @@ class OrdersAppOrder extends CI_Controller
 	public function printOrder2($id, $encOrden, $idOrden)
 	{
 		$idOrden2 = $this->encryption->decrypt($idOrden);
-		echo "<script>console.log('idOrde2: " . $this->encryption->decrypt($idOrden2) . "' );</script>";
+		echo "<script>console.log('idOrde3: " . $this->encryption->decrypt($idOrden2) . "' );</script>";
 		//$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD",  $this->encryption->decrypt($idOrden2));
 		$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD",  '4');
 		$data['producto'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
@@ -1579,9 +1579,15 @@ class OrdersAppOrder extends CI_Controller
 			$data['apellidoUsuario'] = $usuarioSession->APELLIDOS;
 			$usuarioSession = $this->Users->getUsersProfile($this->session->userdata('usuario'));
 			$data['especialidad'] = $usuarioSession->PERFIL;
-			$data['producto'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
-			$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
+			// Obtengo el idArbol asociado
+			echo "<script>console.log('idOrden1: " . $this->encryption->decrypt($idOrden2) . "' );</script>";
+			$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD",  $this->encryption->decrypt($idOrden2));
+			echo "<script>console.log('codigo1: " . $codigo . "' );</script>";
+			$data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
+			$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
+			echo "<script>console.log('datacodigo1: " . $data['codigo'] . "' );</script>";
+			$data['idPinta'] = $idOrden2;
 			// Pinto plantilla principal
 			$this->load->view('orders/process/printOrderInformationPaciente', $data);
 
@@ -1661,8 +1667,8 @@ class OrdersAppOrder extends CI_Controller
 	public function tracerProcess($id, $idOrden)
 	{
 		$this->encryption->decrypt($id);
-		echo "<script>console.log('idOrden: " . $this->encryption->decrypt($idOrden) . "' );</script>";
-		echo "<script>console.log('id: " . $this->encryption->decrypt($id) . "' );</script>";
+		echo "<script>console.log('idOrden4: " . $this->encryption->decrypt($idOrden) . "' );</script>";
+		echo "<script>console.log('id2: " . $this->encryption->decrypt($id) . "' );</script>";
 
 		/**
 		 * Listo los diferentes pacientes que se han encontrado con los datos datos
@@ -1746,22 +1752,23 @@ class OrdersAppOrder extends CI_Controller
 					// echo $idArbol;
 					$data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "NOMBRE", $codigo);
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ELEMENTO", "CODIGO", $codigo);
-					echo "<script>console.log('codigo3: " . $codigo . "' );</script>";
-					echo "<script>console.log('codigo3: " . $data['codigo'] . "' );</script>";
+					echo "<script>console.log('codigo1: " . $codigo . "' );</script>";
+					echo "<script>console.log('codigo13: " . $data['codigo'] . "' );</script>";
 				} else {
 
 					/**
 					 * ************************** INICIO RUTA DEL PRODUCTO O SERVICIO *************************
 					 */
 					// Obtengo el idArbol asociado
+					$idArbol = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "ID_ARBOLVALORES", $codigo);
 					$codigo = $this->FunctionsGeneral->getFieldFromTable("ORD_ORDEN", "ACTIVIDAD", $idOrden);
 					$data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
 					$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 
-					$idArbol = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "ID_ARBOLVALORES", $codigo);
-					echo "<script>console.log('codigo2: " . $codigo . "' );</script>";
-					echo "<script>console.log('idOrden: " . $idOrden . "' );</script>";
-					echo "<script>console.log('datacodigo2: " . $data['codigo'] . "' );</script>";
+
+					echo "<script>console.log('codigo4: " . $codigo . "' );</script>";
+					echo "<script>console.log('idOrden4: " . $idOrden . "' );</script>";
+					echo "<script>console.log('datacodigo4: " . $data['codigo'] . "' );</script>";
 
 					$idTipoMiem = $this->FunctionsGeneral->getFieldFromTable("VIEW_ORD_ARBOL_TS", "ID_TIPOMIEM", $idArbol);
 					if ($idTipoMiem == '') {

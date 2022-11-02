@@ -32,10 +32,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <small style="text-align:right; "> <?= $this->FunctionsGeneral->getFieldFromTableNotId("ADM_PARAMETROS", "COD_ORDENES", "ID", 1); ?></small>
       <hr>
       <?php
-      foreach ($paciente as $value) {
-        $datos = selectPatienInformationFromOrder($this->session->userdata('encOrden'), $this);
-        $responsable = $datos[0];
-      } ?>
+      $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $idPinta);
+      $datos = selectPatienInformationFromOrder($idEncOrden, $this);
+      $responsable = $datos[0];
+      ?>
       <div class="row">
         <div class="col-md-12">
 
@@ -3111,7 +3111,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column5 " colspan="2" rowspan="3"><strong>Documento<br> </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?></td>
                   <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br> </strong> <?= $value->ID_PCTE; ?></td>
                   <td class="column13 " colspan="2" rowspan="3"> <strong> Edad <br> </strong><?= intervaloTiempo($value->FECH_NCTO_PCTE, cambiaHoraServer(2), 31104000); ?>Años</td>
-                  <td class="column14 " colspan="4" rowspan="3"> <strong>Responsable<br> </strong>NUEVA EMPRESA PROMOTORA DE SALUD S A<?= $responsable; ?></td>
+                  <td class="column14 " colspan="4" rowspan="3"> <strong>Responsable<br> </strong><?= $responsable; ?></td>
 
                 </tr>
 
@@ -3127,10 +3127,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column17 style8 null"></td>
                   <td class="column18">&nbsp;</td>
                 </tr>
-                <tr class="row14">  
+                <tr class="row14">
                   <td class="column0">&nbsp;</td>
                   <td class="column1 " colspan="9">
-                    <strong><br>Producto: </strong> <?= $producto; ?><br><br></td>
+                    <strong><br>Producto: </strong> <?= $codigo . " - " . $nombre; ?><br><br>
+                  </td>
                   </td>
                   <td class="column6">&nbsp;</td>
                   <td class="column7">&nbsp;</td>
