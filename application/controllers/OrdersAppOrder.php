@@ -1587,7 +1587,11 @@ class OrdersAppOrder extends CI_Controller
 			$data['nombre'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "NOMBRE", $codigo);
 			$data['codigo'] = $this->FunctionsGeneral->getFieldFromTable("ORD_ARBOLCODIGO", "CODIGO", $codigo);
 			echo "<script>console.log('datacodigo1: " . $data['codigo'] . "' );</script>";
-			$data['idPinta'] = $idOrden2;
+
+			$data['idOrden'] =  $this->encryption->decrypt($idOrden2);
+			$data['idPinta'] = $this->encryption->decrypt($idOrden);
+			echo "<script>console.log('idPinta: " . $data['idPinta'] . "' );</script>";
+			echo "<script>console.log('idOrden: " . $data['idOrden'] . "' );</script>";
 			// Pinto plantilla principal
 			$this->load->view('orders/process/printOrderInformationPaciente', $data);
 

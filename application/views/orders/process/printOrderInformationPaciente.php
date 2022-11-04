@@ -35,7 +35,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
       foreach ($paciente as $value) {
         $datos = selectPatienInformationFromOrder($this->session->userdata('encOrden'), $this);
         $responsable = $datos[0];
-      } ?>
+      } 
+      
+      $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $this->encryption->decrypt($idPinta));
+      $datos = selectPatienInformationFromOrder($idEncOrden, $this);      
+      $responsable = $datos[0]; ?>
+      ?>
       <div class="row">
         <div class="col-md-12">
 
