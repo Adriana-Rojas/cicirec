@@ -1072,7 +1072,8 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 					<?php
 					//	}
 					?>
-
+					<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#documents" role="tab"><span class="hidden-sm-up"><i class="fa fa-folder-open"></i></span> <span class="hidden-xs-down">Documentos soporte</span></a>
+					</li>
 
 
 				</ul>
@@ -1083,7 +1084,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 							<!-- Contenido del tab -->
 							<form class=" form-horizontal" role="form" action="<?= base_url() ?>OrdersAppOrder/saveTraceOrder" id="form_sample_3" method="post" autocomplete="off" enctype="multipart/form-data">
 								<div class="p-20">
-									<h3>Realizar seguUimiento.</h3>
+									<h3>Realizar seguimiento.</h3>
 									<p align="justify">Genere el seguimiento a la orden de acuerdo
 										al estado y perfil de usuario.</p>
 								</div>
@@ -1111,7 +1112,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 												<div class="form-control-feedback"></div>
 											</div>
 										</div>
-								
+
 										<div class="form-group ">
 											<label class="col-md-12" for="tipo">Observaci&oacute;n *</label>
 											<div class="col-md-12">
@@ -1601,42 +1602,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 											$adjunto1 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO1", "ID", $idSolicitud));
 											$adjunto2 = $this->encryption->decrypt($this->FunctionsGeneral->getFieldFromTableNotId("COT_SOLICITUD", "ADJUNTO2", "ID", $idSolicitud));
 									?>
-										<div class="row">
-											<div class="col-sm-12">
-												<?php $id = $idcotizacion ?>
-												<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
-													<span class="hidden-xs"> Ver Cotización</span>
-												</a>
 
-											</div>
-											<div class="col-sm-12">
-												<br>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<?php $id = $idcotizacion ?>
-												<a href="<?= base_url() ?>OrdersAppOrder/printOrder1/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
-													<span class="hidden-xs"> Orden de Producción</span>
-												</a>
-
-											</div>
-											<div class="col-sm-12">
-												<br>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<?php $id = $idcotizacion ?>
-												<a href="<?= base_url() ?>OrdersAppOrder/printOrder2/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden). "/" . $this->encryption->encrypt($idOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
-													<span class="hidden-xs"> Formato de entrega de elementos</span>
-												</a>
-
-											</div>
-											<div class="col-sm-12">
-												<br>
-											</div>
-										</div>
 										<?php
 											//echo $adjunto1." ".$adjunto2;
 											if ($adjunto1 != '') {
@@ -1976,6 +1942,69 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 									</tbody>
 
 								</table>
+							</div>
+						</div>
+						<!-- Contenido del tab -->
+
+						<!-- Contenido del tab -->
+					</div>
+					<div class="tab-pane " id="documents" role="tabpanel">
+						<div class="p-20">
+							<h3>Equipo de trabajo.</h3>
+							<div class="row">
+								<?php
+								if ($adjunto1 != '') {
+								?>
+									<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto1; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Resumen de historia cl&iacute;nica</span>
+									</a>
+								<?php
+								}
+								?>
+								<?php
+								if ($adjunto2 != '') {
+								?>
+									<a href="<?= base_url() . STOKEPRICE_FOLDER . $adjunto2; ?>" target="_blank" class="btn  btn-info btn-rounded pull-left waves-effect waves-light m-r-10">
+										<i class="fa fa-paperclip "></i> <span class="hidden-xs"> Orden m&eacute;dica</span>
+									</a>
+
+								<?php
+								}
+								?>
+								<div class="col-sm-12">
+									<?php $id = $idcotizacion ?>
+									<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+										<span class="hidden-xs"> Ver Cotización</span>
+									</a>
+
+								</div>
+								<div class="col-sm-12">
+									<br>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<?php $id = $idcotizacion ?>
+									<a href="<?= base_url() ?>OrdersAppOrder/printOrder1/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+										<span class="hidden-xs"> Orden de Producción</span>
+									</a>
+
+								</div>
+								<div class="col-sm-12">
+									<br>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<?php $id = $idcotizacion ?>
+									<a href="<?= base_url() ?>OrdersAppOrder/printOrder2/<?= $this->encryption->encrypt($this->session->userdata('id')) . "/" . $this->encryption->encrypt($idEncOrden) . "/" . $this->encryption->encrypt($idOrden); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
+										<span class="hidden-xs"> Formato de entrega de elementos</span>
+									</a>
+
+								</div>
+								<div class="col-sm-12">
+									<br>
+								</div>
 							</div>
 						</div>
 						<!-- Contenido del tab -->
