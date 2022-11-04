@@ -40,7 +40,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $this->encryption->decrypt($idPinta));
       $datos = selectPatienInformationFromOrder($idEncOrden, $this);      
       $responsable = $datos[0]; ?>
-      ?>
+      
       <div class="row">
         <div class="col-md-12">
 
@@ -3156,7 +3156,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <br />
                     El período de garantía de los elementos entregados:<br />
                     <br />
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/img1.png" width="100%" /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/img1.png" width="70%" /></div>
                     <br />
                   </td>
                 </tr>
@@ -3348,7 +3348,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row54">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%" /></div>
+                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="80%" /></div>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION DE COLOMBIA. CIREC <br />
                     CERTIFICADO DE GARANTIA<br />
@@ -3544,57 +3544,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14">&nbsp;</td>
                 </tr>
 
-                <tr class="row90">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
-                </tr>
-                <tr class="row91">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
-                </tr>
-                <tr class="row92">
-                  <td class="column0">&nbsp;</td>
-                  <td class="column1">&nbsp;</td>
-                  <td class="column2">&nbsp;</td>
-                  <td class="column3">&nbsp;</td>
-                  <td class="column4">&nbsp;</td>
-                  <td class="column5">&nbsp;</td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
-                </tr>
+                
                 <tr class="row93">
                   <td class="column0">&nbsp;</td>
                   <td class="column1">&nbsp;</td>
@@ -3627,7 +3577,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row98">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1 style103 s style101" colspan="8">ACUDIENTE _______ PACIENTE ______</td>
+                  <td class="column1 style103 s style101" colspan="10">ACUDIENTE ______________________ PACIENTE ______________________</td>
                   <td class="column9">&nbsp;</td>
                   <td class="column10">&nbsp;</td>
                   <td class="column11">&nbsp;</td>
@@ -3708,18 +3658,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
               </tbody>
             </table>
-        </div>
-        <div class="col-md-12">
-          <div class="pull-right m-t-30 text-right">
-            <p>&nbsp;</p>
-            <p>&nbsp; </p>
-            <hr>
-            <h4>Jorge Morales</h4>
-            <h6><?= $especialidad; ?></h6>
-          </div>
-          <div class="clearfix"></div>
-
-        </div>
+        </div>       
       </div>
       <hr>
       <div class="row text-center">
