@@ -3134,7 +3134,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row14">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1 " colspan="15">
+                  <td class="column1 " colspan="13">
                     <strong><br>Producto: </strong> <?= $codigo . " - " . $nombre; ?><br><br>
                   </td>
                 </tr>
