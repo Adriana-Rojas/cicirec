@@ -1950,7 +1950,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 					</div>
 					<div class="tab-pane " id="documents" role="tabpanel">
 						<div class="p-20">
-							<h3>Equipo de trabajo.</h3>
+							<h3>Documentos soporte</h3>
 							<div class="row">
 								<?php
 								if ($adjunto1 != '') {
@@ -1971,13 +1971,7 @@ $id_apb = $this->EsaludModel->getFieldFromTableNotIdFieldsFromEsalud("T_APB", "I
 								<?php
 								}
 								?>
-								<div class="col-sm-12">
-									<?php $id = $idcotizacion ?>
-									<a href="<?= base_url() ?>StokePriceAppStokePrice/viewRegister/<?= $this->encryption->encrypt($id); ?>" class="btn  btn-info btn-rounded pull-right waves-effect waves-light m-r-10">
-										<span class="hidden-xs"> Ver Cotización</span>
-									</a>
-
-								</div>
+								
 								<div class="col-sm-12">
 									<br>
 								</div>
