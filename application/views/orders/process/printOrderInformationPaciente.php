@@ -35,12 +35,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
       foreach ($paciente as $value) {
         $datos = selectPatienInformationFromOrder($this->session->userdata('encOrden'), $this);
         $responsable = $datos[0];
-      } 
-      
+      }
+
       $idEncOrden = $this->FunctionsGeneral->getFieldFromTableNotId("ORD_ORDEN", "ID_ENCORDEN", "ID", $this->encryption->decrypt($idPinta));
-      $datos = selectPatienInformationFromOrder($idEncOrden, $this);      
+      $datos = selectPatienInformationFromOrder($idEncOrden, $this);
       $responsable = $datos[0]; ?>
-      
+
       <div class="row">
         <div class="col-md-12">
 
@@ -3111,7 +3111,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14">&nbsp;</td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= $fechaOrden; ?></td>
+                  <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= date("Y-m-d  ,g:i a"); ?></td>
                   <td class="column1 " colspan="2" rowspan="3"><b>Nombres y Apellidos :<br> </b> &nbsp;<b class="text-danger"> <?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " \n ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></td>
                   <td class="column5 " colspan="2" rowspan="3"><strong>Documento<br> </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?></td>
                   <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br> </strong> <?= $value->ID_PCTE; ?></td>
@@ -3544,7 +3544,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14">&nbsp;</td>
                 </tr>
 
-                
+
                 <tr class="row93">
                   <td class="column0">&nbsp;</td>
                   <td class="column1">&nbsp;</td>
@@ -3658,7 +3658,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
               </tbody>
             </table>
-        </div>       
+        </div>
       </div>
       <hr>
       <div class="row text-center">
