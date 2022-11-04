@@ -3065,7 +3065,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row1">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="100%" /></div>
+                    <center><img src="<?= base_url() ?>/assets/images/logoCirec.png" alt="what image shows" height="100%" width="100%"></center>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION COLOMBIA. CIREC <br />
                     &nbsp;ACTA DE ENTREGA Y CERTIFICADO DE GARANTIA<br />
@@ -3111,7 +3111,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <td class="column14">&nbsp;</td>
                 </tr>
                 <tr class="row6">
-                  <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= date("Y-m-d  ,g:i a"); ?></td>
+                  <td class="column0 " colspan="5" rowspan="3"><b>Fecha de Entrega :<br> </b> <i class="fa fa-calendar"></i> <?= cambiaHoraServer(3); ?></td>
                   <td class="column1 " colspan="2" rowspan="3"><b>Nombres y Apellidos :<br> </b> &nbsp;<b class="text-danger"> <?= $value->PRI_NOM_PCTE, " ", $value->SEG_NOM_PCTE, " \n ", $value->PRI_APELL_PCTE, " ", $value->SEG_APELL_PCTE; ?></td>
                   <td class="column5 " colspan="2" rowspan="3"><strong>Documento<br> </strong> <?= $value->TP_ID_PCTE, " ", $value->NUM_ID_PCTE; ?></td>
                   <td class="column10 " colspan="1" rowspan="3"> <strong>Registro<br> </strong> <?= $value->ID_PCTE; ?></td>
@@ -3134,18 +3134,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row14">
                   <td class="column0">&nbsp;</td>
-                  <td class="column1 " colspan="9">
+                  <td class="column1 " colspan="15">
                     <strong><br>Producto: </strong> <?= $codigo . " - " . $nombre; ?><br><br>
                   </td>
-                  <td class="column6">&nbsp;</td>
-                  <td class="column7">&nbsp;</td>
-                  <td class="column8">&nbsp;</td>
-                  <td class="column9">&nbsp;</td>
-                  <td class="column10">&nbsp;</td>
-                  <td class="column11">&nbsp;</td>
-                  <td class="column12">&nbsp;</td>
-                  <td class="column13">&nbsp;</td>
-                  <td class="column14">&nbsp;</td>
                 </tr>
                 <tr class="row15">
                   <td class="column0">&nbsp;</td>
@@ -3348,7 +3339,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 </tr>
                 <tr class="row54">
                   <td class="column0 style44 null style52" colspan="5" rowspan="4">
-                    <div style="position: relative;"><img src="<?= base_url() ?>/assets/images/logoCirec.png" width="80%" /></div>
+                  <center><img src="<?= base_url() ?>/assets/images/logoCirec.png" alt="what image shows" height="100%" width="100%"></center>
                   </td>
                   <td class="column5 style32 s style40" colspan="6" rowspan="4">CENTRO INTEGRAL DE REHABILITACION DE COLOMBIA. CIREC <br />
                     CERTIFICADO DE GARANTIA<br />

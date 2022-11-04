@@ -501,6 +501,8 @@ if (!function_exists('cambiaHoraServer')) {
             $fecha = date("Y-m-d H:i");
         } else if ($opc == 2) {
             $fecha = date("Y/m/d H:i");
+        } else if ($opc == 3) {
+            $fecha = date("Y-m-d g:i a");
         } else {
             $fecha = date("Y/m/d H:i");
         }
