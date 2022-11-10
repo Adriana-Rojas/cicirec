@@ -79,7 +79,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     <th>C&oacute;digo</th>
                                     <th>Descripci&oacute;n</th>
                                     <th>Observaci&oacute;n</th>
-                                    <th class="text-right">Cantidad</th>
+                                    <th class="text-right">Cantidadd</th>
                                 </tr>
                             </thead>
                             <tbody>
